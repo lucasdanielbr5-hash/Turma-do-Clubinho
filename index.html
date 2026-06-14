@@ -1,444 +1,162 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aulas Psicopedagógicas Infantis</title>
 
-<title>Turma do Clubinho</title>
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-<style>
+    body {
+      background: #fef6ff;
+      color: #333;
+    }
 
-/* =========================
-   BASE
-========================= */
+    header {
+      background: #ffcc00;
+      padding: 20px;
+      text-align: center;
+      color: #222;
+      font-weight: 700;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
+    nav {
+      background: #ff6f61;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
 
-:root{
---primary:#4f46e5;
---secondary:#22c55e;
---text:#111827;
---soft:#f0f9ff;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-body{
-background:#ffffff;
-color:var(--text);
-overflow-x:hidden;
-}
+    .hero {
+      background: #7bdff2;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-/* =========================
-   HEADER (MENOR + PREMIUM)
-========================= */
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-header{
-position:fixed;
-top:0;
-width:100%;
-background:#fff;
-border-bottom:1px solid #e5e7eb;
-z-index:999;
-}
+    .hero p {
+      font-size: 1.2rem;
+    }
 
-.nav{
-max-width:1100px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:8px 20px; /* MENOR ALTURA */
-}
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-.logo img{
-height:72px; /* LOGO MAIOR */
-}
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-.menu{
-display:flex;
-gap:18px;
-align-items:center;
-}
+    .card {
+      background: #fff;
+      border: 3px solid #ffcc00;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+    }
 
-.menu a{
-text-decoration:none;
-color:#374151;
-font-size:14px;
-font-weight:500;
-padding:6px 8px;
-transition:.2s;
-}
+    .card h3 {
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
 
-.menu a:hover{
-color:var(--primary);
-}
+    .btn {
+      background: #00c49a;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: inline-block;
+    }
 
-.btn{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:#fff;
-padding:10px 16px;
-border-radius:10px;
-font-weight:600;
-text-decoration:none;
-transition:.2s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-/* =========================
-   HERO (MAIS COLORIDO)
-========================= */
-
-.hero{
-padding:130px 20px 90px;
-background:linear-gradient(180deg,#eef2ff,#ffffff);
-position:relative;
-overflow:hidden;
-}
-
-.hero-container{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.hero h1{
-font-size:3rem;
-line-height:1.1;
-margin-bottom:15px;
-}
-
-.hero p{
-color:#6b7280;
-line-height:1.8;
-margin-bottom:20px;
-max-width:500px;
-}
-
-.hero-img img{
-width:100%;
-border-radius:14px;
-box-shadow:0 20px 40px rgba(79,70,229,0.15);
-}
-
-/* =========================
-   SEÇÕES
-========================= */
-
-.section{
-padding:80px 20px;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-}
-
-.title{
-text-align:center;
-font-size:2rem;
-margin-bottom:40px;
-}
-
-/* =========================
-   CARDS MAIS VIVOS
-========================= */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.card{
-background:#fff;
-border:1px solid #eef2ff;
-padding:24px;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(79,70,229,0.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-border-color:var(--primary);
-}
-
-.card h3{
-margin-bottom:8px;
-}
-
-.card p{
-color:#6b7280;
-line-height:1.6;
-}
-
-/* =========================
-   MÉTODO
-========================= */
-
-.method{
-background:var(--soft);
-border-top:1px solid #e5e7eb;
-border-bottom:1px solid #e5e7eb;
-text-align:center;
-}
-
-.method p{
-max-width:700px;
-margin:auto;
-color:#4b5563;
-line-height:1.8;
-}
-
-/* =========================
-   CTA
-========================= */
-
-.cta{
-text-align:center;
-padding:90px 20px;
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:#fff;
-}
-
-.cta h2{
-font-size:2rem;
-margin-bottom:10px;
-}
-
-.cta a{
-display:inline-block;
-margin-top:20px;
-background:#fff;
-color:var(--primary);
-padding:12px 18px;
-border-radius:10px;
-font-weight:700;
-text-decoration:none;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-background:#111827;
-color:#fff;
-padding:50px 20px;
-}
-
-.footer-grid{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-
-.footer-bottom{
-text-align:center;
-margin-top:30px;
-opacity:.6;
-font-size:13px;
-}
-
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:26px;
-color:#fff;
-cursor:pointer;
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media(max-width:900px){
-
-.hero-container,
-.grid,
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-.menu{
-display:none;
-}
-
-.hero{
-text-align:center;
-}
-
-.hero h1{
-font-size:2.2rem;
-}
-
-.hero p{
-margin:auto;
-}
-
-}
-
-</style>
+    footer {
+      background: #ffcc00;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-weight: 600;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-<div class="nav">
+  <header>
+    🌈 Apoio Psicopedagógico Infantil
+  </header>
 
-<div class="logo">
-<img src="https://i.imgur.com/86LuJEt.png" alt="Logo">
-</div>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-<nav class="menu">
-<a href="#">Início</a>
-<a href="#metodo">Método</a>
-<a href="#programas">Programas</a>
-<a href="#contato">Contato</a>
-</nav>
+  <section class="hero">
+    <h1>Aprender pode ser divertido!</h1>
+    <p>Aulas particulares com apoio psicopedagógico para crianças</p>
+  </section>
 
-<a class="btn" href="#">Matricular</a>
+  <section class="section" id="sobre">
+    <h2>Sobre</h2>
+    <p>Atendimento especializado para ajudar no desenvolvimento da aprendizagem infantil com carinho, paciência e métodos lúdicos.</p>
+  </section>
 
-</div>
-</header>
+  <section class="section" id="servicos">
+    <h2>Serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Reforço Escolar</h3>
+        <p>Ajuda em português, matemática e tarefas escolares.</p>
+      </div>
 
-<!-- HERO -->
-<section class="hero">
+      <div class="card">
+        <h3>Dificuldades de Aprendizagem</h3>
+        <p>Suporte psicopedagógico individualizado.</p>
+      </div>
 
-<div class="hero-container">
+      <div class="card">
+        <h3>Jogos Educativos</h3>
+        <p>Aprendizado com atividades lúdicas e divertidas.</p>
+      </div>
+    </div>
+  </section>
 
-<div>
-<h1>Aprendizado estruturado para resultados reais</h1>
+  <section class="section" id="contato">
+    <h2>Contato</h2>
+    <p>Fale comigo pelo WhatsApp para agendar aulas!</p>
+    <a class="btn" href="https://wa.me/5500000000000" target="_blank">
+      Chamar no WhatsApp
+    </a>
+  </section>
 
-<p>
-Um método contínuo de ensino que desenvolve disciplina, foco e evolução no aprendizado infantil.
-</p>
-
-<a class="btn" href="#">Agendar avaliação</a>
-</div>
-
-<div class="hero-img">
-<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=900" alt="Estudo">
-</div>
-
-</div>
-
-</section>
-
-<!-- MÉTODO -->
-<section class="section method" id="metodo">
-
-<h2 class="title">Nosso Método</h2>
-
-<p>
-Trabalhamos com aprendizado progressivo, respeitando o ritmo individual de cada aluno.
-O foco é construir base sólida em leitura, escrita e raciocínio lógico.
-</p>
-
-</section>
-
-<!-- PROGRAMAS -->
-<section class="section" id="programas">
-
-<div class="container">
-
-<h2 class="title">Programas</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Alfabetização</h3>
-<p>Construção sólida da leitura e escrita.</p>
-</div>
-
-<div class="card">
-<h3>Reforço Escolar</h3>
-<p>Apoio contínuo em todas as matérias.</p>
-</div>
-
-<div class="card">
-<h3>Raciocínio Lógico</h3>
-<p>Desenvolvimento cognitivo estruturado.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-<section class="cta">
-
-<h2>Comece hoje a evolução do seu filho</h2>
-
-<a href="#">Falar no WhatsApp</a>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-
-<div class="footer-grid">
-
-<div>
-<h3>Turma do Clubinho</h3>
-<p>Ensino estruturado e evolução contínua.</p>
-</div>
-
-<div>
-<h3>Links</h3>
-<p>Início</p>
-<p>Método</p>
-<p>Programas</p>
-</div>
-
-<div>
-<h3>Contato</h3>
-<p>WhatsApp</p>
-<p>Email</p>
-<p>Instagram</p>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-© 2025 Turma do Clubinho
-</div>
-
-</footer>
-
-<!-- WHATSAPP -->
-<div class="whatsapp" onclick="window.open('https://wa.me/5511999999999')">
-💬
-</div>
+  <footer>
+    © 2026 - Apoio Psicopedagógico Infantil
+  </footer>
 
 </body>
 </html>
