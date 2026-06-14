@@ -55,8 +55,28 @@ body{
   padding:80px 8% 0;
   position:relative;
   background:linear-gradient(to top, #87cefa, #bfe9ff);
+  overflow:hidden;
 }
 
+/* NUVENS */
+.cloud{
+  position:absolute;
+  width:140px;
+  opacity:0.85;
+  animation:moveClouds linear infinite;
+  pointer-events:none;
+}
+
+.cloud1{top:12%; left:-180px; animation-duration:55s;}
+.cloud2{top:38%; left:-240px; animation-duration:70s;}
+.cloud3{top:65%; left:-200px; animation-duration:60s;}
+
+@keyframes moveClouds{
+  from{transform:translateX(0);}
+  to{transform:translateX(140vw);}
+}
+
+/* TEXTO HERO */
 .hero-text{
   width:50%;
   z-index:2;
@@ -86,7 +106,7 @@ body{
   font-weight:600;
 }
 
-/* ================= LOGO CORRIGIDA ================= */
+/* ================= LOGO GRANDE COM DEGRADÊ ================= */
 .hero-logo{
   width:40%;
   display:flex;
@@ -98,21 +118,31 @@ body{
 .hero-logo::before{
   content:"";
   position:absolute;
-  width:200px;
-  height:200px;
-  background:radial-gradient(circle, #ffffff 60%, #e8f4ff 100%);
+  width:280px;
+  height:280px;
+  background:radial-gradient(circle at top, #ffffff 40%, #dff1ff 80%, #cfe8ff 100%);
   border-radius:50%;
-  box-shadow:0 15px 30px rgba(0,0,0,0.10);
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
   z-index:1;
 }
 
+.hero-logo::after{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  background:rgba(255,255,255,0.25);
+  border-radius:60% 40% 55% 45%;
+  z-index:0;
+}
+
 .hero-logo img{
-  width:120px;
+  width:170px;
   position:relative;
   z-index:2;
 }
 
-/* ================= SERVIÇOS COMPLETOS ================= */
+/* ================= SERVIÇOS ================= */
 .servicos{
   padding:120px 20px;
   text-align:center;
@@ -158,7 +188,7 @@ body{
   line-height:1.6;
 }
 
-/* ================= AVALIAÇÕES COMPLETAS ================= */
+/* ================= AVALIAÇÕES ================= */
 .testemunhos{
   padding:120px 20px;
   background:#eef3ff;
@@ -288,6 +318,11 @@ footer{
 <!-- HERO -->
 <section class="hero">
 
+  <!-- NUVENS -->
+  <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
+  <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
+  <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
+
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
     <p>
@@ -311,36 +346,24 @@ footer{
 
   <p>
     O Clubinho da Aprendizagem realiza intervenções psicopedagógicas completas,
-    com foco no desenvolvimento individual da criança, respeitando seu ritmo,
-    suas dificuldades e suas potencialidades.
+    respeitando o ritmo individual da criança e suas necessidades específicas de aprendizagem.
   </p>
 
   <div class="grid">
 
     <div class="card">
       <h3>Aulas particulares</h3>
-      <p>
-        Acompanhamento individual em leitura, escrita e matemática, com estratégias
-        adaptadas às necessidades específicas da criança, promovendo autonomia e
-        segurança no aprendizado.
-      </p>
+      <p>Acompanhamento individual em leitura, escrita e matemática com estratégias adaptadas ao perfil de aprendizagem da criança, promovendo autonomia e segurança escolar.</p>
     </div>
 
     <div class="card">
       <h3>Avaliação psicopedagógica</h3>
-      <p>
-        Processo completo de análise das dificuldades de aprendizagem, envolvendo
-        aspectos cognitivos, emocionais e pedagógicos para construção de um plano
-        de intervenção individualizado.
-      </p>
+      <p>Processo detalhado de investigação das dificuldades de aprendizagem, considerando aspectos cognitivos, emocionais e pedagógicos para definição de um plano individualizado.</p>
     </div>
 
     <div class="card">
       <h3>Intervenção psicopedagógica</h3>
-      <p>
-        Atividades estruturadas e lúdicas voltadas ao desenvolvimento de atenção,
-        memória, raciocínio lógico e desempenho escolar, com acompanhamento contínuo.
-      </p>
+      <p>Atividades estruturadas e lúdicas para desenvolvimento de atenção, memória, raciocínio lógico e desempenho escolar com acompanhamento contínuo.</p>
     </div>
 
   </div>
@@ -356,26 +379,17 @@ footer{
     <div class="comentarios">
 
       <div class="comentario">
-        <p>
-          “Percebemos uma evolução muito significativa na leitura e na compreensão de textos.
-          O acompanhamento respeitou totalmente o ritmo do nosso filho.”
-        </p>
+        <p>“Evolução muito clara na leitura e na compreensão após o acompanhamento.”</p>
         <span>— Ana, mãe de aluno</span>
       </div>
 
       <div class="comentario">
-        <p>
-          “O atendimento é extremamente profissional e ao mesmo tempo acolhedor.
-          Conseguimos entender melhor o processo de aprendizagem.”
-        </p>
+        <p>“Atendimento humano, técnico e extremamente organizado.”</p>
         <span>— Carlos, pai de aluno</span>
       </div>
 
       <div class="comentario">
-        <p>
-          “Em poucas semanas já vimos melhora no foco, na atenção e no desempenho escolar.
-          O trabalho é muito bem estruturado.”
-        </p>
+        <p>“Melhora perceptível na concentração e no desempenho escolar em poucas semanas.”</p>
         <span>— Juliana, mãe de aluno</span>
       </div>
 
@@ -396,7 +410,7 @@ footer{
 
       <div class="final-item">Plano individual de aprendizagem</div>
       <div class="final-item">Processo contínuo de evolução</div>
-      <div class="final-item">Acompanhamento com a família</div>
+      <div class="final-item">Participação da família</div>
 
     </div>
 
