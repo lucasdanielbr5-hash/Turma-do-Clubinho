@@ -28,7 +28,6 @@ body{
   padding:0 8%;
   position:relative;
   background:linear-gradient(to top, #87cefa, #bfe9ff);
-  overflow:hidden;
 }
 
 /* ===== NUVENS ===== */
@@ -65,7 +64,7 @@ body{
   to{transform:translateX(140vw);}
 }
 
-/* ===== TEXTO ===== */
+/* ===== TEXTO ESQUERDA ===== */
 .hero-text{
   width:50%;
   z-index:2;
@@ -93,9 +92,14 @@ body{
   text-decoration:none;
   font-weight:600;
   box-shadow:0 10px 20px rgba(255,107,157,0.3);
+  transition:0.3s;
 }
 
-/* ===== LOGO AREA COM ONDA ===== */
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* ===== LOGO COM FUNDO EM ONDA BRANCA ===== */
 .hero-logo{
   width:40%;
   display:flex;
@@ -105,38 +109,36 @@ body{
   z-index:2;
 }
 
-/* ONDA ATRÁS DA LOGO */
+/* FUNDO BRANCO (FORMA ONDULADA PRINCIPAL) */
 .hero-logo::before{
   content:"";
   position:absolute;
   width:380px;
-  height:380px;
-  background:radial-gradient(circle at center,
-    rgba(255,255,255,0.95),
-    rgba(255,255,255,0.6),
-    rgba(255,255,255,0) 70%);
-  border-radius:50%;
+  height:340px;
+  background:#ffffff;
+  border-radius:60% 40% 60% 40% / 60% 50% 50% 40%;
+  box-shadow:0 20px 40px rgba(0,0,0,0.10);
   z-index:1;
 }
 
-/* camada de onda inferior (efeito fluido) */
+/* CAMADA SUAVE DE PROFUNDIDADE */
 .hero-logo::after{
   content:"";
   position:absolute;
   width:420px;
-  height:200px;
-  bottom:-40px;
-  background:linear-gradient(135deg,#ffffffaa,#bfe9ff88);
-  border-radius:50% 50% 40% 60% / 60% 40% 60% 40%;
+  height:360px;
+  background:linear-gradient(145deg,#ffffff, #f3f9ff);
+  border-radius:50% 50% 60% 40% / 40% 60% 40% 60%;
+  opacity:0.95;
   z-index:1;
 }
 
-/* LOGO LIMPA (SEM EFEITO) */
+/* LOGO SEM NENHUM EFEITO */
 .hero-logo img{
-  width:280px;
+  width:260px;
   max-width:90%;
-  z-index:3;
   position:relative;
+  z-index:3;
 }
 
 /* RESPONSIVO */
@@ -146,6 +148,7 @@ body{
     text-align:center;
     justify-content:center;
     gap:30px;
+    padding:20px;
   }
 
   .hero-text{
@@ -168,7 +171,7 @@ body{
   <div class="cloud cloud2"></div>
   <div class="cloud cloud3"></div>
 
-  <!-- TEXTO -->
+  <!-- TEXTO ESQUERDA -->
   <div class="hero-text">
     <h1>Bem-vindo ao Clubinho da Aprendizagem 🌈</h1>
     <p>Um espaço leve, divertido e acolhedor onde aprender é brincar e crescer com alegria.</p>
@@ -176,7 +179,7 @@ body{
     <a class="btn" href="#contato">Entrar no Clubinho</a>
   </div>
 
-  <!-- LOGO COM ONDA -->
+  <!-- LOGO DIREITA COM FUNDO ONDULADO -->
   <div class="hero-logo">
     <img src="https://i.imgur.com/86LuJEt.png" alt="Logo">
   </div>
