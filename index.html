@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Escola Infantil</title>
+<title>Psicopedagogia</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --primary:#1f4e79;
-  --bg:#f6f8fc;
-  --text:#1a202c;
+  --primary:#2d6a8a;
+  --secondary:#7bb7a6;
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --text:#1e2a33;
+  --soft:#6b7c8a;
 }
 
 *{
@@ -22,8 +25,18 @@
 }
 
 body{
-  background:var(--bg);
+  background:linear-gradient(180deg,#f4f7fb,#eef3f8);
   color:var(--text);
+}
+
+/* ANIMAÇÃO */
+section, .card, .split, .hero{
+  animation:fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(18px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 /* HEADER */
@@ -31,69 +44,82 @@ header{
   position:fixed;
   top:0;
   width:100%;
-  background:#fff;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 25px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  padding:14px 25px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.05);
   z-index:1000;
 }
 
 nav{
   display:flex;
-  gap:15px;
+  gap:18px;
 }
 
 nav a{
   text-decoration:none;
   color:var(--text);
   font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--primary);
 }
 
 /* HERO */
 .hero{
   margin-top:80px;
-  padding:70px 20px;
+  padding:90px 20px;
   text-align:center;
-  background:white;
-}
-
-.hero img.logo{
-  width:260px;
-  max-width:90%;
-  margin-bottom:20px;
+  background:radial-gradient(circle at top, #ffffff, #eef5fa);
 }
 
 .hero h1{
   color:var(--primary);
-  font-size:2rem;
+  font-size:2.2rem;
 }
 
 .hero p{
   max-width:650px;
   margin:15px auto;
-  color:#4a5568;
+  color:var(--soft);
 }
 
+.hero img.logo{
+  width:240px;
+  margin-bottom:20px;
+}
+
+/* BOTÃO */
 .btn{
   display:inline-block;
   margin-top:20px;
-  background:var(--primary);
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:white;
-  padding:12px 20px;
-  border-radius:10px;
+  padding:12px 22px;
+  border-radius:14px;
   text-decoration:none;
+  transition:0.3s;
+  box-shadow:0 8px 18px rgba(45,106,138,0.2);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(45,106,138,0.25);
 }
 
 /* SEÇÕES */
 section{
-  padding:70px 20px;
+  padding:80px 20px;
   text-align:center;
 }
 
 .title{
-  font-size:1.6rem;
+  font-size:1.8rem;
   color:var(--primary);
   margin-bottom:10px;
 }
@@ -101,10 +127,11 @@ section{
 .subtitle{
   max-width:750px;
   margin:0 auto 30px auto;
-  color:#718096;
+  color:var(--soft);
+  line-height:1.6;
 }
 
-/* BLOCO COM IMAGEM */
+/* SPLIT */
 .split{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
@@ -117,34 +144,45 @@ section{
 
 .split img{
   width:100%;
-  border-radius:15px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
 }
 
-/* GRID CARDS */
+.split img:hover{
+  transform:scale(1.02);
+}
+
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  gap:18px;
+  gap:20px;
   max-width:1100px;
   margin:0 auto;
 }
 
 .card{
-  background:white;
-  border-radius:15px;
+  background:var(--card);
+  border-radius:18px;
   overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.1);
 }
 
 .card img{
   width:100%;
-  height:160px;
+  height:170px;
   object-fit:cover;
 }
 
 .card .content{
-  padding:15px;
+  padding:16px;
 }
 
 .card h3{
@@ -154,9 +192,9 @@ section{
 
 /* CTA */
 .cta{
-  background:var(--primary);
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:white;
-  padding:70px 20px;
+  padding:80px 20px;
 }
 
 .cta .btn{
@@ -169,7 +207,7 @@ footer{
   padding:25px;
   text-align:center;
   background:white;
-  color:#718096;
+  color:var(--soft);
 }
 
 /* MOBILE */
@@ -177,105 +215,105 @@ footer{
   nav{display:none;}
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-  <div><strong>Escola Infantil</strong></div>
+  <div><strong>Psicopedagogia</strong></div>
   <nav>
     <a href="#sobre">Sobre</a>
-    <a href="#ensino">Ensino</a>
-    <a href="#estrutura">Estrutura</a>
+    <a href="#atendimento">Atendimento</a>
+    <a href="#servicos">Serviços</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
-<!-- HERO COM LOGO -->
+<!-- HERO -->
 <section class="hero">
-  <img class="logo" src="https://i.imgur.com/86LuJEt.png" alt="Logo Escola">
+  <img class="logo" src="https://i.imgur.com/86LuJEt.png" alt="Logo">
 
-  <h1>Educação Infantil com Cuidado e Excelência</h1>
-  <p>Ambiente acolhedor, seguro e preparado para o desenvolvimento completo da criança.</p>
+  <h1>Apoio Psicopedagógico com Cuidado e Humanização</h1>
+  <p>Atendimento especializado para crianças, adolescentes e famílias, focado no desenvolvimento emocional e cognitivo.</p>
 
-  <a class="btn" href="#contato">Agendar Visita</a>
+  <a class="btn" href="#contato">Agendar Consulta</a>
 </section>
 
-<!-- SOBRE COM IMAGEM -->
+<!-- SOBRE -->
 <section id="sobre">
-  <h2 class="title">Sobre a Escola</h2>
+  <h2 class="title">Sobre o Atendimento</h2>
 
   <div class="split">
-    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Sala de aula">
+    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Atendimento">
 
     <div>
       <p class="subtitle">
-        Nossa escola oferece educação infantil de qualidade com foco em desenvolvimento cognitivo,
-        emocional e social, respeitando o ritmo de cada criança.
+        O trabalho psicopedagógico auxilia no processo de aprendizagem, identificando dificuldades,
+        desenvolvendo habilidades e promovendo autonomia com acolhimento e respeito.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ENSINO COM IMAGENS -->
-<section id="ensino">
-  <h2 class="title">Ensino</h2>
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <h2 class="title">Serviços</h2>
 
   <div class="grid">
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
       <div class="content">
-        <h3>Alfabetização</h3>
-        <p>Aprendizado da leitura e escrita com método leve.</p>
+        <h3>Avaliação Psicopedagógica</h3>
+        <p>Identificação de dificuldades de aprendizagem.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1588072432865-2f6d2b4d4d4d">
+      <img src="https://images.unsplash.com/photo-1559757175-7cb057fba93c">
       <div class="content">
-        <h3>Brincar e Aprender</h3>
-        <p>Atividades lúdicas para desenvolvimento infantil.</p>
+        <h3>Intervenção</h3>
+        <p>Atividades personalizadas de desenvolvimento.</p>
       </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
       <div class="content">
-        <h3>Matemática</h3>
-        <p>Ensino com jogos e raciocínio lógico.</p>
+        <h3>Acompanhamento Familiar</h3>
+        <p>Orientação para pais e responsáveis.</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ESTRUTURA COM IMAGEM GRANDE -->
-<section id="estrutura">
-  <h2 class="title">Nossa Estrutura</h2>
+<!-- ESTRUTURA / ATENDIMENTO -->
+<section id="atendimento">
+  <h2 class="title">Como funciona</h2>
 
   <div class="split">
     <div>
       <p class="subtitle">
-        Contamos com salas modernas, ambiente seguro, áreas recreativas e equipe especializada.
+        O atendimento é individualizado, respeitando o ritmo de cada paciente, com foco em estratégias práticas
+        para melhorar o aprendizado e a autoestima.
       </p>
     </div>
 
-    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt="Escola moderna">
+    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt="Consulta">
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta" id="contato">
-  <h2>Venha conhecer nossa escola</h2>
-  <p>Agende uma visita e veja de perto nossa estrutura.</p>
+  <h2>Agende seu atendimento</h2>
+  <p>Entre em contato e inicie o acompanhamento psicopedagógico.</p>
 
   <a class="btn" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
 </section>
 
 <footer>
-  © 2026 Escola Infantil — Todos os direitos reservados
+  © 2026 Psicopedagogia — Todos os direitos reservados
 </footer>
 
 </body>
