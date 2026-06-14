@@ -99,7 +99,7 @@ body{
   transform:scale(1.05);
 }
 
-/* ===== LOGO COM FUNDO EM ONDA BRANCA ===== */
+/* ===== LOGO COM FUNDO ONDULADO AJUSTADO ===== */
 .hero-logo{
   width:40%;
   display:flex;
@@ -109,33 +109,33 @@ body{
   z-index:2;
 }
 
-/* FUNDO BRANCO (FORMA ONDULADA PRINCIPAL) */
+/* fundo menor e equilibrado */
 .hero-logo::before{
   content:"";
   position:absolute;
-  width:380px;
-  height:340px;
+  width:240px;
+  height:220px;
   background:#ffffff;
-  border-radius:60% 40% 60% 40% / 60% 50% 50% 40%;
-  box-shadow:0 20px 40px rgba(0,0,0,0.10);
+  border-radius:55% 45% 60% 40% / 60% 50% 50% 40%;
+  box-shadow:0 12px 25px rgba(0,0,0,0.10);
   z-index:1;
 }
 
-/* CAMADA SUAVE DE PROFUNDIDADE */
+/* camada suave interna */
 .hero-logo::after{
   content:"";
   position:absolute;
-  width:420px;
-  height:360px;
-  background:linear-gradient(145deg,#ffffff, #f3f9ff);
+  width:270px;
+  height:240px;
+  background:linear-gradient(145deg,#ffffff,#f3f9ff);
   border-radius:50% 50% 60% 40% / 40% 60% 40% 60%;
-  opacity:0.95;
+  opacity:0.9;
   z-index:1;
 }
 
-/* LOGO SEM NENHUM EFEITO */
+/* LOGO LIMPA */
 .hero-logo img{
-  width:260px;
+  width:190px;
   max-width:90%;
   position:relative;
   z-index:3;
@@ -171,7 +171,7 @@ body{
   <div class="cloud cloud2"></div>
   <div class="cloud cloud3"></div>
 
-  <!-- TEXTO ESQUERDA -->
+  <!-- TEXTO -->
   <div class="hero-text">
     <h1>Bem-vindo ao Clubinho da Aprendizagem 🌈</h1>
     <p>Um espaço leve, divertido e acolhedor onde aprender é brincar e crescer com alegria.</p>
@@ -179,7 +179,7 @@ body{
     <a class="btn" href="#contato">Entrar no Clubinho</a>
   </div>
 
-  <!-- LOGO DIREITA COM FUNDO ONDULADO -->
+  <!-- LOGO -->
   <div class="hero-logo">
     <img src="https://i.imgur.com/86LuJEt.png" alt="Logo">
   </div>
