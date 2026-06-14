@@ -10,8 +10,8 @@
 <style>
 :root{
   --primary:#1f4e79;
-  --secondary:#f4a261;
-  --bg:#f6f8fc;
+  --accent:#f4a261;
+  --bg:#f7fafc;
   --text:#1a202c;
   --card:#ffffff;
 }
@@ -46,7 +46,7 @@ header{
 
 nav{
   display:flex;
-  gap:18px;
+  gap:15px;
 }
 
 nav a{
@@ -55,34 +55,30 @@ nav a{
   font-weight:500;
 }
 
-nav a:hover{
-  color:var(--primary);
-}
-
 /* HERO */
 .hero{
   margin-top:80px;
-  padding:70px 20px;
+  padding:90px 20px;
   text-align:center;
-  background:#ffffff;
+  background:white;
 }
 
 .hero img{
-  width:160px;
-  margin-bottom:20px;
+  width:280px;
+  max-width:90%;
+  margin-bottom:25px;
 }
 
 .hero h1{
-  font-size:clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size:clamp(1.8rem, 3vw, 2.6rem);
   color:var(--primary);
 }
 
 .hero p{
-  margin-top:12px;
+  max-width:700px;
+  margin:15px auto;
   color:#4a5568;
-  max-width:650px;
-  margin-left:auto;
-  margin-right:auto;
+  font-size:1.1rem;
 }
 
 .btn{
@@ -90,7 +86,7 @@ nav a:hover{
   margin-top:20px;
   background:var(--primary);
   color:white;
-  padding:12px 20px;
+  padding:13px 22px;
   border-radius:10px;
   text-decoration:none;
   font-weight:600;
@@ -98,28 +94,28 @@ nav a:hover{
 
 /* SEÇÕES */
 section{
-  padding:70px 20px;
+  padding:80px 20px;
   text-align:center;
 }
 
 .title{
-  font-size:1.6rem;
+  font-size:1.7rem;
   color:var(--primary);
   margin-bottom:10px;
 }
 
 .subtitle{
-  max-width:700px;
-  margin:0 auto 30px auto;
+  max-width:750px;
+  margin:0 auto 35px auto;
   color:#718096;
 }
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
   gap:18px;
-  max-width:1000px;
+  max-width:1100px;
   margin:0 auto;
 }
 
@@ -128,7 +124,6 @@ section{
   padding:22px;
   border-radius:14px;
   box-shadow:0 4px 12px rgba(0,0,0,0.06);
-  border:1px solid #e2e8f0;
   text-align:left;
 }
 
@@ -137,25 +132,15 @@ section{
   margin-bottom:8px;
 }
 
-/* BANNER LOGO CENTRAL */
-.logo-section{
-  background:#f1f5f9;
-  text-align:center;
-  padding:80px 20px;
-}
-
-.logo-section img{
-  width:220px;
-  margin-bottom:20px;
-}
-
-.logo-section h2{
-  color:var(--primary);
+/* BLOCO GRANDE INFORMATIVO */
+.big-section{
+  background:white;
+  padding:90px 20px;
 }
 
 /* FOOTER */
 footer{
-  padding:25px;
+  padding:30px;
   text-align:center;
   color:#718096;
   background:white;
@@ -169,6 +154,7 @@ footer{
   }
 }
 </style>
+
 </head>
 
 <body>
@@ -178,93 +164,135 @@ footer{
 
   <nav>
     <a href="#sobre">Sobre</a>
-    <a href="#ensino">Ensino</a>
+    <a href="#pedagogico">Pedagógico</a>
+    <a href="#turmas">Turmas</a>
     <a href="#estrutura">Estrutura</a>
+    <a href="#eventos">Eventos</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO LOGO GRANDE -->
 <section class="hero">
   <img src="https://i.imgur.com/86LuJEt.png" alt="Logo Escola">
-  <h1>Educação Infantil com Excelência</h1>
-  <p>
-    Um ambiente acolhedor, seguro e pensado para o desenvolvimento completo das crianças.
-  </p>
-  <a class="btn" href="#contato">Agendar Visita</a>
-</section>
 
-<!-- LOGO CENTRAL -->
-<section class="logo-section">
-  <h2>Nossa Identidade</h2>
-  <img src="https://i.imgur.com/86LuJEt.png" alt="Logo no centro">
+  <h1>Educação Infantil com Excelência e Cuidado</h1>
+
   <p>
-    Uma escola que valoriza o aprendizado, a infância e o desenvolvimento humano.
+    Um ambiente seguro, moderno e acolhedor onde cada criança aprende no seu ritmo,
+    com carinho, atenção e desenvolvimento completo.
   </p>
+
+  <a class="btn" href="#contato">Agendar Visita</a>
 </section>
 
 <!-- SOBRE -->
 <section id="sobre">
   <h2 class="title">Sobre a Escola</h2>
   <p class="subtitle">
-    Trabalhamos com educação infantil de qualidade, focando no desenvolvimento cognitivo,
-    emocional e social das crianças desde os primeiros anos.
+    Somos uma instituição de educação infantil comprometida com o desenvolvimento integral da criança,
+    unindo aprendizagem, socialização e valores humanos.
   </p>
 </section>
 
-<!-- ENSINO -->
-<section id="ensino">
-  <h2 class="title">Ensino</h2>
+<!-- PEDAGÓGICO -->
+<section id="pedagogico" class="big-section">
+  <h2 class="title">Proposta Pedagógica</h2>
+  <p class="subtitle">
+    Nosso ensino é baseado em metodologias ativas, aprendizagem lúdica e desenvolvimento emocional.
+  </p>
 
   <div class="grid">
     <div class="card">
-      <h3>Educação Infantil</h3>
-      <p>Base pedagógica estruturada para crianças em fase inicial.</p>
-    </div>
-
-    <div class="card">
-      <h3>Linguagem e Alfabetização</h3>
-      <p>Desenvolvimento da leitura e escrita com métodos modernos.</p>
+      <h3>Alfabetização</h3>
+      <p>Desenvolvimento da leitura e escrita de forma gradual e natural.</p>
     </div>
 
     <div class="card">
       <h3>Matemática Lúdica</h3>
-      <p>Aprendizado com jogos e atividades interativas.</p>
+      <p>Aprendizado com jogos, desafios e atividades práticas.</p>
     </div>
 
     <div class="card">
-      <h3>Arte e Criatividade</h3>
-      <p>Expressão artística, música e atividades criativas.</p>
+      <h3>Educação Emocional</h3>
+      <p>Trabalho com sentimentos, convivência e socialização.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TURMAS -->
+<section id="turmas">
+  <h2 class="title">Turmas</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Berçário</h3>
+      <p>0 a 2 anos — estímulos sensoriais e afetivos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Maternal</h3>
+      <p>2 a 4 anos — desenvolvimento da linguagem e coordenação.</p>
+    </div>
+
+    <div class="card">
+      <h3>Pré-escola</h3>
+      <p>4 a 6 anos — preparação para alfabetização.</p>
     </div>
   </div>
 </section>
 
 <!-- ESTRUTURA -->
-<section id="estrutura">
+<section id="estrutura" class="big-section">
   <h2 class="title">Nossa Estrutura</h2>
 
   <div class="grid">
     <div class="card">
       <h3>Salas Modernas</h3>
-      <p>Ambientes climatizados e preparados para aprendizagem.</p>
+      <p>Ambientes amplos, seguros e climatizados.</p>
     </div>
 
     <div class="card">
-      <h3>Área de Recreação</h3>
-      <p>Espaço seguro para brincadeiras e socialização.</p>
+      <h3>Parquinho</h3>
+      <p>Espaço recreativo seguro e supervisionado.</p>
     </div>
 
     <div class="card">
-      <h3>Equipe Qualificada</h3>
-      <p>Professores especializados em educação infantil.</p>
+      <h3>Equipe Especializada</h3>
+      <p>Profissionais capacitados em educação infantil.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section id="eventos">
+  <h2 class="title">Eventos e Atividades</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Semana da Família</h3>
+      <p>Integração entre pais e alunos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Festa Junina</h3>
+      <p>Cultura, diversão e aprendizado.</p>
+    </div>
+
+    <div class="card">
+      <h3>Mostra Cultural</h3>
+      <p>Apresentações e projetos dos alunos.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTATO -->
-<section id="contato">
-  <h2 class="title">Contato</h2>
-  <p class="subtitle">Agende uma visita ou matrícula.</p>
+<section id="contato" class="big-section">
+  <h2 class="title">Matrículas</h2>
+
+  <p class="subtitle">
+    Entre em contato para agendar uma visita e conhecer nossa escola.
+  </p>
 
   <a class="btn" href="https://wa.me/5500000000000" target="_blank">
     Falar no WhatsApp
