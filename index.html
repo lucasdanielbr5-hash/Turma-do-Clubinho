@@ -1,3 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clubinho da Aprendizagem</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  overflow-x:hidden;
+  background:#fffaf0;
+}
+
+/* ================= HERO ================= */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8%;
+  position:relative;
+  background:linear-gradient(to top, #87cefa, #bfe9ff);
+}
+
+/* NUVENS */
+.cloud{
+  position:absolute;
+  width:140px;
+  opacity:0.9;
+  animation:moveClouds linear infinite;
+}
+
+.cloud1{top:15%; left:-160px; animation-duration:45s;}
+.cloud2{top:40%; left:-220px; animation-duration:60s;}
+.cloud3{top:65%; left:-180px; animation-duration:50s;}
+
+@keyframes moveClouds{
+  from{transform:translateX(0);}
+  to{transform:translateX(140vw);}
+}
+
+/* HERO TEXTO */
+.hero-text{
+  width:50%;
+  z-index:2;
+  color:#1f3b57;
+}
+
+.hero-text h1{
+  font-size:2.7rem;
+  margin-bottom:15px;
+}
+
+.hero-text p{
+  font-size:1.1rem;
+  max-width:460px;
+  line-height:1.6;
+  color:#2f4f6f;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 26px;
+  border-radius:30px;
+  background:#ff6b9d;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* ================= LOGO CORRIGIDA ================= */
+.hero-logo{
+  width:40%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+.hero-logo::before{
+  content:"";
+  position:absolute;
+  width:340px;
+  height:340px;
+  background:radial-gradient(circle, #ffffff 55%, #e8f4ff 100%);
+  border-radius:50%;
+  box-shadow:0 20px 40px rgba(0,0,0,0.10);
+  z-index:1;
+}
+
+.hero-logo::after{
+  content:"";
+  position:absolute;
+  width:380px;
+  height:380px;
+  background:rgba(255,255,255,0.25);
+  border-radius:55% 45% 60% 40%;
+  z-index:0;
+}
+
+.hero-logo img{
+  width:200px;
+  position:relative;
+  z-index:2;
+  animation:none;
+}
+
+/* ================= SERVIÇOS ================= */
+.servicos{
+  padding:120px 20px;
+  text-align:center;
+  background:#fdfcf9;
+}
+
+.servicos h2{
+  font-size:2.2rem;
+  color:#2d6cdf;
+  margin-bottom:10px;
+}
+
+.servicos p{
+  max-width:750px;
+  margin:auto;
+  color:#666;
+  line-height:1.6;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:30px;
+  max-width:1200px;
+  margin:60px auto 0;
+}
+
+.card{
+  background:#fff;
+  border-radius:25px;
+  padding:40px 30px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* ================= DEPOIMENTOS ================= */
+.testemunhos{
+  padding:120px 20px;
+  background:#eef3ff;
+  display:flex;
+  justify-content:center;
+}
+
+.testemunhos-box{
+  width:100%;
+  max-width:900px;
+  background:#ffffff;
+  border-radius:25px;
+  padding:50px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.08);
+}
+
+.textos h2{
+  font-size:2rem;
+  color:#2c3e50;
+  margin-bottom:20px;
+}
+
+.comentarios{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.comentario{
+  background:#f1f6ff;
+  padding:12px 14px;
+  border-radius:14px;
+  border-left:4px solid #7aa7ff;
+}
+
+.comentario p{
+  margin:0;
+  color:#2c3e50;
+  line-height:1.4;
+}
+
+.comentario span{
+  font-size:0.85rem;
+  color:#6c7a89;
+}
+
+/* ================= FINAL PROFISSIONAL ================= */
+.final{
+  padding:120px 20px;
+  background:#f7f9fc;
+  display:flex;
+  justify-content:center;
+}
+
+.final-box{
+  max-width:1000px;
+  text-align:center;
+}
+
+.final-box h2{
+  font-size:2rem;
+  color:#2c3e50;
+  margin-bottom:15px;
+}
+
+.final-box p{
+  max-width:750px;
+  margin:auto;
+  color:#5f6c7b;
+  line-height:1.6;
+}
+
+.final-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+}
+
+.final-item{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.final-item h3{
+  margin-bottom:10px;
+  color:#2c3e50;
+  font-size:1rem;
+}
+
+.final-item p{
+  font-size:0.95rem;
+  color:#6c7a89;
+}
+
+/* ================= BOTÃO FLUTUANTE ================= */
+.floating-btn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#1877f2;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  z-index:999;
+  transition:0.3s;
+}
+
+.floating-btn:hover{
+  transform:scale(1.05);
+  background:#145dbf;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:white;
+  color:#777;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+    gap:30px;
+  }
+
+  .hero-text{
+    width:100%;
+  }
+
+  .hero-logo{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+  <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
+  <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
+  <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
+
+  <div class="hero-text">
+    <h1>Bem-vindo ao Clubinho da Aprendizagem</h1>
+    <p>Um espaço de acolhimento e intervenção psicopedagógica voltado ao desenvolvimento integral da criança.</p>
+
+    <a class="btn" href="#contato">Entrar no Clubinho</a>
+  </div>
+
+  <div class="hero-logo">
+    <img src="https://i.imgur.com/86LuJEt.png">
+  </div>
+
+</section>
+
+<!-- SERVIÇOS -->
+<section class="servicos">
+  <h2>O que fazemos no Clubinho</h2>
+  <p>Atendimento psicopedagógico com intervenções individualizadas e acompanhamento contínuo.</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📚 Aulas Particulares</h3>
+      <p>Apoio individual em leitura, escrita e matemática.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Avaliação Psicopedagógica</h3>
+      <p>Identificação de dificuldades de aprendizagem com precisão e cuidado.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Intervenção Psicopedagógica</h3>
+      <p>Estratégias personalizadas para desenvolvimento cognitivo e emocional.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testemunhos" id="contato">
+
+  <div class="testemunhos-box">
+
+    <div class="textos">
+      <h2>O que eles dizem?</h2>
+
+      <div class="comentarios">
+
+        <div class="comentario">
+          <p>“Meu filho evoluiu significativamente na leitura e escrita.”</p>
+          <span>— Ana, mãe de aluno</span>
+        </div>
+
+        <div class="comentario">
+          <p>“Atendimento humano, técnico e muito cuidadoso.”</p>
+          <span>— Carlos, pai de aluno</span>
+        </div>
+
+        <div class="comentario">
+          <p>“Percebemos avanço na concentração e no desempenho escolar.”</p>
+          <span>— Juliana, mãe de aluno</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FINAL -->
 <section class="final">
 
   <div class="final-box">
@@ -5,8 +394,8 @@
     <h2>Desenvolvimento e acompanhamento individual</h2>
 
     <p>
-      O trabalho do Clubinho é baseado no respeito ao tempo de aprendizagem de cada criança,
-      com intervenções personalizadas e acompanhamento contínuo da família.
+      O trabalho do Clubinho é baseado no respeito ao ritmo de aprendizagem de cada criança,
+      com intervenções individualizadas e participação ativa da família.
     </p>
 
     <div class="final-grid">
@@ -23,7 +412,7 @@
 
       <div class="final-item">
         <h3>Acompanhamento familiar</h3>
-        <p>A família participa ativamente de todas as etapas.</p>
+        <p>A família participa ativamente de todas as etapas do processo.</p>
       </div>
 
     </div>
@@ -31,3 +420,16 @@
   </div>
 
 </section>
+
+<!-- BOTÃO FIXO -->
+<a class="floating-btn" href="https://wa.me/5500000000000">
+  Falar com atendente
+</a>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Clubinho da Aprendizagem
+</footer>
+
+</body>
+</html>
