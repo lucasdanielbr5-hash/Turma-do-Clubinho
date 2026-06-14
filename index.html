@@ -48,7 +48,7 @@ body{
   to{transform:translateX(140vw);}
 }
 
-/* TEXTO HERO */
+/* HERO TEXTO */
 .hero-text{
   width:50%;
   z-index:2;
@@ -104,7 +104,6 @@ body{
 
 .hero-logo img{
   width:200px;
-  position:relative;
   animation:none;
 }
 
@@ -173,23 +172,74 @@ body{
 .comentarios{
   display:flex;
   flex-direction:column;
-  gap:15px;
+  gap:12px;
 }
 
 .comentario{
-  background:#f7f9ff;
-  padding:15px 18px;
-  border-radius:12px;
-  border-left:4px solid #4d96ff;
+  background:#f1f6ff;
+  padding:12px 14px;
+  border-radius:14px;
+  border-left:4px solid #7aa7ff;
 }
 
 .comentario p{
+  margin:0;
   color:#2c3e50;
-  margin-bottom:5px;
+  line-height:1.4;
 }
 
 .comentario span{
-  font-size:0.9rem;
+  font-size:0.85rem;
+  color:#6c7a89;
+}
+
+/* ================= FINAL ================= */
+.final{
+  padding:120px 20px;
+  background:#fdfcf9;
+  display:flex;
+  justify-content:center;
+}
+
+.final-box{
+  max-width:1000px;
+  text-align:center;
+}
+
+.final-box h2{
+  font-size:2rem;
+  color:#2d6cdf;
+  margin-bottom:15px;
+}
+
+.final-box p{
+  max-width:750px;
+  margin:auto;
+  color:#5f6c7b;
+  line-height:1.6;
+}
+
+.final-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+}
+
+.final-item{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.final-item h3{
+  margin-bottom:10px;
+  color:#2c3e50;
+}
+
+.final-item p{
+  font-size:0.95rem;
   color:#6c7a89;
 }
 
@@ -314,6 +364,41 @@ footer{
           <span>— Juliana, mãe de aluno</span>
         </div>
 
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FINAL -->
+<section class="final">
+
+  <div class="final-box">
+
+    <h2>O Clubinho acompanha cada etapa do aprendizado 🌱</h2>
+
+    <p>
+      Acreditamos que cada criança tem seu próprio ritmo. Nosso trabalho é acolher,
+      orientar e fortalecer o desenvolvimento com carinho e técnica.
+    </p>
+
+    <div class="final-grid">
+
+      <div class="final-item">
+        <h3>👶 Individualidade</h3>
+        <p>Cada criança é atendida de forma única.</p>
+      </div>
+
+      <div class="final-item">
+        <h3>🧠 Desenvolvimento</h3>
+        <p>Foco em aprendizado cognitivo e emocional.</p>
+      </div>
+
+      <div class="final-item">
+        <h3>💙 Acompanhamento</h3>
+        <p>Família sempre envolvida no processo.</p>
       </div>
 
     </div>
