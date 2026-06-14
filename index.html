@@ -1,198 +1,105 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clubinho da Aprendizagem</title>
+<!-- ===== SERVIÇOS ===== -->
+<section style="padding:80px 20px; text-align:center; background:#fffaf0;">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <h2 style="color:#06d6a0; font-size:1.9rem; margin-bottom:10px;">
+    O que fazemos no Clubinho 🎈
+  </h2>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
-}
+  <p style="max-width:700px; margin:auto; color:#666; line-height:1.6;">
+    Atendimento psicopedagógico com carinho, leveza e atividades personalizadas para cada criança.
+  </p>
 
-body{
-  overflow-x:hidden;
-}
+  <div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:18px;
+    max-width:1100px;
+    margin:40px auto 0;
+  ">
 
-/* ===== HERO CÉU ===== */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 8%;
-  position:relative;
-  background:linear-gradient(to top, #87cefa, #bfe9ff);
-}
+    <!-- CARD 1 -->
+    <div style="
+      background:white;
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+      border:3px solid #ffd166;
+    ">
+      <h3 style="color:#ff6b9d; margin-bottom:10px;">📚 Aulas Particulares</h3>
+      <p style="color:#666; font-size:0.95rem;">
+        Apoio individualizado para leitura, escrita e matemática.
+      </p>
+    </div>
 
-/* ===== NUVENS ===== */
-.cloud{
-  position:absolute;
-  background:white;
-  border-radius:100px;
-  opacity:0.85;
-  animation:moveClouds linear infinite;
-}
+    <!-- CARD 2 -->
+    <div style="
+      background:white;
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+      border:3px solid #4a90e2;
+    ">
+      <h3 style="color:#4a90e2; margin-bottom:10px;">🧠 Avaliação Psicopedagógica</h3>
+      <p style="color:#666; font-size:0.95rem;">
+        Identificamos dificuldades de aprendizagem com cuidado e precisão.
+      </p>
+    </div>
 
-.cloud::before,
-.cloud::after{
-  content:"";
-  position:absolute;
-  background:white;
-  border-radius:50%;
-}
+    <!-- CARD 3 -->
+    <div style="
+      background:white;
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+      border:3px solid #06d6a0;
+    ">
+      <h3 style="color:#06d6a0; margin-bottom:10px;">🎯 Intervenção Psicopedagógica</h3>
+      <p style="color:#666; font-size:0.95rem;">
+        Estratégias lúdicas para desenvolvimento cognitivo e emocional.
+      </p>
+    </div>
 
-.cloud1{width:120px;height:60px;top:20%;left:-150px;animation-duration:35s;}
-.cloud1::before{width:60px;height:60px;top:-20px;left:15px;}
-.cloud1::after{width:70px;height:70px;top:-25px;left:50px;}
-
-.cloud2{width:160px;height:70px;top:55%;left:-200px;animation-duration:50s;}
-.cloud2::before{width:70px;height:70px;top:-25px;left:20px;}
-.cloud2::after{width:80px;height:80px;top:-30px;left:70px;}
-
-.cloud3{width:100px;height:50px;top:35%;left:-120px;animation-duration:40s;}
-.cloud3::before{width:50px;height:50px;top:-15px;left:10px;}
-.cloud3::after{width:60px;height:60px;top:-20px;left:40px;}
-
-@keyframes moveClouds{
-  from{transform:translateX(0);}
-  to{transform:translateX(140vw);}
-}
-
-/* ===== TEXTO ESQUERDA ===== */
-.hero-text{
-  width:50%;
-  z-index:2;
-  color:#1f3b57;
-}
-
-.hero-text h1{
-  font-size:2.6rem;
-  margin-bottom:15px;
-}
-
-.hero-text p{
-  font-size:1.1rem;
-  max-width:450px;
-  color:#2f4f6f;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 22px;
-  border-radius:30px;
-  background:#ff6b9d;
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 10px 20px rgba(255,107,157,0.3);
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
-
-/* ===== LOGO COM FUNDO ONDULADO ===== */
-.hero-logo{
-  width:40%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  z-index:2;
-}
-
-/* fundo branco orgânico */
-.hero-logo::before{
-  content:"";
-  position:absolute;
-  width:240px;
-  height:220px;
-  background:#ffffff;
-  border-radius:55% 45% 60% 40% / 60% 50% 50% 40%;
-  box-shadow:0 12px 25px rgba(0,0,0,0.10);
-  z-index:1;
-}
-
-/* camada suave */
-.hero-logo::after{
-  content:"";
-  position:absolute;
-  width:270px;
-  height:240px;
-  background:linear-gradient(145deg,#ffffff,#f3f9ff);
-  border-radius:50% 50% 60% 40% / 40% 60% 40% 60%;
-  opacity:0.9;
-  z-index:1;
-}
-
-/* LOGO FLUTUANDO */
-.hero-logo img{
-  width:190px;
-  max-width:90%;
-  position:relative;
-  z-index:3;
-
-  animation:floatLogo 4s ease-in-out infinite;
-}
-
-@keyframes floatLogo{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
-  100%{transform:translateY(0);}
-}
-
-/* RESPONSIVO */
-@media(max-width:768px){
-  .hero{
-    flex-direction:column;
-    text-align:center;
-    justify-content:center;
-    gap:30px;
-    padding:20px;
-  }
-
-  .hero-text{
-    width:100%;
-  }
-
-  .hero-logo{
-    width:100%;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<section class="hero">
-
-  <!-- NUVENS -->
-  <div class="cloud cloud1"></div>
-  <div class="cloud cloud2"></div>
-  <div class="cloud cloud3"></div>
-
-  <!-- TEXTO -->
-  <div class="hero-text">
-    <h1>Bem-vindo ao Clubinho da Aprendizagem 🌈</h1>
-    <p>Um espaço leve, divertido e acolhedor onde aprender é brincar e crescer com alegria.</p>
-
-    <a class="btn" href="#contato">Entrar no Clubinho</a>
   </div>
-
-  <!-- LOGO -->
-  <div class="hero-logo">
-    <img src="https://i.imgur.com/86LuJEt.png" alt="Logo">
-  </div>
-
 </section>
 
-</body>
-</html>
+<!-- ===== CONTATO ===== -->
+<section id="contato" style="
+  padding:80px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#4a90e2,#06d6a0);
+  color:white;
+  border-radius:40px 40px 0 0;
+">
+
+  <h2 style="font-size:2rem; margin-bottom:10px;">
+    Fale com o Clubinho 💬
+  </h2>
+
+  <p style="max-width:600px; margin:auto; opacity:0.9;">
+    Tire dúvidas, agende avaliações ou converse com nossa equipe.
+  </p>
+
+  <a href="https://wa.me/5500000000000" style="
+    display:inline-block;
+    margin-top:20px;
+    background:white;
+    color:#4a90e2;
+    padding:14px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+  ">
+    Falar no WhatsApp
+  </a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="
+  text-align:center;
+  padding:20px;
+  background:white;
+  color:#777;
+">
+  © 2026 Clubinho da Aprendizagem
+</footer>
