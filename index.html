@@ -3,160 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aulas Psicopedagógicas Infantis</title>
+  <title>Psicopedagogia Infantil | Apoio Escolar</title>
 
-  <!-- Fonte Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: #fef6ff;
-      color: #333;
-    }
-
-    header {
-      background: #ffcc00;
-      padding: 20px;
-      text-align: center;
-      color: #222;
-      font-weight: 700;
-    }
-
-    nav {
-      background: #ff6f61;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .hero {
-      background: #7bdff2;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-    }
-
-    .section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border: 3px solid #ffcc00;
-      border-radius: 15px;
-      padding: 20px;
-      width: 250px;
-    }
-
-    .card h3 {
-      color: #ff6f61;
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      background: #00c49a;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 10px;
-      display: inline-block;
-    }
-
-    footer {
-      background: #ffcc00;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-      font-weight: 600;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    🌈 Apoio Psicopedagógico Infantil
-  </header>
+<header class="header">
+  <div class="logo">🧠 Apoio Infantil</div>
 
-  <nav>
+  <nav class="nav">
+    <a href="#inicio">Início</a>
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
+    <a href="#metodo">Método</a>
     <a href="#contato">Contato</a>
   </nav>
+</header>
 
-  <section class="hero">
-    <h1>Aprender pode ser divertido!</h1>
-    <p>Aulas particulares com apoio psicopedagógico para crianças</p>
-  </section>
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1>Desenvolvimento Infantil com Amor e Ciência</h1>
+    <p>Apoio psicopedagógico e aulas particulares para crianças com dificuldades de aprendizagem.</p>
 
-  <section class="section" id="sobre">
-    <h2>Sobre</h2>
-    <p>Atendimento especializado para ajudar no desenvolvimento da aprendizagem infantil com carinho, paciência e métodos lúdicos.</p>
-  </section>
+    <a class="btn" href="#contato">Agendar Atendimento</a>
+  </div>
+</section>
 
-  <section class="section" id="servicos">
-    <h2>Serviços</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Reforço Escolar</h3>
-        <p>Ajuda em português, matemática e tarefas escolares.</p>
-      </div>
+<section class="section" id="sobre">
+  <h2>Sobre o Atendimento</h2>
+  <p>
+    Atendimento psicopedagógico voltado ao desenvolvimento cognitivo, emocional e escolar.
+    Trabalhamos com metodologias lúdicas, respeitando o tempo de cada criança.
+  </p>
+</section>
 
-      <div class="card">
-        <h3>Dificuldades de Aprendizagem</h3>
-        <p>Suporte psicopedagógico individualizado.</p>
-      </div>
+<section class="section dark" id="servicos">
+  <h2>Serviços</h2>
 
-      <div class="card">
-        <h3>Jogos Educativos</h3>
-        <p>Aprendizado com atividades lúdicas e divertidas.</p>
-      </div>
+  <div class="grid">
+    <div class="card">
+      <h3>📘 Reforço Escolar</h3>
+      <p>Auxílio em leitura, escrita e matemática.</p>
     </div>
-  </section>
 
-  <section class="section" id="contato">
-    <h2>Contato</h2>
-    <p>Fale comigo pelo WhatsApp para agendar aulas!</p>
-    <a class="btn" href="https://wa.me/5500000000000" target="_blank">
-      Chamar no WhatsApp
-    </a>
-  </section>
+    <div class="card">
+      <h3>🧩 Psicopedagogia</h3>
+      <p>Intervenção para dificuldades de aprendizagem.</p>
+    </div>
 
-  <footer>
-    © 2026 - Apoio Psicopedagógico Infantil
-  </footer>
+    <div class="card">
+      <h3>🎲 Jogos Educativos</h3>
+      <p>Aprender brincando com atividades estruturadas.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Atenção e Foco</h3>
+      <p>Estimulação cognitiva e concentração.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="metodo">
+  <h2>Metodologia</h2>
+
+  <div class="steps">
+    <div class="step">1. Avaliação individual</div>
+    <div class="step">2. Plano personalizado</div>
+    <div class="step">3. Intervenções lúdicas</div>
+    <div class="step">4. Evolução contínua</div>
+  </div>
+</section>
+
+<section class="section dark">
+  <h2>Depoimentos</h2>
+
+  <div class="grid">
+    <div class="card">
+      <p>"Meu filho melhorou muito na escola!"</p>
+      <strong>- Ana Paula</strong>
+    </div>
+
+    <div class="card">
+      <p>"Atendimento incrível e muito paciente."</p>
+      <strong>- Marcos</strong>
+    </div>
+
+    <div class="card">
+      <p>"Método lúdico fez toda diferença."</p>
+      <strong>- Juliana</strong>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contato">
+  <h2>Agendamento</h2>
+
+  <p>Entre em contato para avaliação ou aulas particulares.</p>
+
+  <a class="btn" href="https://wa.me/5500000000000" target="_blank">
+    Falar no WhatsApp
+  </a>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Apoio Psicopedagógico Infantil</p>
+</footer>
 
 </body>
 </html>
