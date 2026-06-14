@@ -83,7 +83,7 @@ body{
   transform:scale(1.05);
 }
 
-/* LOGO ESTÁTICA */
+/* ================= LOGO CORRIGIDA ================= */
 .hero-logo{
   width:40%;
   display:flex;
@@ -92,18 +92,33 @@ body{
   position:relative;
 }
 
+/* fundo integrado (NÃO mais círculo solto) */
 .hero-logo::before{
   content:"";
   position:absolute;
-  width:250px;
-  height:230px;
-  background:#fff;
-  border-radius:60% 40% 55% 45%;
-  box-shadow:0 15px 30px rgba(0,0,0,0.10);
+  width:340px;
+  height:340px;
+  background:radial-gradient(circle, #ffffff 55%, #e8f4ff 100%);
+  border-radius:50%;
+  box-shadow:0 20px 40px rgba(0,0,0,0.10);
+  z-index:1;
+}
+
+/* camada suave de nuvem/forma */
+.hero-logo::after{
+  content:"";
+  position:absolute;
+  width:380px;
+  height:380px;
+  background:rgba(255,255,255,0.25);
+  border-radius:55% 45% 60% 40%;
+  z-index:0;
 }
 
 .hero-logo img{
   width:200px;
+  position:relative;
+  z-index:2;
   animation:none;
 }
 
