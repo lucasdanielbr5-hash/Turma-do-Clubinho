@@ -147,7 +147,7 @@ body{
   justify-content:center;
 }
 
-/* ================= “O QUE ELES DIZEM?” ================= */
+/* ================= DEPOIMENTOS ================= */
 .testemunhos{
   padding:120px 20px;
   background:#eef3ff;
@@ -161,36 +161,56 @@ body{
   background:#ffffff;
   border-radius:25px;
   padding:50px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
   box-shadow:0 20px 45px rgba(0,0,0,0.08);
 }
 
 .textos h2{
   font-size:2rem;
   color:#2c3e50;
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
-.textos p{
-  color:#5f6c7b;
-  max-width:450px;
-  line-height:1.6;
+.comentarios{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
 }
 
-.botao-area a{
+.comentario{
+  background:#f7f9ff;
+  padding:15px 18px;
+  border-radius:12px;
+  border-left:4px solid #4d96ff;
+}
+
+.comentario p{
+  color:#2c3e50;
+  margin-bottom:5px;
+}
+
+.comentario span{
+  font-size:0.9rem;
+  color:#6c7a89;
+}
+
+/* ================= BOTÃO FLUTUANTE ================= */
+.floating-btn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
   background:#1877f2;
   color:white;
-  padding:14px 20px;
-  border-radius:8px;
+  padding:14px 18px;
+  border-radius:50px;
   text-decoration:none;
   font-weight:600;
-  transition:0.2s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  z-index:999;
+  transition:0.3s;
 }
 
-.botao-area a:hover{
+.floating-btn:hover{
+  transform:scale(1.05);
   background:#145dbf;
 }
 
@@ -218,17 +238,13 @@ footer{
   .hero-logo{
     width:100%;
   }
-
-  .testemunhos-box{
-    flex-direction:column;
-    text-align:center;
-  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
 
   <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
@@ -248,6 +264,7 @@ footer{
 
 </section>
 
+<!-- SERVIÇOS -->
 <section class="servicos">
   <h2>O que fazemos no Clubinho</h2>
   <p>Atendimento psicopedagógico com atividades lúdicas e personalizadas.</p>
@@ -272,23 +289,45 @@ footer{
   </div>
 </section>
 
+<!-- DEPOIMENTOS -->
 <section class="testemunhos" id="contato">
 
   <div class="testemunhos-box">
 
     <div class="textos">
       <h2>O que eles dizem?</h2>
-      <p>Famílias que confiam no Clubinho compartilham suas experiências com nosso atendimento.</p>
-    </div>
 
-    <div class="botao-area">
-      <a href="https://wa.me/5500000000000">Falar com atendente</a>
+      <div class="comentarios">
+
+        <div class="comentario">
+          <p>“Meu filho evoluiu muito na leitura depois do Clubinho.”</p>
+          <span>— Ana, mãe de aluno</span>
+        </div>
+
+        <div class="comentario">
+          <p>“Atendimento humano e muito cuidadoso.”</p>
+          <span>— Carlos, pai de aluno</span>
+        </div>
+
+        <div class="comentario">
+          <p>“As atividades ajudam muito na concentração.”</p>
+          <span>— Juliana, mãe de aluno</span>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
 
 </section>
 
+<!-- BOTÃO FIXO -->
+<a class="floating-btn" href="https://wa.me/5500000000000">
+  Falar com atendente
+</a>
+
+<!-- FOOTER -->
 <footer>
   © 2026 Clubinho da Aprendizagem
 </footer>
