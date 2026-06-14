@@ -20,11 +20,10 @@ body{
   background:#fffaf0;
 }
 
-/* ================= POPUP ================= */
+/* POPUP */
 .topbar{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
   background:#ff6b9d;
   color:white;
@@ -46,7 +45,7 @@ body{
   cursor:pointer;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero{
   height:100vh;
   display:flex;
@@ -64,7 +63,6 @@ body{
   width:140px;
   opacity:0.85;
   animation:moveClouds linear infinite;
-  pointer-events:none;
 }
 
 .cloud1{top:12%; left:-180px; animation-duration:55s;}
@@ -76,7 +74,7 @@ body{
   to{transform:translateX(140vw);}
 }
 
-/* TEXTO HERO */
+/* TEXTO */
 .hero-text{
   width:50%;
   z-index:2;
@@ -91,8 +89,8 @@ body{
 .hero-text p{
   font-size:1.05rem;
   line-height:1.6;
-  color:#2f4f6f;
   max-width:500px;
+  color:#2f4f6f;
 }
 
 .btn{
@@ -106,7 +104,7 @@ body{
   font-weight:600;
 }
 
-/* ================= LOGO GRANDE COM DEGRADÊ ================= */
+/* LOGO */
 .hero-logo{
   width:40%;
   display:flex;
@@ -126,23 +124,13 @@ body{
   z-index:1;
 }
 
-.hero-logo::after{
-  content:"";
-  position:absolute;
-  width:320px;
-  height:320px;
-  background:rgba(255,255,255,0.25);
-  border-radius:60% 40% 55% 45%;
-  z-index:0;
-}
-
 .hero-logo img{
   width:170px;
-  position:relative;
   z-index:2;
+  position:relative;
 }
 
-/* ================= SERVIÇOS ================= */
+/* SERVIÇOS */
 .servicos{
   padding:120px 20px;
   text-align:center;
@@ -152,7 +140,6 @@ body{
 .servicos h2{
   font-size:2.2rem;
   color:#2d6cdf;
-  margin-bottom:10px;
 }
 
 .servicos p{
@@ -188,67 +175,44 @@ body{
   line-height:1.6;
 }
 
-/* ================= AVALIAÇÕES ================= */
-.testemunhos{
+/* COMO FUNCIONA (SUBSTITUIU AVALIAÇÕES) */
+.processo{
   padding:120px 20px;
   background:#eef3ff;
-  display:flex;
-  justify-content:center;
-}
-
-.testemunhos-box{
-  max-width:900px;
-  background:#fff;
-  padding:50px;
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.08);
-}
-
-.testemunhos-box h2{
-  margin-bottom:20px;
-  color:#2c3e50;
-}
-
-.comentarios{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-.comentario{
-  background:#f1f6ff;
-  padding:15px;
-  border-radius:12px;
-  border-left:4px solid #7aa7ff;
-}
-
-.comentario p{
-  margin-bottom:5px;
-  color:#2c3e50;
-  line-height:1.5;
-}
-
-.comentario span{
-  font-size:0.85rem;
-  color:#6c7a89;
-}
-
-/* ================= FINAL ================= */
-.final{
-  padding:120px 20px;
-  background:#f7f9fc;
-  display:flex;
-  justify-content:center;
-}
-
-.final-box{
-  max-width:1000px;
   text-align:center;
 }
 
-.final-box h2{
+.processo h2{
   font-size:2rem;
   color:#2c3e50;
+}
+
+.steps{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+  max-width:1100px;
+  margin-inline:auto;
+}
+
+.step{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.step h3{
+  color:#2d6cdf;
+  margin-bottom:10px;
+}
+
+/* FINAL */
+.final{
+  padding:120px 20px;
+  background:#f7f9fc;
+  text-align:center;
 }
 
 .final-grid{
@@ -256,6 +220,8 @@ body{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
   gap:20px;
+  max-width:1000px;
+  margin-inline:auto;
 }
 
 .final-item{
@@ -265,7 +231,7 @@ body{
   box-shadow:0 8px 20px rgba(0,0,0,0.06);
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer{
   background:#1f3b57;
   color:white;
@@ -318,17 +284,13 @@ footer{
 <!-- HERO -->
 <section class="hero">
 
-  <!-- NUVENS -->
   <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
   <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
   <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
 
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
-    <p>
-      Atendimento psicopedagógico especializado em dificuldades de aprendizagem,
-      desenvolvimento cognitivo e acompanhamento escolar individualizado.
-    </p>
+    <p>Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
 
     <a class="btn" href="#contato">Falar com atendimento</a>
   </div>
@@ -345,54 +307,50 @@ footer{
   <h2>Serviços oferecidos</h2>
 
   <p>
-    O Clubinho da Aprendizagem realiza intervenções psicopedagógicas completas,
-    respeitando o ritmo individual da criança e suas necessidades específicas de aprendizagem.
+    Atendimento especializado para dificuldades de aprendizagem, com intervenções estruturadas
+    e acompanhamento individualizado.
   </p>
 
   <div class="grid">
 
     <div class="card">
       <h3>Aulas particulares</h3>
-      <p>Acompanhamento individual em leitura, escrita e matemática com estratégias adaptadas ao perfil de aprendizagem da criança, promovendo autonomia e segurança escolar.</p>
+      <p>Apoio individual em leitura, escrita e matemática com estratégias adaptadas ao ritmo da criança.</p>
     </div>
 
     <div class="card">
       <h3>Avaliação psicopedagógica</h3>
-      <p>Processo detalhado de investigação das dificuldades de aprendizagem, considerando aspectos cognitivos, emocionais e pedagógicos para definição de um plano individualizado.</p>
+      <p>Investigação das dificuldades de aprendizagem e construção de plano de intervenção personalizado.</p>
     </div>
 
     <div class="card">
       <h3>Intervenção psicopedagógica</h3>
-      <p>Atividades estruturadas e lúdicas para desenvolvimento de atenção, memória, raciocínio lógico e desempenho escolar com acompanhamento contínuo.</p>
+      <p>Desenvolvimento de atenção, memória, raciocínio e desempenho escolar com atividades estruturadas.</p>
     </div>
 
   </div>
 </section>
 
-<!-- AVALIAÇÕES -->
-<section class="testemunhos">
+<!-- PROCESSO (SUBSTITUI AVALIAÇÕES) -->
+<section class="processo">
 
-  <div class="testemunhos-box">
+  <h2>Como funciona o atendimento</h2>
 
-    <h2>O que dizem as famílias</h2>
+  <div class="steps">
 
-    <div class="comentarios">
+    <div class="step">
+      <h3>1. Primeiro contato</h3>
+      <p>Entendemos a demanda e as principais dificuldades da criança.</p>
+    </div>
 
-      <div class="comentario">
-        <p>“Evolução muito clara na leitura e na compreensão após o acompanhamento.”</p>
-        <span>— Ana, mãe de aluno</span>
-      </div>
+    <div class="step">
+      <h3>2. Avaliação</h3>
+      <p>Realizamos análise completa das habilidades cognitivas e escolares.</p>
+    </div>
 
-      <div class="comentario">
-        <p>“Atendimento humano, técnico e extremamente organizado.”</p>
-        <span>— Carlos, pai de aluno</span>
-      </div>
-
-      <div class="comentario">
-        <p>“Melhora perceptível na concentração e no desempenho escolar em poucas semanas.”</p>
-        <span>— Juliana, mãe de aluno</span>
-      </div>
-
+    <div class="step">
+      <h3>3. Intervenção</h3>
+      <p>Iniciamos o acompanhamento individualizado com plano personalizado.</p>
     </div>
 
   </div>
@@ -402,17 +360,13 @@ footer{
 <!-- FINAL -->
 <section class="final">
 
-  <div class="final-box">
+  <h2>Acompanhamento contínuo do desenvolvimento</h2>
 
-    <h2>Acompanhamento contínuo do desenvolvimento</h2>
+  <div class="final-grid">
 
-    <div class="final-grid">
-
-      <div class="final-item">Plano individual de aprendizagem</div>
-      <div class="final-item">Processo contínuo de evolução</div>
-      <div class="final-item">Participação da família</div>
-
-    </div>
+    <div class="final-item">Plano individual de aprendizagem</div>
+    <div class="final-item">Processo contínuo de evolução</div>
+    <div class="final-item">Acompanhamento com a família</div>
 
   </div>
 
