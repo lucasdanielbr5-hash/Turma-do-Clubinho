@@ -49,16 +49,8 @@ body{
 }
 
 .cloud1{width:120px;height:60px;top:20%;left:-150px;animation-duration:35s;}
-.cloud1::before{width:60px;height:60px;top:-20px;left:15px;}
-.cloud1::after{width:70px;height:70px;top:-25px;left:50px;}
-
 .cloud2{width:160px;height:70px;top:55%;left:-200px;animation-duration:50s;}
-.cloud2::before{width:70px;height:70px;top:-25px;left:20px;}
-.cloud2::after{width:80px;height:80px;top:-30px;left:70px;}
-
 .cloud3{width:100px;height:50px;top:35%;left:-120px;animation-duration:40s;}
-.cloud3::before{width:50px;height:50px;top:-15px;left:10px;}
-.cloud3::after{width:60px;height:60px;top:-20px;left:40px;}
 
 @keyframes moveClouds{
   from{transform:translateX(0);}
@@ -101,7 +93,7 @@ body{
   transform:scale(1.05);
 }
 
-/* ================= LOGO COM FUNDO ONDULADO ================= */
+/* ================= LOGO ================= */
 .hero-logo{
   width:40%;
   display:flex;
@@ -111,7 +103,7 @@ body{
   z-index:2;
 }
 
-/* base branca orgânica */
+/* fundo orgânico */
 .hero-logo::before{
   content:"";
   position:absolute;
@@ -123,7 +115,6 @@ body{
   z-index:1;
 }
 
-/* camada suave */
 .hero-logo::after{
   content:"";
   position:absolute;
@@ -135,7 +126,6 @@ body{
   z-index:1;
 }
 
-/* LOGO FLUTUANDO */
 .hero-logo img{
   width:190px;
   max-width:90%;
@@ -150,71 +140,93 @@ body{
   100%{transform:translateY(0);}
 }
 
-/* ================= SERVIÇOS ================= */
+/* ================= SERVIÇOS (MELHORADO) ================= */
 .servicos{
-  padding:80px 20px;
+  padding:100px 20px;
   text-align:center;
-  background:#fffaf0;
+  background:#fdfcf9;
 }
 
 .servicos h2{
-  color:#06d6a0;
-  font-size:1.9rem;
+  color:#2d6cdf;
+  font-size:2rem;
   margin-bottom:10px;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-  gap:18px;
-  max-width:1100px;
-  margin:40px auto 0;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:25px;
+  max-width:1200px;
+  margin:50px auto 0;
 }
 
 .card{
-  background:white;
-  border-radius:20px;
-  padding:20px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  background:#ffffff;
+  border-radius:24px;
+  padding:30px 25px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  min-height:180px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
 }
 
 .card h3{
-  margin-bottom:10px;
+  margin-bottom:12px;
+  font-size:1.2rem;
 }
 
 .card p{
-  color:#666;
-  font-size:0.95rem;
+  color:#5f6c7b;
+  font-size:1rem;
+  line-height:1.5;
 }
 
-/* cores diferentes */
-.card:nth-child(1){border:3px solid #ffd166;}
-.card:nth-child(2){border:3px solid #4a90e2;}
-.card:nth-child(3){border:3px solid #06d6a0;}
+.card:nth-child(1){border-left:6px solid #ffb703;}
+.card:nth-child(2){border-left:6px solid #4d96ff;}
+.card:nth-child(3){border-left:6px solid #06d6a0;}
 
-/* ================= CONTATO ================= */
+/* ================= CONTATO (SEM GRADIENTE FEIO) ================= */
 .contato{
-  padding:80px 20px;
+  padding:100px 20px;
   text-align:center;
-  background:linear-gradient(135deg,#4a90e2,#06d6a0);
+  background:#2d6cdf;
   color:white;
-  border-radius:40px 40px 0 0;
+}
+
+.contato h2{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.contato p{
+  opacity:0.9;
+  max-width:600px;
+  margin:auto;
 }
 
 .contato a{
   display:inline-block;
-  margin-top:20px;
+  margin-top:25px;
   background:white;
-  color:#4a90e2;
-  padding:14px 24px;
-  border-radius:30px;
+  color:#2d6cdf;
+  padding:16px 28px;
+  border-radius:40px;
   text-decoration:none;
-  font-weight:600;
+  font-weight:700;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.contato a:hover{
+  transform:scale(1.05);
 }
 
 /* ================= FOOTER ================= */
@@ -248,12 +260,7 @@ footer{
 
 <body>
 
-<!-- ===== HERO ===== -->
 <section class="hero">
-
-  <div class="cloud cloud1"></div>
-  <div class="cloud cloud2"></div>
-  <div class="cloud cloud3"></div>
 
   <div class="hero-text">
     <h1>Bem-vindo ao Clubinho da Aprendizagem 🌈</h1>
@@ -268,7 +275,6 @@ footer{
 
 </section>
 
-<!-- ===== SERVIÇOS ===== -->
 <section class="servicos">
   <h2>O que fazemos no Clubinho 🎈</h2>
   <p style="color:#666; max-width:700px; margin:auto;">
@@ -279,31 +285,29 @@ footer{
 
     <div class="card">
       <h3>📚 Aulas Particulares</h3>
-      <p>Leitura, escrita e matemática com apoio individual.</p>
+      <p>Apoio individual em leitura, escrita e matemática.</p>
     </div>
 
     <div class="card">
-      <h3>🧠 Avaliação</h3>
-      <p>Identificação de dificuldades de aprendizagem.</p>
+      <h3>🧠 Avaliação Psicopedagógica</h3>
+      <p>Identificação de dificuldades de aprendizagem com cuidado.</p>
     </div>
 
     <div class="card">
-      <h3>🎯 Intervenção</h3>
-      <p>Atividades para desenvolvimento cognitivo e emocional.</p>
+      <h3>🎯 Intervenção Psicopedagógica</h3>
+      <p>Estratégias lúdicas para desenvolvimento cognitivo e emocional.</p>
     </div>
 
   </div>
 </section>
 
-<!-- ===== CONTATO ===== -->
 <section class="contato" id="contato">
   <h2>Fale com o Clubinho 💬</h2>
-  <p>Tire dúvidas ou agende uma avaliação.</p>
+  <p>Tire dúvidas ou agende uma avaliação com nossa equipe.</p>
 
   <a href="https://wa.me/5500000000000">Falar no WhatsApp</a>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   © 2026 Clubinho da Aprendizagem
 </footer>
