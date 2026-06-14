@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Psicopedagogia</title>
+<title>Psicopedagogia Infantil</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --primary:#2d6a8a;
-  --secondary:#7bb7a6;
-  --bg:#f4f7fb;
-  --card:#ffffff;
-  --text:#1e2a33;
-  --soft:#6b7c8a;
+  --blue:#4a90e2;
+  --yellow:#ffd166;
+  --pink:#ff6b6b;
+  --green:#06d6a0;
+  --bg:#fffaf3;
+  --text:#2b2b2b;
 }
 
 *{
@@ -25,18 +25,8 @@
 }
 
 body{
-  background:linear-gradient(180deg,#f4f7fb,#eef3f8);
+  background:var(--bg);
   color:var(--text);
-}
-
-/* ANIMAÇÃO */
-section, .card, .split, .hero{
-  animation:fadeUp 0.8s ease both;
-}
-
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(18px);}
-  to{opacity:1; transform:translateY(0);}
 }
 
 /* HEADER */
@@ -44,19 +34,18 @@ header{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(255,255,255,0.85);
-  backdrop-filter: blur(10px);
+  background:white;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 25px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+  padding:14px 20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
   z-index:1000;
 }
 
 nav{
   display:flex;
-  gap:18px;
+  gap:15px;
 }
 
 nav a{
@@ -67,7 +56,7 @@ nav a{
 }
 
 nav a:hover{
-  color:var(--primary);
+  color:var(--pink);
 }
 
 /* HERO */
@@ -75,41 +64,61 @@ nav a:hover{
   margin-top:80px;
   padding:90px 20px;
   text-align:center;
-  background:radial-gradient(circle at top, #ffffff, #eef5fa);
+  background:linear-gradient(135deg,#fff,#fff7e6);
+  position:relative;
+  overflow:hidden;
+}
+
+/* bolhas decorativas */
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  opacity:0.2;
+}
+
+.hero::before{
+  background:var(--yellow);
+  top:-50px;
+  left:-50px;
+}
+
+.hero::after{
+  background:var(--blue);
+  bottom:-60px;
+  right:-60px;
 }
 
 .hero h1{
-  color:var(--primary);
   font-size:2.2rem;
+  color:var(--blue);
 }
 
 .hero p{
-  max-width:650px;
+  max-width:600px;
   margin:15px auto;
-  color:var(--soft);
-}
-
-.hero img.logo{
-  width:240px;
-  margin-bottom:20px;
+  color:#555;
 }
 
 /* BOTÃO */
 .btn{
   display:inline-block;
   margin-top:20px;
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  background:linear-gradient(135deg,var(--pink),var(--yellow));
   color:white;
   padding:12px 22px;
-  border-radius:14px;
+  border-radius:30px;
   text-decoration:none;
+  font-weight:500;
+  box-shadow:0 8px 20px rgba(255,107,107,0.3);
   transition:0.3s;
-  box-shadow:0 8px 18px rgba(45,106,138,0.2);
 }
 
 .btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 25px rgba(45,106,138,0.25);
+  transform:scale(1.05);
 }
 
 /* SEÇÕES */
@@ -120,94 +129,91 @@ section{
 
 .title{
   font-size:1.8rem;
-  color:var(--primary);
   margin-bottom:10px;
+  color:var(--green);
 }
 
 .subtitle{
-  max-width:750px;
-  margin:0 auto 30px auto;
-  color:var(--soft);
+  max-width:700px;
+  margin:0 auto 30px;
+  color:#666;
   line-height:1.6;
 }
 
 /* SPLIT */
 .split{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-  align-items:center;
-  gap:30px;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:25px;
   max-width:1100px;
-  margin:0 auto;
+  margin:auto;
+  align-items:center;
   text-align:left;
 }
 
 .split img{
   width:100%;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.split img:hover{
-  transform:scale(1.02);
-}
-
-/* GRID */
+/* CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
   gap:20px;
   max-width:1100px;
-  margin:0 auto;
+  margin:auto;
 }
 
 .card{
-  background:var(--card);
-  border-radius:18px;
+  background:white;
+  border-radius:20px;
   overflow:hidden;
-  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
   transition:0.3s;
+  border:3px solid transparent;
 }
 
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 28px rgba(0,0,0,0.1);
+  transform:translateY(-8px);
+  border:3px solid var(--yellow);
 }
 
 .card img{
   width:100%;
-  height:170px;
+  height:160px;
   object-fit:cover;
 }
 
 .card .content{
-  padding:16px;
+  padding:15px;
 }
 
 .card h3{
-  color:var(--primary);
-  margin-bottom:8px;
+  color:var(--pink);
+  margin-bottom:5px;
 }
 
 /* CTA */
 .cta{
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  background:linear-gradient(135deg,var(--green),var(--blue));
   color:white;
   padding:80px 20px;
+  border-radius:40px 40px 0 0;
 }
 
 .cta .btn{
   background:white;
-  color:var(--primary);
+  color:var(--blue);
 }
 
 /* FOOTER */
 footer{
-  padding:25px;
+  padding:20px;
   text-align:center;
   background:white;
-  color:var(--soft);
+  color:#777;
 }
 
 /* MOBILE */
@@ -220,100 +226,93 @@ footer{
 <body>
 
 <header>
-  <div><strong>Psicopedagogia</strong></div>
+  <div><strong>Psicopedagogia Infantil</strong></div>
   <nav>
     <a href="#sobre">Sobre</a>
-    <a href="#atendimento">Atendimento</a>
     <a href="#servicos">Serviços</a>
+    <a href="#como">Como funciona</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <img class="logo" src="https://i.imgur.com/86LuJEt.png" alt="Logo">
-
-  <h1>Apoio Psicopedagógico com Cuidado e Humanização</h1>
-  <p>Atendimento especializado para crianças, adolescentes e famílias, focado no desenvolvimento emocional e cognitivo.</p>
-
-  <a class="btn" href="#contato">Agendar Consulta</a>
+  <h1>Aprender pode ser leve e divertido 🌈</h1>
+  <p>Apoio psicopedagógico com acolhimento, brincadeira e desenvolvimento emocional.</p>
+  <a class="btn" href="#contato">Agendar atendimento</a>
 </section>
 
 <!-- SOBRE -->
 <section id="sobre">
-  <h2 class="title">Sobre o Atendimento</h2>
+  <h2 class="title">Um espaço de cuidado</h2>
+  <p class="subtitle">
+    Aqui a criança aprende no seu tempo, com respeito, ludicidade e estímulos positivos para desenvolver confiança e autonomia.
+  </p>
 
   <div class="split">
-    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Atendimento">
-
-    <div>
-      <p class="subtitle">
-        O trabalho psicopedagógico auxilia no processo de aprendizagem, identificando dificuldades,
-        desenvolvendo habilidades e promovendo autonomia com acolhimento e respeito.
-      </p>
-    </div>
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+    <p class="subtitle">
+      O atendimento psicopedagógico ajuda no desenvolvimento da aprendizagem, atenção, leitura, escrita e habilidades emocionais.
+    </p>
   </div>
 </section>
 
 <!-- SERVIÇOS -->
 <section id="servicos">
-  <h2 class="title">Serviços</h2>
+  <h2 class="title">O que trabalhamos</h2>
 
   <div class="grid">
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
       <div class="content">
-        <h3>Avaliação Psicopedagógica</h3>
-        <p>Identificação de dificuldades de aprendizagem.</p>
+        <h3>Aprender brincando</h3>
+        <p>Atividades lúdicas e educativas.</p>
       </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1559757175-7cb057fba93c">
       <div class="content">
-        <h3>Intervenção</h3>
-        <p>Atividades personalizadas de desenvolvimento.</p>
+        <h3>Atenção e foco</h3>
+        <p>Estratégias para concentração.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
       <div class="content">
-        <h3>Acompanhamento Familiar</h3>
-        <p>Orientação para pais e responsáveis.</p>
+        <h3>Aprendizagem leve</h3>
+        <p>Leitura e escrita com confiança.</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ESTRUTURA / ATENDIMENTO -->
-<section id="atendimento">
+<!-- COMO FUNCIONA -->
+<section id="como">
   <h2 class="title">Como funciona</h2>
 
   <div class="split">
-    <div>
-      <p class="subtitle">
-        O atendimento é individualizado, respeitando o ritmo de cada paciente, com foco em estratégias práticas
-        para melhorar o aprendizado e a autoestima.
-      </p>
-    </div>
+    <p class="subtitle">
+      O atendimento é individual, respeitoso e adaptado à criança, com foco em autoestima, aprendizado e desenvolvimento emocional.
+    </p>
 
-    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt="Consulta">
+    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754">
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta" id="contato">
-  <h2>Agende seu atendimento</h2>
-  <p>Entre em contato e inicie o acompanhamento psicopedagógico.</p>
+  <h2>Vamos ajudar seu pequeno 🌟</h2>
+  <p>Entre em contato e agende uma avaliação.</p>
 
   <a class="btn" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
 </section>
 
 <footer>
-  © 2026 Psicopedagogia — Todos os direitos reservados
+  © 2026 Psicopedagogia Infantil
 </footer>
 
 </body>
