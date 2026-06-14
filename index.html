@@ -99,7 +99,7 @@ body{
   transform:scale(1.05);
 }
 
-/* ===== LOGO COM FUNDO ONDULADO AJUSTADO ===== */
+/* ===== LOGO COM FUNDO ONDULADO ===== */
 .hero-logo{
   width:40%;
   display:flex;
@@ -109,7 +109,7 @@ body{
   z-index:2;
 }
 
-/* fundo menor e equilibrado */
+/* fundo branco orgânico */
 .hero-logo::before{
   content:"";
   position:absolute;
@@ -121,7 +121,7 @@ body{
   z-index:1;
 }
 
-/* camada suave interna */
+/* camada suave */
 .hero-logo::after{
   content:"";
   position:absolute;
@@ -133,12 +133,20 @@ body{
   z-index:1;
 }
 
-/* LOGO LIMPA */
+/* LOGO FLUTUANDO */
 .hero-logo img{
   width:190px;
   max-width:90%;
   position:relative;
   z-index:3;
+
+  animation:floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+  100%{transform:translateY(0);}
 }
 
 /* RESPONSIVO */
