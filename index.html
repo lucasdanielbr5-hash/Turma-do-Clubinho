@@ -31,26 +31,17 @@ body{
   background:linear-gradient(to top, #87cefa, #bfe9ff);
 }
 
-/* ================= NUVENS (VOLTOU) ================= */
+/* ================= NUVENS REAIS ================= */
 .cloud{
   position:absolute;
-  background:white;
-  border-radius:100px;
-  opacity:0.85;
+  width:140px;
+  opacity:0.9;
   animation:moveClouds linear infinite;
 }
 
-.cloud::before,
-.cloud::after{
-  content:"";
-  position:absolute;
-  background:white;
-  border-radius:50%;
-}
-
-.cloud1{width:120px;height:60px;top:18%;left:-150px;animation-duration:40s;}
-.cloud2{width:180px;height:75px;top:55%;left:-220px;animation-duration:55s;}
-.cloud3{width:110px;height:55px;top:35%;left:-120px;animation-duration:45s;}
+.cloud1{top:15%; left:-160px; animation-duration:45s;}
+.cloud2{top:40%; left:-220px; animation-duration:60s;}
+.cloud3{top:65%; left:-180px; animation-duration:50s;}
 
 @keyframes moveClouds{
   from{transform:translateX(0);}
@@ -65,20 +56,20 @@ body{
 }
 
 .hero-text h1{
-  font-size:2.8rem;
-  margin-bottom:18px;
+  font-size:2.7rem;
+  margin-bottom:15px;
 }
 
 .hero-text p{
-  font-size:1.15rem;
-  max-width:480px;
-  color:#2f4f6f;
+  font-size:1.1rem;
+  max-width:460px;
   line-height:1.6;
+  color:#2f4f6f;
 }
 
 .btn{
   display:inline-block;
-  margin-top:22px;
+  margin-top:20px;
   padding:14px 26px;
   border-radius:30px;
   background:#ff6b9d;
@@ -100,7 +91,6 @@ body{
   justify-content:center;
   align-items:center;
   position:relative;
-  z-index:2;
 }
 
 .hero-logo::before{
@@ -108,39 +98,27 @@ body{
   position:absolute;
   width:250px;
   height:230px;
-  background:#ffffff;
-  border-radius:55% 45% 60% 40% / 60% 50% 50% 40%;
-  box-shadow:0 12px 25px rgba(0,0,0,0.10);
-  z-index:1;
-}
-
-.hero-logo::after{
-  content:"";
-  position:absolute;
-  width:280px;
-  height:250px;
-  background:linear-gradient(145deg,#ffffff,#f3f9ff);
-  border-radius:50% 50% 60% 40% / 40% 60% 40% 60%;
-  opacity:0.9;
-  z-index:1;
+  background:#fff;
+  border-radius:60% 40% 55% 45%;
+  box-shadow:0 15px 30px rgba(0,0,0,0.10);
 }
 
 .hero-logo img{
   width:200px;
-  z-index:3;
   position:relative;
-  animation:floatLogo 4s ease-in-out infinite;
+  animation:float 4s ease-in-out infinite;
+  z-index:2;
 }
 
-@keyframes floatLogo{
+@keyframes float{
   0%{transform:translateY(0);}
   50%{transform:translateY(-12px);}
   100%{transform:translateY(0);}
 }
 
-/* ================= SERVIÇOS (MAIOR E MAIS RESPIRADO) ================= */
+/* ================= SERVIÇOS ================= */
 .servicos{
-  padding:120px 20px;
+  padding:110px 20px;
   text-align:center;
   background:#fdfcf9;
 }
@@ -148,14 +126,13 @@ body{
 .servicos h2{
   font-size:2.2rem;
   color:#2d6cdf;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 .servicos p{
   max-width:750px;
   margin:auto;
   color:#666;
-  font-size:1.1rem;
   line-height:1.6;
 }
 
@@ -169,89 +146,78 @@ body{
 
 .card{
   background:#fff;
-  border-radius:26px;
+  border-radius:25px;
   padding:40px 30px;
   box-shadow:0 15px 35px rgba(0,0,0,0.08);
   min-height:220px;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  transition:0.3s;
 }
 
-.card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 20px 45px rgba(0,0,0,0.12);
-}
-
-.card h3{
-  font-size:1.3rem;
-  margin-bottom:12px;
-}
-
-.card p{
-  color:#5f6c7b;
-  font-size:1.05rem;
-  line-height:1.6;
-}
-
-/* ================= CONTATO (GRANDE E FORTE) ================= */
+/* ================= CONTATO NOVO (MELHORADO) ================= */
 .contato{
-  padding:140px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#7fb3ff,#a8d8ff);
-  color:white;
-  position:relative;
-  overflow:hidden;
+  padding:120px 20px;
+  background:#eaf4ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.contato h2{
-  font-size:2.4rem;
-  margin-bottom:12px;
-}
-
-.contato p{
-  max-width:700px;
-  margin:auto;
-  font-size:1.15rem;
-  opacity:0.95;
-  line-height:1.6;
-}
-
-.contato a{
-  display:inline-block;
-  margin-top:30px;
+.contato-box{
+  max-width:900px;
+  width:100%;
   background:white;
-  color:#4d96ff;
-  padding:18px 34px;
-  border-radius:40px;
+  border-radius:30px;
+  padding:40px;
+  display:flex;
+  align-items:center;
+  gap:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.10);
+}
+
+/* imagem do atendimento */
+.contato-box img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+/* texto */
+.contato-text h2{
+  font-size:2rem;
+  margin-bottom:10px;
+  color:#2d6cdf;
+}
+
+.contato-text p{
+  color:#555;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+/* botão */
+.contato-text a{
+  display:inline-block;
+  background:#25d366;
+  color:white;
+  padding:14px 22px;
+  border-radius:30px;
   text-decoration:none;
   font-weight:700;
-  box-shadow:0 15px 30px rgba(0,0,0,0.18);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
   transition:0.3s;
 }
 
-.contato a:hover{
-  transform:scale(1.06);
-}
-
-/* brilho leve */
-.contato::before{
-  content:"";
-  position:absolute;
-  width:450px;
-  height:450px;
-  background:rgba(255,255,255,0.18);
-  border-radius:50%;
-  top:-180px;
-  left:-120px;
-  filter:blur(35px);
+.contato-text a:hover{
+  transform:scale(1.05);
 }
 
 /* ================= FOOTER ================= */
 footer{
   text-align:center;
-  padding:25px;
+  padding:20px;
   background:white;
   color:#777;
 }
@@ -263,7 +229,6 @@ footer{
     text-align:center;
     justify-content:center;
     gap:30px;
-    padding:20px;
   }
 
   .hero-text{
@@ -273,18 +238,23 @@ footer{
   .hero-logo{
     width:100%;
   }
+
+  .contato-box{
+    flex-direction:column;
+    text-align:center;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
 
-  <div class="cloud cloud1"></div>
-  <div class="cloud cloud2"></div>
-  <div class="cloud cloud3"></div>
+  <!-- NUVENS NOVAS -->
+  <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
+  <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
+  <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
 
   <div class="hero-text">
     <h1>Bem-vindo ao Clubinho da Aprendizagem 🌈</h1>
@@ -294,45 +264,53 @@ footer{
   </div>
 
   <div class="hero-logo">
-    <img src="https://i.imgur.com/86LuJEt.png" alt="Logo">
+    <img src="https://i.imgur.com/86LuJEt.png">
   </div>
 
 </section>
 
-<!-- SERVIÇOS -->
 <section class="servicos">
   <h2>O que fazemos no Clubinho</h2>
-  <p>Atendimento psicopedagógico com atividades lúdicas, individuais e personalizadas para cada criança.</p>
+  <p>Atendimento psicopedagógico com atividades lúdicas e personalizadas.</p>
 
   <div class="grid">
 
     <div class="card">
       <h3>📚 Aulas Particulares</h3>
-      <p>Apoio individual em leitura, escrita e matemática com acompanhamento contínuo.</p>
+      <p>Apoio individual em leitura, escrita e matemática.</p>
     </div>
 
     <div class="card">
       <h3>🧠 Avaliação Psicopedagógica</h3>
-      <p>Identificamos dificuldades de aprendizagem com cuidado, análise e escuta da criança.</p>
+      <p>Identificação de dificuldades de aprendizagem com cuidado.</p>
     </div>
 
     <div class="card">
       <h3>🎯 Intervenção Psicopedagógica</h3>
-      <p>Estratégias lúdicas e personalizadas para desenvolvimento cognitivo e emocional.</p>
+      <p>Estratégias lúdicas para desenvolvimento cognitivo e emocional.</p>
     </div>
 
   </div>
 </section>
 
-<!-- CONTATO -->
+<!-- CONTATO NOVO BONITO -->
 <section class="contato" id="contato">
-  <h2>Fale com o Clubinho</h2>
-  <p>Entre em contato para agendar uma avaliação ou tirar dúvidas sobre o atendimento.</p>
 
-  <a href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+  <div class="contato-box">
+
+    <img src="https://images.unsplash.com/photo-1603575448360-153f093fd0f4">
+
+    <div class="contato-text">
+      <h2>Fale com o Clubinho</h2>
+      <p>Converse com nossa equipe, tire dúvidas ou agende uma avaliação psicopedagógica.</p>
+
+      <a href="https://wa.me/5500000000000">💬 Falar com atendente</a>
+    </div>
+
+  </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 Clubinho da Aprendizagem
 </footer>
