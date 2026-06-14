@@ -10,14 +10,7 @@
 
 <style>
 
-:root{
---blue:#1e90ff;
---teal:#14b8b8;
---dark:#0f172a;
---text:#475569;
---bg:#f6fbff;
-}
-
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -26,39 +19,17 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:var(--bg);
-overflow-x:hidden;
+background:#f6fbff;
+color:#0f172a;
 }
-
-/* FUNDO INOVADOR */
-.background-shapes{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-overflow:hidden;
-}
-
-.shape{
-position:absolute;
-border-radius:50%;
-opacity:.15;
-filter:blur(30px);
-}
-
-.shape1{width:300px;height:300px;background:var(--blue);top:-50px;left:-80px;}
-.shape2{width:400px;height:400px;background:var(--teal);top:200px;right:-120px;}
-.shape3{width:250px;height:250px;background:var(--blue);bottom:50px;left:200px;}
 
 /* HEADER */
 header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(12px);
 border-bottom:1px solid #e5e7eb;
 z-index:999;
 }
@@ -69,86 +40,90 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
+padding:14px 20px;
 }
 
 .logo img{
-height:58px;
+height:55px;
 }
 
+/* MENU */
+.menu{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.menu a{
+text-decoration:none;
+color:#0f172a;
+font-weight:500;
+padding:8px 10px;
+border-radius:8px;
+}
+
+.menu a:hover{
+background:#e6fffb;
+}
+
+/* DROPDOWN */
+.dropdown{
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+top:40px;
+left:0;
+background:#fff;
+min-width:180px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+border-radius:12px;
+overflow:hidden;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* BOTÃO */
 .btn{
-background:linear-gradient(135deg,var(--blue),var(--teal));
+background:linear-gradient(135deg,#14b8b8,#1e90ff);
 color:#fff;
-padding:12px 18px;
-border-radius:14px;
+padding:10px 16px;
+border-radius:12px;
 text-decoration:none;
 font-weight:600;
 }
 
 /* HERO */
 .hero{
-padding:160px 20px 100px;
-position:relative;
-}
-
-.hero-container{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.badge{
-display:inline-block;
-background:rgba(20,184,184,0.15);
-color:var(--teal);
-padding:8px 14px;
-border-radius:50px;
-font-weight:600;
-margin-bottom:18px;
+padding:160px 20px 90px;
+text-align:center;
+background:linear-gradient(180deg,#e6fffb,#f6fbff);
 }
 
 .hero h1{
-font-size:3.5rem;
-line-height:1.1;
-color:var(--dark);
-margin-bottom:18px;
+font-size:3rem;
+margin-bottom:15px;
 }
 
 .hero p{
-color:var(--text);
-font-size:1.1rem;
+color:#475569;
+max-width:700px;
+margin:auto;
 line-height:1.8;
-margin-bottom:25px;
 }
 
-/* CARD VISUAL LOGO */
-.logo-card{
-background:#fff;
-padding:35px;
-border-radius:28px;
-box-shadow:0 30px 60px rgba(0,0,0,0.08);
-display:flex;
-justify-content:center;
-align-items:center;
-transform:rotate(-2deg);
-transition:.3s;
-}
-
-.logo-card:hover{
-transform:rotate(0deg) scale(1.03);
-}
-
-.logo-card img{
-width:100%;
-max-width:320px;
-}
-
-/* SERVIÇOS */
+/* SEÇÕES */
 .section{
-padding:100px 20px;
+padding:90px 20px;
 }
 
 .container{
@@ -158,11 +133,11 @@ margin:auto;
 
 .title{
 text-align:center;
-font-size:2.6rem;
-margin-bottom:50px;
-color:var(--dark);
+font-size:2.4rem;
+margin-bottom:40px;
 }
 
+/* CARDS */
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -171,83 +146,59 @@ gap:25px;
 
 .card{
 background:#fff;
-border-radius:20px;
 padding:30px;
-box-shadow:0 15px 40px rgba(0,0,0,0.06);
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
 transition:.3s;
-border:1px solid #f1f5f9;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 25px 60px rgba(0,0,0,0.1);
-}
-
-.card h3{
-margin-bottom:10px;
-color:var(--dark);
-}
-
-.card p{
-color:var(--text);
-line-height:1.7;
-}
-
-/* BLOCO DIFERENCIAL */
-.highlight{
-background:linear-gradient(135deg,var(--blue),var(--teal));
-padding:90px 20px;
-color:#fff;
-text-align:center;
-border-radius:40px;
-margin:60px 20px;
-}
-
-.highlight h2{
-font-size:2.5rem;
-margin-bottom:15px;
-}
-
-/* CTA */
-.cta{
-text-align:center;
-padding:120px 20px;
-}
-
-.cta a{
-display:inline-block;
-margin-top:20px;
-background:linear-gradient(135deg,var(--blue),var(--teal));
-color:#fff;
-padding:15px 25px;
-border-radius:14px;
-text-decoration:none;
-font-weight:700;
+transform:translateY(-6px);
 }
 
 /* FOOTER */
 footer{
 background:#0f172a;
 color:#fff;
-text-align:center;
-padding:40px;
+padding:50px 20px;
 margin-top:60px;
+}
+
+.footer-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.footer-grid h3{
+margin-bottom:10px;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+opacity:.7;
 }
 
 /* RESPONSIVO */
 @media(max-width:900px){
 
-.hero-container{
-grid-template-columns:1fr;
-text-align:center;
+.menu{
+display:none;
 }
 
 .grid{
 grid-template-columns:1fr;
 }
 
+.footer-grid{
+grid-template-columns:1fr;
+}
+
 .hero h1{
-font-size:2.4rem;
+font-size:2.2rem;
 }
 
 }
@@ -258,45 +209,41 @@ font-size:2.4rem;
 
 <body>
 
-<!-- FUNDO -->
-<div class="background-shapes">
-<div class="shape shape1"></div>
-<div class="shape shape2"></div>
-<div class="shape shape3"></div>
-</div>
-
 <header>
 <div class="nav">
+
 <div class="logo">
 <img src="https://i.imgur.com/zNWEs3d.png" alt="Logo">
 </div>
-<a class="btn" href="#">Agendar aula</a>
+
+<nav class="menu">
+
+<a href="#">Início</a>
+
+<div class="dropdown">
+<a href="#">Serviços ▾</a>
+<div class="dropdown-content">
+<a href="#">Alfabetização</a>
+<a href="#">Reforço Escolar</a>
+<a href="#">Psicopedagogia</a>
+</div>
+</div>
+
+<a href="#">Sobre</a>
+<a href="#">Contato</a>
+<a class="btn" href="#">Agendar</a>
+
+</nav>
+
 </div>
 </header>
 
 <section class="hero">
 
-<div class="hero-container">
-
-<div>
-
-<span class="badge">Educação Infantil & Reforço Escolar</span>
-
-<h1>Aprendizado moderno, leve e com resultado real</h1>
-
+<h1>Educação moderna, leve e personalizada</h1>
 <p>
-A Turma do Clubinho transforma o aprendizado infantil com metodologia personalizada, acolhedora e inovadora.
+A Turma do Clubinho oferece ensino infantil e reforço escolar com metodologia acolhedora e focada no desenvolvimento individual.
 </p>
-
-<a class="btn" href="#">Falar no WhatsApp</a>
-
-</div>
-
-<div class="logo-card">
-<img src="https://i.imgur.com/zNWEs3d.png" alt="Logo">
-</div>
-
-</div>
 
 </section>
 
@@ -304,43 +251,60 @@ A Turma do Clubinho transforma o aprendizado infantil com metodologia personaliz
 
 <div class="container">
 
-<h2 class="title">O que oferecemos</h2>
+<h2 class="title">Nossos Serviços</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Alfabetização</h3>
-<p>Ensino leve e adaptado ao ritmo da criança.</p>
+<p>Ensino adaptado ao ritmo da criança.</p>
 </div>
 
 <div class="card">
 <h3>Reforço Escolar</h3>
-<p>Apoio pedagógico completo e contínuo.</p>
+<p>Apoio contínuo para melhorar desempenho.</p>
 </div>
 
 <div class="card">
 <h3>Psicopedagogia</h3>
-<p>Intervenção em dificuldades de aprendizagem.</p>
+<p>Intervenção especializada em aprendizagem.</p>
 </div>
 
 </div>
 
 </div>
 
-</section>
-
-<div class="highlight">
-<h2>Aprender pode ser leve e divertido</h2>
-<p>Metodologia moderna baseada em confiança e evolução real</p>
-</div>
-
-<section class="cta">
-<h2>Agende uma avaliação agora</h2>
-<a href="#">Entrar em contato</a>
 </section>
 
 <footer>
-<p>© 2025 Turma do Clubinho</p>
+
+<div class="footer-grid">
+
+<div>
+<h3>Turma do Clubinho</h3>
+<p>Educação infantil e reforço escolar com qualidade e carinho.</p>
+</div>
+
+<div>
+<h3>Links</h3>
+<p>Início</p>
+<p>Serviços</p>
+<p>Contato</p>
+</div>
+
+<div>
+<h3>Contato</h3>
+<p>WhatsApp</p>
+<p>Email</p>
+<p>Instagram</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2025 Turma do Clubinho — Todos os direitos reservados
+</div>
+
 </footer>
 
 </body>
