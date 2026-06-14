@@ -12,10 +12,10 @@
 
 :root{
 --primary:#14b8b8;
+--secondary:#8b5cf6;
+--soft:#f0fbfb;
+--text:#334155;
 --dark:#0f172a;
---text:#475569;
---bg:#f6f8fb;
---card:#ffffff;
 }
 
 *{
@@ -26,18 +26,19 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:var(--bg);
+background:#ffffff;
 color:var(--dark);
 }
 
 /* HEADER */
+
 header{
 position:fixed;
 top:0;
 width:100%;
 background:rgba(255,255,255,0.85);
 backdrop-filter:blur(12px);
-border-bottom:1px solid #e5e7eb;
+border-bottom:1px solid #eee;
 z-index:999;
 }
 
@@ -47,18 +48,11 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 20px;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
+padding:15px 20px;
 }
 
 .logo img{
-height:58px;
-width:auto;
+height:60px;
 object-fit:contain;
 }
 
@@ -73,16 +67,16 @@ font-weight:500;
 background:var(--primary);
 color:#fff;
 padding:12px 18px;
-border-radius:10px;
+border-radius:12px;
 text-decoration:none;
 font-weight:600;
 }
 
 /* HERO */
+
 .hero{
-padding:140px 20px 100px;
-background:
-radial-gradient(circle at top, #e6fffb, #f6f8fb);
+padding:150px 20px 90px;
+background:linear-gradient(180deg,#f0fbfb,#ffffff);
 }
 
 .hero-container{
@@ -94,8 +88,19 @@ gap:70px;
 align-items:center;
 }
 
+.badge{
+display:inline-block;
+background:#e6fffb;
+color:var(--primary);
+padding:8px 14px;
+border-radius:50px;
+font-weight:600;
+margin-bottom:18px;
+font-size:.9rem;
+}
+
 .hero h1{
-font-size:3.4rem;
+font-size:3.5rem;
 line-height:1.1;
 margin-bottom:18px;
 }
@@ -104,33 +109,29 @@ margin-bottom:18px;
 color:var(--text);
 font-size:1.1rem;
 line-height:1.8;
-margin-bottom:28px;
+margin-bottom:25px;
 }
 
-.hero-logo{
+.hero-img{
 display:flex;
 justify-content:center;
 align-items:center;
 }
 
-.hero-logo-box{
+.hero-img-box{
 background:#fff;
 padding:30px;
-border-radius:24px;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-display:flex;
-justify-content:center;
-align-items:center;
+border-radius:26px;
+box-shadow:0 25px 60px rgba(0,0,0,0.08);
 }
 
-.hero-logo-box img{
+.hero-img-box img{
 width:100%;
 max-width:320px;
-height:auto;
-object-fit:contain;
 }
 
-/* SERVICES */
+/* SEÇÕES */
+
 .section{
 padding:90px 20px;
 }
@@ -146,6 +147,16 @@ font-size:2.6rem;
 margin-bottom:50px;
 }
 
+.subtitle{
+text-align:center;
+color:var(--text);
+max-width:700px;
+margin:auto;
+margin-bottom:60px;
+}
+
+/* CARDS */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -154,41 +165,70 @@ gap:25px;
 
 .card{
 background:#fff;
+border:1px solid #eee;
 padding:30px;
 border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
 
 .card h3{
 margin-bottom:10px;
+color:var(--dark);
 }
 
-/* ABOUT */
-.about{
-background:#fff;
+.card p{
+color:var(--text);
+line-height:1.7;
 }
 
-.about-content{
+/* METODOLOGIA */
+
+.method{
+background:var(--soft);
+}
+
+.method-content{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:60px;
 align-items:center;
 }
 
-.about p{
+.method p{
 color:var(--text);
 line-height:1.8;
 margin-bottom:15px;
 }
 
+/* DIFERENCIAIS */
+
+.features{
+padding:90px 20px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.feature{
+background:#fff;
+padding:25px;
+border-radius:16px;
+border:1px solid #eee;
+text-align:center;
+}
+
 /* CTA */
+
 .cta{
-background:linear-gradient(135deg,#14b8b8,#7c3aed);
+background:linear-gradient(135deg,var(--primary),var(--secondary));
 color:#fff;
 text-align:center;
 padding:110px 20px;
@@ -203,14 +243,15 @@ margin-bottom:15px;
 display:inline-block;
 margin-top:20px;
 background:#fff;
-color:#14b8b8;
+color:var(--primary);
 padding:15px 25px;
 border-radius:12px;
-font-weight:700;
 text-decoration:none;
+font-weight:700;
 }
 
 /* FOOTER */
+
 footer{
 background:#0f172a;
 color:#fff;
@@ -219,15 +260,17 @@ padding:40px;
 }
 
 /* RESPONSIVO */
+
 @media(max-width:900px){
 
 .hero-container,
-.about-content{
+.method-content{
 grid-template-columns:1fr;
 text-align:center;
 }
 
-.grid{
+.grid,
+.feature-grid{
 grid-template-columns:1fr;
 }
 
@@ -256,7 +299,7 @@ display:none;
 
 <nav>
 <a href="#servicos">Serviços</a>
-<a href="#sobre">Sobre</a>
+<a href="#metodo">Metodologia</a>
 <a href="#contato">Contato</a>
 <a class="btn" href="#">Agendar</a>
 </nav>
@@ -270,20 +313,24 @@ display:none;
 
 <div>
 
-<h1>Educação personalizada que transforma vidas</h1>
+<span class="badge">Educação Infantil & Reforço Escolar</span>
+
+<h1>Aprendizado leve, moderno e com resultado real</h1>
 
 <p>
-Alfabetização, reforço escolar e acompanhamento psicopedagógico com abordagem moderna, acolhedora e individualizada.
+A Turma do Clubinho é uma escola de apoio educacional com metodologia personalizada para alfabetização, reforço e desenvolvimento cognitivo infantil.
 </p>
 
 <a class="btn" href="#">Agendar avaliação</a>
 
 </div>
 
-<div class="hero-logo">
-<div class="hero-logo-box">
-<img src="https://i.imgur.com/zNWEs3d.png" alt="Turma do Clubinho">
+<div class="hero-img">
+
+<div class="hero-img-box">
+<img src="https://i.imgur.com/zNWEs3d.png" alt="Logo">
 </div>
+
 </div>
 
 </div>
@@ -296,22 +343,66 @@ Alfabetização, reforço escolar e acompanhamento psicopedagógico com abordage
 
 <h2 class="title">Nossos Serviços</h2>
 
+<p class="subtitle">
+Atendimento individualizado com foco no desenvolvimento completo da criança.
+</p>
+
 <div class="grid">
 
 <div class="card">
 <h3>Alfabetização</h3>
-<p>Desenvolvimento da leitura e escrita com método individualizado.</p>
+<p>Ensino estruturado e adaptado ao ritmo da criança.</p>
 </div>
 
 <div class="card">
 <h3>Reforço Escolar</h3>
-<p>Acompanhamento pedagógico contínuo e estruturado.</p>
+<p>Acompanhamento contínuo para melhorar desempenho escolar.</p>
 </div>
 
 <div class="card">
 <h3>Psicopedagogia</h3>
-<p>Intervenção em dificuldades de aprendizagem com foco no aluno.</p>
+<p>Intervenção especializada em dificuldades de aprendizagem.</p>
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="metodo" class="section method">
+
+<div class="container method-content">
+
+<div>
+<h2 class="title">Nossa Metodologia</h2>
+
+<p>
+Trabalhamos com abordagem individualizada, respeitando o tempo e o estilo de aprendizagem de cada criança.
+</p>
+
+<p>
+Unimos atividades práticas, estímulos cognitivos e acompanhamento próximo para garantir evolução real.
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=900" alt="Crianças estudando">
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="container">
+
+<div class="feature-grid">
+
+<div class="feature">Ambiente acolhedor</div>
+<div class="feature">Método personalizado</div>
+<div class="feature">Profissionais qualificados</div>
+<div class="feature">Foco em resultados</div>
 
 </div>
 
@@ -321,16 +412,16 @@ Alfabetização, reforço escolar e acompanhamento psicopedagógico com abordage
 
 <section class="cta">
 
-<h2>Vamos começar essa jornada?</h2>
+<h2>Quer ver seu filho evoluir de verdade?</h2>
 
-<p>Entre em contato e agende uma avaliação.</p>
+<p>Agende uma avaliação e conheça nosso método.</p>
 
 <a href="#">Falar no WhatsApp</a>
 
 </section>
 
 <footer>
-<p>© 2025 Turma do Clubinho</p>
+<p>© 2025 Turma do Clubinho — Educação com propósito</p>
 </footer>
 
 </body>
