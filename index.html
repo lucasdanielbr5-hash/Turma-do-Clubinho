@@ -28,15 +28,15 @@ body{
   padding:0 8%;
   position:relative;
   background:linear-gradient(to top, #87cefa, #bfe9ff);
+  overflow:hidden;
 }
 
-/* NUVENS */
+/* ===== NUVENS ===== */
 .cloud{
   position:absolute;
   background:white;
   border-radius:100px;
-  opacity:0.9;
-  filter:blur(0.3px);
+  opacity:0.85;
   animation:moveClouds linear infinite;
 }
 
@@ -48,75 +48,24 @@ body{
   border-radius:50%;
 }
 
-/* nuvem 1 */
-.cloud1{
-  width:120px;
-  height:60px;
-  top:20%;
-  left:-150px;
-  animation-duration:30s;
-}
-.cloud1::before{
-  width:60px;
-  height:60px;
-  top:-20px;
-  left:15px;
-}
-.cloud1::after{
-  width:70px;
-  height:70px;
-  top:-25px;
-  left:50px;
-}
+.cloud1{width:120px;height:60px;top:20%;left:-150px;animation-duration:35s;}
+.cloud1::before{width:60px;height:60px;top:-20px;left:15px;}
+.cloud1::after{width:70px;height:70px;top:-25px;left:50px;}
 
-/* nuvem 2 */
-.cloud2{
-  width:160px;
-  height:70px;
-  top:55%;
-  left:-200px;
-  animation-duration:45s;
-}
-.cloud2::before{
-  width:70px;
-  height:70px;
-  top:-25px;
-  left:20px;
-}
-.cloud2::after{
-  width:80px;
-  height:80px;
-  top:-30px;
-  left:70px;
-}
+.cloud2{width:160px;height:70px;top:55%;left:-200px;animation-duration:50s;}
+.cloud2::before{width:70px;height:70px;top:-25px;left:20px;}
+.cloud2::after{width:80px;height:80px;top:-30px;left:70px;}
 
-/* nuvem 3 */
-.cloud3{
-  width:100px;
-  height:50px;
-  top:35%;
-  left:-120px;
-  animation-duration:35s;
-}
-.cloud3::before{
-  width:50px;
-  height:50px;
-  top:-15px;
-  left:10px;
-}
-.cloud3::after{
-  width:60px;
-  height:60px;
-  top:-20px;
-  left:40px;
-}
+.cloud3{width:100px;height:50px;top:35%;left:-120px;animation-duration:40s;}
+.cloud3::before{width:50px;height:50px;top:-15px;left:10px;}
+.cloud3::after{width:60px;height:60px;top:-20px;left:40px;}
 
 @keyframes moveClouds{
-  from{ transform:translateX(0); }
-  to{ transform:translateX(140vw); }
+  from{transform:translateX(0);}
+  to{transform:translateX(140vw);}
 }
 
-/* TEXTO ESQUERDA */
+/* ===== TEXTO ===== */
 .hero-text{
   width:50%;
   z-index:2;
@@ -146,25 +95,48 @@ body{
   box-shadow:0 10px 20px rgba(255,107,157,0.3);
 }
 
-/* LOGO DIREITA */
+/* ===== LOGO AREA COM ONDA ===== */
 .hero-logo{
   width:40%;
   display:flex;
   justify-content:center;
   align-items:center;
+  position:relative;
   z-index:2;
 }
 
+/* ONDA ATRÁS DA LOGO */
+.hero-logo::before{
+  content:"";
+  position:absolute;
+  width:380px;
+  height:380px;
+  background:radial-gradient(circle at center,
+    rgba(255,255,255,0.95),
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0) 70%);
+  border-radius:50%;
+  z-index:1;
+}
+
+/* camada de onda inferior (efeito fluido) */
+.hero-logo::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:200px;
+  bottom:-40px;
+  background:linear-gradient(135deg,#ffffffaa,#bfe9ff88);
+  border-radius:50% 50% 40% 60% / 60% 40% 60% 40%;
+  z-index:1;
+}
+
+/* LOGO LIMPA (SEM EFEITO) */
 .hero-logo img{
   width:280px;
   max-width:90%;
-  animation:float 4s ease-in-out infinite;
-  filter:drop-shadow(0 20px 20px rgba(0,0,0,0.2));
-}
-
-@keyframes float{
-  0%,100%{ transform:translateY(0); }
-  50%{ transform:translateY(-15px); }
+  z-index:3;
+  position:relative;
 }
 
 /* RESPONSIVO */
@@ -196,7 +168,7 @@ body{
   <div class="cloud cloud2"></div>
   <div class="cloud cloud3"></div>
 
-  <!-- TEXTO ESQUERDA -->
+  <!-- TEXTO -->
   <div class="hero-text">
     <h1>Bem-vindo ao Clubinho da Aprendizagem 🌈</h1>
     <p>Um espaço leve, divertido e acolhedor onde aprender é brincar e crescer com alegria.</p>
@@ -204,7 +176,7 @@ body{
     <a class="btn" href="#contato">Entrar no Clubinho</a>
   </div>
 
-  <!-- LOGO DIREITA -->
+  <!-- LOGO COM ONDA -->
   <div class="hero-logo">
     <img src="https://i.imgur.com/86LuJEt.png" alt="Logo">
   </div>
