@@ -31,7 +31,7 @@ body{
   background:linear-gradient(to top, #87cefa, #bfe9ff);
 }
 
-/* ================= NUVENS REAIS ================= */
+/* NUVENS */
 .cloud{
   position:absolute;
   width:140px;
@@ -48,7 +48,7 @@ body{
   to{transform:translateX(140vw);}
 }
 
-/* ================= TEXTO HERO ================= */
+/* TEXTO HERO */
 .hero-text{
   width:50%;
   z-index:2;
@@ -76,7 +76,6 @@ body{
   color:white;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 10px 20px rgba(255,107,157,0.3);
   transition:0.3s;
 }
 
@@ -84,7 +83,7 @@ body{
   transform:scale(1.05);
 }
 
-/* ================= LOGO ================= */
+/* LOGO ESTÁTICA */
 .hero-logo{
   width:40%;
   display:flex;
@@ -106,19 +105,12 @@ body{
 .hero-logo img{
   width:200px;
   position:relative;
-  animation:float 4s ease-in-out infinite;
-  z-index:2;
-}
-
-@keyframes float{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
-  100%{transform:translateY(0);}
+  animation:none;
 }
 
 /* ================= SERVIÇOS ================= */
 .servicos{
-  padding:110px 20px;
+  padding:120px 20px;
   text-align:center;
   background:#fdfcf9;
 }
@@ -155,66 +147,54 @@ body{
   justify-content:center;
 }
 
-/* ================= CONTATO NOVO (MELHORADO) ================= */
-.contato{
+/* ================= “O QUE ELES DIZEM?” ================= */
+.testemunhos{
   padding:120px 20px;
-  background:#eaf4ff;
+  background:#eef3ff;
   display:flex;
   justify-content:center;
-  align-items:center;
 }
 
-.contato-box{
-  max-width:900px;
+.testemunhos-box{
   width:100%;
-  background:white;
-  border-radius:30px;
-  padding:40px;
+  max-width:900px;
+  background:#ffffff;
+  border-radius:25px;
+  padding:50px;
   display:flex;
   align-items:center;
+  justify-content:space-between;
   gap:30px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.10);
+  box-shadow:0 20px 45px rgba(0,0,0,0.08);
 }
 
-/* imagem do atendimento */
-.contato-box img{
-  width:180px;
-  height:180px;
-  object-fit:cover;
-  border-radius:20px;
-}
-
-/* texto */
-.contato-text h2{
+.textos h2{
   font-size:2rem;
+  color:#2c3e50;
   margin-bottom:10px;
-  color:#2d6cdf;
 }
 
-.contato-text p{
-  color:#555;
+.textos p{
+  color:#5f6c7b;
+  max-width:450px;
   line-height:1.6;
-  margin-bottom:20px;
 }
 
-/* botão */
-.contato-text a{
-  display:inline-block;
-  background:#25d366;
+.botao-area a{
+  background:#1877f2;
   color:white;
-  padding:14px 22px;
-  border-radius:30px;
+  padding:14px 20px;
+  border-radius:8px;
   text-decoration:none;
-  font-weight:700;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  transition:0.3s;
+  font-weight:600;
+  transition:0.2s;
 }
 
-.contato-text a:hover{
-  transform:scale(1.05);
+.botao-area a:hover{
+  background:#145dbf;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer{
   text-align:center;
   padding:20px;
@@ -222,7 +202,7 @@ footer{
   color:#777;
 }
 
-/* ================= RESPONSIVO ================= */
+/* RESPONSIVO */
 @media(max-width:768px){
   .hero{
     flex-direction:column;
@@ -239,7 +219,7 @@ footer{
     width:100%;
   }
 
-  .contato-box{
+  .testemunhos-box{
     flex-direction:column;
     text-align:center;
   }
@@ -251,7 +231,6 @@ footer{
 
 <section class="hero">
 
-  <!-- NUVENS NOVAS -->
   <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
   <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
   <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
@@ -293,18 +272,17 @@ footer{
   </div>
 </section>
 
-<!-- CONTATO NOVO BONITO -->
-<section class="contato" id="contato">
+<section class="testemunhos" id="contato">
 
-  <div class="contato-box">
+  <div class="testemunhos-box">
 
-    <img src="https://images.unsplash.com/photo-1603575448360-153f093fd0f4">
+    <div class="textos">
+      <h2>O que eles dizem?</h2>
+      <p>Famílias que confiam no Clubinho compartilham suas experiências com nosso atendimento.</p>
+    </div>
 
-    <div class="contato-text">
-      <h2>Fale com o Clubinho</h2>
-      <p>Converse com nossa equipe, tire dúvidas ou agende uma avaliação psicopedagógica.</p>
-
-      <a href="https://wa.me/5500000000000">💬 Falar com atendente</a>
+    <div class="botao-area">
+      <a href="https://wa.me/5500000000000">Falar com atendente</a>
     </div>
 
   </div>
