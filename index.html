@@ -23,7 +23,7 @@ background:#ffffff;
 color:#111827;
 }
 
-/* HEADER MINIMALISTA */
+/* HEADER */
 header{
 position:fixed;
 top:0;
@@ -43,7 +43,7 @@ padding:14px 20px;
 }
 
 .logo img{
-height:44px;
+height:46px;
 }
 
 .menu{
@@ -56,23 +56,24 @@ text-decoration:none;
 color:#374151;
 font-size:14px;
 font-weight:500;
+transition:.2s;
 }
 
 .menu a:hover{
-color:#000;
+color:#111827;
 }
 
 .btn{
 background:#111827;
 color:#fff;
 padding:10px 16px;
-border-radius:6px;
+border-radius:8px;
 text-decoration:none;
 font-size:13px;
 font-weight:600;
 }
 
-/* HERO KUMON STYLE */
+/* HERO */
 .hero{
 padding:140px 20px 90px;
 border-bottom:1px solid #eee;
@@ -87,9 +88,9 @@ gap:60px;
 align-items:center;
 }
 
+/* TEXT */
 .hero h1{
 font-size:3rem;
-font-weight:700;
 line-height:1.1;
 margin-bottom:15px;
 }
@@ -97,14 +98,15 @@ margin-bottom:15px;
 .hero p{
 color:#6b7280;
 line-height:1.8;
-max-width:500px;
 margin-bottom:20px;
+max-width:500px;
 }
 
-/* IMAGEM LIMPA */
+/* IMAGE */
 .hero-img img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
 
 /* SEÇÕES */
@@ -118,34 +120,35 @@ margin:auto;
 }
 
 .title{
-font-size:2rem;
-font-weight:700;
-margin-bottom:30px;
 text-align:center;
+font-size:2rem;
+margin-bottom:40px;
 }
 
-/* CARDS SIMPLES */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:20px;
 }
 
+/* CARD */
 .card{
 border:1px solid #e5e7eb;
-padding:22px;
-border-radius:10px;
+padding:24px;
+border-radius:12px;
 transition:.2s;
 background:#fff;
 }
 
 .card:hover{
 border-color:#111827;
+transform:translateY(-4px);
 }
 
 .card h3{
-font-size:16px;
 margin-bottom:8px;
+font-size:16px;
 }
 
 .card p{
@@ -154,7 +157,7 @@ color:#6b7280;
 line-height:1.6;
 }
 
-/* METODOLOGIA */
+/* METHOD */
 .method{
 background:#f9fafb;
 border-top:1px solid #eee;
@@ -165,8 +168,8 @@ border-bottom:1px solid #eee;
 max-width:800px;
 margin:auto;
 text-align:center;
-color:#374151;
 line-height:1.8;
+color:#4b5563;
 }
 
 /* CTA */
@@ -189,8 +192,9 @@ margin-bottom:20px;
 background:#111827;
 color:#fff;
 padding:12px 18px;
-border-radius:6px;
+border-radius:8px;
 text-decoration:none;
+font-weight:600;
 }
 
 /* FOOTER */
@@ -222,14 +226,14 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-width:58px;
-height:58px;
+width:60px;
+height:60px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-color:#fff;
 font-size:26px;
+color:#fff;
 cursor:pointer;
 }
 
@@ -246,12 +250,12 @@ grid-template-columns:1fr;
 display:none;
 }
 
-.hero h1{
-font-size:2.2rem;
-}
-
 .hero{
 text-align:center;
+}
+
+.hero h1{
+font-size:2.2rem;
 }
 
 .hero p{
@@ -276,8 +280,8 @@ margin:auto;
 
 <nav class="menu">
 <a href="#">Início</a>
-<a href="#servicos">Método</a>
-<a href="#sobre">Sobre</a>
+<a href="#metodo">Método</a>
+<a href="#programas">Programas</a>
 <a href="#contato">Contato</a>
 </nav>
 
@@ -292,41 +296,41 @@ margin:auto;
 <div class="hero-container">
 
 <div>
-<h1>Aprendizado com método e resultado</h1>
+<h1>Aprendizado estruturado para resultados reais</h1>
 
 <p>
-Um sistema de ensino estruturado que desenvolve disciplina, raciocínio e evolução contínua no aprendizado infantil.
+Um sistema de ensino contínuo que desenvolve disciplina, foco e evolução no aprendizado infantil.
 </p>
 
 <a class="btn" href="#">Agendar avaliação</a>
 </div>
 
 <div class="hero-img">
-<img src="https://images.unsplash.com/photo-1603574670812-d24560880210?w=900">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=900" alt="Estudando">
 </div>
 
 </div>
 
 </section>
 
-<!-- METODOLOGIA -->
-<section class="section method">
+<!-- MÉTODO -->
+<section class="section method" id="metodo">
 
 <div class="method-content">
 
 <h2 class="title">Nosso Método</h2>
 
 <p>
-Trabalhamos com desenvolvimento progressivo, respeitando o ritmo individual do aluno.
-O foco é construir base sólida em leitura, escrita e raciocínio lógico, com acompanhamento constante.
+Trabalhamos com aprendizado progressivo e individualizado, respeitando o ritmo de cada aluno.
+O foco é criar base sólida em leitura, escrita e raciocínio lógico, com disciplina e constância.
 </p>
 
 </div>
 
 </section>
 
-<!-- SERVIÇOS -->
-<section class="section" id="servicos">
+<!-- PROGRAMAS -->
+<section class="section" id="programas">
 
 <div class="container">
 
@@ -336,17 +340,17 @@ O foco é construir base sólida em leitura, escrita e raciocínio lógico, com 
 
 <div class="card">
 <h3>Alfabetização</h3>
-<p>Construção sólida da leitura e escrita.</p>
+<p>Desenvolvimento completo da leitura e escrita.</p>
 </div>
 
 <div class="card">
 <h3>Reforço Escolar</h3>
-<p>Suporte contínuo para desempenho escolar.</p>
+<p>Apoio contínuo para melhorar desempenho.</p>
 </div>
 
 <div class="card">
-<h3>Desenvolvimento Cognitivo</h3>
-<p>Foco em raciocínio e disciplina de estudo.</p>
+<h3>Raciocínio Lógico</h3>
+<p>Desenvolvimento cognitivo estruturado.</p>
 </div>
 
 </div>
@@ -358,8 +362,8 @@ O foco é construir base sólida em leitura, escrita e raciocínio lógico, com 
 <!-- CTA -->
 <section class="cta">
 
-<h2>Comece hoje o desenvolvimento do seu filho</h2>
-<p>Agende uma avaliação inicial sem compromisso.</p>
+<h2>Comece a evolução do seu filho hoje</h2>
+<p>Agende uma avaliação sem compromisso.</p>
 
 <a href="#">Falar no WhatsApp</a>
 
@@ -372,14 +376,14 @@ O foco é construir base sólida em leitura, escrita e raciocínio lógico, com 
 
 <div>
 <h3>Turma do Clubinho</h3>
-<p>Ensino estruturado e acompanhamento contínuo.</p>
+<p>Ensino estruturado e contínuo para crianças.</p>
 </div>
 
 <div>
 <h3>Links</h3>
 <p>Início</p>
 <p>Método</p>
-<p>Contato</p>
+<p>Programas</p>
 </div>
 
 <div>
