@@ -57,7 +57,7 @@ body{
   to{transform:translateX(140vw);}
 }
 
-/* ================= TEXTO HERO ================= */
+/* ================= TEXTO ================= */
 .hero-text{
   width:50%;
   z-index:2;
@@ -103,7 +103,6 @@ body{
   z-index:2;
 }
 
-/* fundo orgânico */
 .hero-logo::before{
   content:"";
   position:absolute;
@@ -140,7 +139,7 @@ body{
   100%{transform:translateY(0);}
 }
 
-/* ================= SERVIÇOS (MELHORADO) ================= */
+/* ================= SERVIÇOS ================= */
 .servicos{
   padding:100px 20px;
   text-align:center;
@@ -193,12 +192,14 @@ body{
 .card:nth-child(2){border-left:6px solid #4d96ff;}
 .card:nth-child(3){border-left:6px solid #06d6a0;}
 
-/* ================= CONTATO (SEM GRADIENTE FEIO) ================= */
+/* ================= CONTATO (CORRIGIDO) ================= */
 .contato{
   padding:100px 20px;
   text-align:center;
-  background:#2d6cdf;
+  background:linear-gradient(135deg, #7fb3ff, #a8d8ff);
   color:white;
+  position:relative;
+  overflow:hidden;
 }
 
 .contato h2{
@@ -216,7 +217,7 @@ body{
   display:inline-block;
   margin-top:25px;
   background:white;
-  color:#2d6cdf;
+  color:#4d96ff;
   padding:16px 28px;
   border-radius:40px;
   text-decoration:none;
@@ -227,6 +228,19 @@ body{
 
 .contato a:hover{
   transform:scale(1.05);
+}
+
+/* brilho leve decorativo */
+.contato::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:rgba(255,255,255,0.2);
+  border-radius:50%;
+  top:-150px;
+  left:-100px;
+  filter:blur(30px);
 }
 
 /* ================= FOOTER ================= */
@@ -277,6 +291,7 @@ footer{
 
 <section class="servicos">
   <h2>O que fazemos no Clubinho 🎈</h2>
+
   <p style="color:#666; max-width:700px; margin:auto;">
     Atendimento psicopedagógico com atividades lúdicas e personalizadas.
   </p>
