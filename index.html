@@ -6,7 +6,7 @@
 
 <title>Turma do Clubinho</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,188 +19,133 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:#f6fbff;
-color:#0f172a;
-overflow-x:hidden;
+background:#f7fafc;
+color:#1f2937;
 }
 
-/* HEADER */
+/* HEADER CLEAN */
 header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(12px);
-border-bottom:1px solid #e5e7eb;
+background:#fff;
+border-bottom:1px solid #eee;
 z-index:999;
 }
 
 .nav{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 20px;
+padding:12px 20px;
 }
 
 .logo img{
-height:55px;
+height:50px;
 }
 
 .menu{
 display:flex;
-gap:18px;
-align-items:center;
+gap:20px;
+font-size:14px;
 }
 
 .menu a{
 text-decoration:none;
-color:#0f172a;
+color:#374151;
 font-weight:500;
-padding:8px 10px;
-border-radius:8px;
 }
 
 .menu a:hover{
-background:#e6fffb;
-}
-
-/* DROPDOWN */
-.dropdown{
-position:relative;
-}
-
-.dropdown-content{
-display:none;
-position:absolute;
-top:40px;
-left:0;
-background:#fff;
-min-width:180px;
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
-border-radius:12px;
-overflow:hidden;
-}
-
-.dropdown-content a{
-display:block;
-padding:12px;
-}
-
-.dropdown:hover .dropdown-content{
-display:block;
+color:#0ea5e9;
 }
 
 /* BOTÃO */
 .btn{
-background:linear-gradient(135deg,#14b8b8,#1e90ff);
+background:#0ea5e9;
 color:#fff;
-padding:10px 16px;
-border-radius:12px;
+padding:8px 14px;
+border-radius:8px;
 text-decoration:none;
-font-weight:600;
+font-size:14px;
 }
 
-/* HERO */
+/* HERO INFANTIL */
 .hero{
-padding:150px 20px 90px;
-text-align:center;
-background:linear-gradient(180deg,#e6fffb,#f6fbff);
+padding:140px 20px 80px;
+background:linear-gradient(180deg,#e0f2fe,#f7fafc);
+}
+
+.hero-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:2.8rem;
 margin-bottom:15px;
 }
 
 .hero p{
-max-width:700px;
-margin:auto;
-color:#475569;
-line-height:1.8;
+color:#4b5563;
+line-height:1.7;
 }
 
-/* SEÇÕES */
+/* IMAGEM INFANTIL */
+.hero img{
+width:100%;
+border-radius:16px;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* SEÇÃO */
 .section{
-padding:90px 20px;
+padding:80px 20px;
 }
 
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 }
 
-/* CARDS */
+.title{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+}
+
+/* CARDS LIMPOS */
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
+gap:20px;
 }
 
 .card{
 background:#fff;
-padding:25px;
-border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:.3s;
+padding:22px;
+border-radius:14px;
+border:1px solid #eee;
+transition:.2s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-4px);
 }
 
-/* POPUP */
-.popup{
-position:fixed;
-top:0;
-left:0;
+/* IMAGENS */
+.card img{
 width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:1000;
-}
-
-.popup-box{
-background:#fff;
-padding:30px;
-border-radius:16px;
-max-width:400px;
-text-align:center;
-}
-
-.popup-box h2{
-margin-bottom:10px;
-}
-
-.popup-box button{
-margin-top:15px;
-padding:10px 15px;
-border:none;
-background:#14b8b8;
-color:#fff;
+height:160px;
+object-fit:cover;
 border-radius:10px;
-cursor:pointer;
-}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-color:#fff;
-font-size:28px;
-cursor:pointer;
+margin-bottom:10px;
 }
 
 /* FOOTER */
@@ -212,7 +157,7 @@ margin-top:60px;
 }
 
 .footer-grid{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -222,18 +167,43 @@ gap:30px;
 .footer-bottom{
 text-align:center;
 margin-top:30px;
-opacity:.7;
+opacity:.6;
+font-size:13px;
+}
+
+/* POPUP SIMPLES */
+.popup{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#fff;
+padding:16px;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+max-width:260px;
+display:none;
+}
+
+.popup button{
+margin-top:10px;
+background:#0ea5e9;
+color:#fff;
+border:none;
+padding:6px 10px;
+border-radius:6px;
+cursor:pointer;
 }
 
 /* RESPONSIVO */
 @media(max-width:900px){
-.menu{display:none;}
+.hero-container{grid-template-columns:1fr;}
 .grid{grid-template-columns:1fr;}
-.footer-grid{grid-template-columns:1fr;}
-.hero h1{font-size:2.2rem;}
+.menu{display:none;}
+.hero h1{font-size:2rem;}
 }
 
 </style>
+
 </head>
 
 <body>
@@ -243,58 +213,63 @@ opacity:.7;
 <div class="nav">
 
 <div class="logo">
-<img src="https://i.imgur.com/yh207E5.png" alt="Logo">
+<img src="https://i.imgur.com/yh207E5.png">
 </div>
 
 <nav class="menu">
-
 <a href="#">Início</a>
-
-<div class="dropdown">
-<a href="#">Serviços ▾</a>
-<div class="dropdown-content">
-<a href="#">Alfabetização</a>
-<a href="#">Reforço Escolar</a>
-<a href="#">Psicopedagogia</a>
-</div>
-</div>
-
-<a href="#">Sobre</a>
-<a href="#" onclick="openPopup()">Contato</a>
-<a class="btn" href="#">Matrícula</a>
-
+<a href="#servicos">Serviços</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
 </nav>
+
+<a class="btn" href="#">Matrícula</a>
 
 </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-<h1>Educação infantil moderna e acolhedora</h1>
+<div class="hero-container">
+
+<div>
+<h1>Aprendizado leve e feliz para crianças</h1>
 <p>
-Um espaço pensado para o desenvolvimento infantil com carinho, método e resultados reais.
+Um ambiente acolhedor com metodologia personalizada para alfabetização, reforço e desenvolvimento infantil.
 </p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1603574670812-d24560880210?w=900">
+</div>
+
+</div>
 </section>
 
 <!-- SERVIÇOS -->
-<section class="section">
+<section class="section" id="servicos">
 <div class="container">
+
+<h2 class="title">Nossos Serviços</h2>
 
 <div class="grid">
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600">
 <h3>Alfabetização</h3>
-<p>Ensino leve e adaptado ao ritmo da criança.</p>
+<p>Aprendizado no ritmo da criança.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600">
 <h3>Reforço Escolar</h3>
-<p>Apoio completo para evolução escolar.</p>
+<p>Apoio em todas as disciplinas.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600">
 <h3>Psicopedagogia</h3>
-<p>Atendimento especializado individual.</p>
+<p>Desenvolvimento emocional e cognitivo.</p>
 </div>
 
 </div>
@@ -309,7 +284,7 @@ Um espaço pensado para o desenvolvimento infantil com carinho, método e result
 
 <div>
 <h3>Turma do Clubinho</h3>
-<p>Educação infantil com amor, método e resultado.</p>
+<p>Educação infantil com carinho e método.</p>
 </div>
 
 <div>
@@ -334,34 +309,20 @@ Um espaço pensado para o desenvolvimento infantil com carinho, método e result
 
 </footer>
 
-<!-- POPUP -->
+<!-- POPUP DISCRETO -->
 <div class="popup" id="popup">
-<div class="popup-box">
-<h2>Bem-vindo 👋</h2>
-<p>Agende uma avaliação gratuita agora mesmo.</p>
+<p>Agende uma avaliação gratuita.</p>
 <button onclick="closePopup()">Fechar</button>
-</div>
-</div>
-
-<!-- WHATSAPP -->
-<div class="whatsapp" onclick="window.open('https://wa.me/5511999999999')">
-💬
 </div>
 
 <script>
 
-/* POPUP */
-function openPopup(){
-document.getElementById('popup').style.display='flex';
-}
+setTimeout(()=>{
+document.getElementById("popup").style.display="block";
+},4000);
 
 function closePopup(){
-document.getElementById('popup').style.display='none';
-}
-
-/* AUTO POPUP */
-window.onload = function(){
-setTimeout(openPopup, 2000);
+document.getElementById("popup").style.display="none";
 }
 
 </script>
