@@ -52,7 +52,6 @@ nav a{
   text-decoration:none;
   color:var(--text);
   font-weight:500;
-  transition:0.3s;
 }
 
 nav a:hover{
@@ -64,7 +63,7 @@ nav a:hover{
   margin-top:80px;
   padding:90px 20px;
   text-align:center;
-  background:linear-gradient(135deg,#fff,#fff7e6);
+  background:linear-gradient(135deg,#ffffff,#fff3d6);
   position:relative;
   overflow:hidden;
 }
@@ -74,27 +73,36 @@ nav a:hover{
 .hero::after{
   content:"";
   position:absolute;
-  width:200px;
-  height:200px;
+  width:220px;
+  height:220px;
   border-radius:50%;
   opacity:0.2;
 }
 
 .hero::before{
   background:var(--yellow);
-  top:-50px;
-  left:-50px;
+  top:-60px;
+  left:-60px;
 }
 
 .hero::after{
   background:var(--blue);
-  bottom:-60px;
-  right:-60px;
+  bottom:-70px;
+  right:-70px;
+}
+
+/* LOGO RESTAURADA */
+.hero img.logo{
+  width:220px;
+  max-width:90%;
+  margin-bottom:20px;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
 
 .hero h1{
-  font-size:2.2rem;
+  font-size:2.1rem;
   color:var(--blue);
+  margin-top:10px;
 }
 
 .hero p{
@@ -192,7 +200,6 @@ section{
 
 .card h3{
   color:var(--pink);
-  margin-bottom:5px;
 }
 
 /* CTA */
@@ -235,24 +242,30 @@ footer{
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO COM LOGO -->
 <section class="hero">
+
+  <!-- LOGO RESTAURADA AQUI -->
+  <img class="logo" src="https://i.imgur.com/86LuJEt.png" alt="Logo">
+
   <h1>Aprender pode ser leve e divertido 🌈</h1>
   <p>Apoio psicopedagógico com acolhimento, brincadeira e desenvolvimento emocional.</p>
+
   <a class="btn" href="#contato">Agendar atendimento</a>
 </section>
 
 <!-- SOBRE -->
 <section id="sobre">
   <h2 class="title">Um espaço de cuidado</h2>
+
   <p class="subtitle">
-    Aqui a criança aprende no seu tempo, com respeito, ludicidade e estímulos positivos para desenvolver confiança e autonomia.
+    Aqui a criança aprende no seu tempo, com respeito, ludicidade e estímulos positivos.
   </p>
 
   <div class="split">
     <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
     <p class="subtitle">
-      O atendimento psicopedagógico ajuda no desenvolvimento da aprendizagem, atenção, leitura, escrita e habilidades emocionais.
+      O atendimento psicopedagógico ajuda no desenvolvimento da aprendizagem, atenção, leitura, escrita e emoções.
     </p>
   </div>
 </section>
@@ -267,7 +280,6 @@ footer{
       <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
       <div class="content">
         <h3>Aprender brincando</h3>
-        <p>Atividades lúdicas e educativas.</p>
       </div>
     </div>
 
@@ -275,7 +287,6 @@ footer{
       <img src="https://images.unsplash.com/photo-1559757175-7cb057fba93c">
       <div class="content">
         <h3>Atenção e foco</h3>
-        <p>Estratégias para concentração.</p>
       </div>
     </div>
 
@@ -283,7 +294,6 @@ footer{
       <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
       <div class="content">
         <h3>Aprendizagem leve</h3>
-        <p>Leitura e escrita com confiança.</p>
       </div>
     </div>
 
@@ -296,7 +306,7 @@ footer{
 
   <div class="split">
     <p class="subtitle">
-      O atendimento é individual, respeitoso e adaptado à criança, com foco em autoestima, aprendizado e desenvolvimento emocional.
+      Atendimento individual, respeitoso e adaptado à criança, com foco em autoestima e desenvolvimento.
     </p>
 
     <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754">
