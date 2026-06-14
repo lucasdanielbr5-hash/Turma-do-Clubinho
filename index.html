@@ -10,10 +10,8 @@
 <style>
 :root{
   --primary:#1f4e79;
-  --accent:#f4a261;
-  --bg:#f7fafc;
+  --bg:#f6f8fc;
   --text:#1a202c;
-  --card:#ffffff;
 }
 
 *{
@@ -26,21 +24,19 @@
 body{
   background:var(--bg);
   color:var(--text);
-  overflow-x:hidden;
 }
 
 /* HEADER */
 header{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
-  background:white;
+  background:#fff;
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:12px 25px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  box-shadow:0 2px 10px rgba(0,0,0,0.06);
   z-index:1000;
 }
 
@@ -58,27 +54,26 @@ nav a{
 /* HERO */
 .hero{
   margin-top:80px;
-  padding:90px 20px;
+  padding:70px 20px;
   text-align:center;
   background:white;
 }
 
-.hero img{
-  width:280px;
+.hero img.logo{
+  width:260px;
   max-width:90%;
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:clamp(1.8rem, 3vw, 2.6rem);
   color:var(--primary);
+  font-size:2rem;
 }
 
 .hero p{
-  max-width:700px;
+  max-width:650px;
   margin:15px auto;
   color:#4a5568;
-  font-size:1.1rem;
 }
 
 .btn{
@@ -86,31 +81,47 @@ nav a{
   margin-top:20px;
   background:var(--primary);
   color:white;
-  padding:13px 22px;
+  padding:12px 20px;
   border-radius:10px;
   text-decoration:none;
-  font-weight:600;
 }
 
 /* SEÇÕES */
 section{
-  padding:80px 20px;
+  padding:70px 20px;
   text-align:center;
 }
 
 .title{
-  font-size:1.7rem;
+  font-size:1.6rem;
   color:var(--primary);
   margin-bottom:10px;
 }
 
 .subtitle{
   max-width:750px;
-  margin:0 auto 35px auto;
+  margin:0 auto 30px auto;
   color:#718096;
 }
 
-/* GRID */
+/* BLOCO COM IMAGEM */
+.split{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  align-items:center;
+  gap:30px;
+  max-width:1100px;
+  margin:0 auto;
+  text-align:left;
+}
+
+.split img{
+  width:100%;
+  border-radius:15px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* GRID CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
@@ -120,11 +131,20 @@ section{
 }
 
 .card{
-  background:var(--card);
-  padding:22px;
-  border-radius:14px;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
   box-shadow:0 4px 12px rgba(0,0,0,0.06);
-  text-align:left;
+}
+
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.card .content{
+  padding:15px;
 }
 
 .card h3{
@@ -132,26 +152,29 @@ section{
   margin-bottom:8px;
 }
 
-/* BLOCO GRANDE INFORMATIVO */
-.big-section{
+/* CTA */
+.cta{
+  background:var(--primary);
+  color:white;
+  padding:70px 20px;
+}
+
+.cta .btn{
   background:white;
-  padding:90px 20px;
+  color:var(--primary);
 }
 
 /* FOOTER */
 footer{
-  padding:30px;
+  padding:25px;
   text-align:center;
-  color:#718096;
   background:white;
-  border-top:1px solid #e2e8f0;
+  color:#718096;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  nav{
-    display:none;
-  }
+  nav{display:none;}
 }
 </style>
 
@@ -161,142 +184,94 @@ footer{
 
 <header>
   <div><strong>Escola Infantil</strong></div>
-
   <nav>
     <a href="#sobre">Sobre</a>
-    <a href="#pedagogico">Pedagógico</a>
-    <a href="#turmas">Turmas</a>
+    <a href="#ensino">Ensino</a>
     <a href="#estrutura">Estrutura</a>
-    <a href="#eventos">Eventos</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
-<!-- HERO LOGO GRANDE -->
+<!-- HERO COM LOGO -->
 <section class="hero">
-  <img src="https://i.imgur.com/86LuJEt.png" alt="Logo Escola">
+  <img class="logo" src="https://i.imgur.com/86LuJEt.png" alt="Logo Escola">
 
-  <h1>Educação Infantil com Excelência e Cuidado</h1>
-
-  <p>
-    Um ambiente seguro, moderno e acolhedor onde cada criança aprende no seu ritmo,
-    com carinho, atenção e desenvolvimento completo.
-  </p>
+  <h1>Educação Infantil com Cuidado e Excelência</h1>
+  <p>Ambiente acolhedor, seguro e preparado para o desenvolvimento completo da criança.</p>
 
   <a class="btn" href="#contato">Agendar Visita</a>
 </section>
 
-<!-- SOBRE -->
+<!-- SOBRE COM IMAGEM -->
 <section id="sobre">
   <h2 class="title">Sobre a Escola</h2>
-  <p class="subtitle">
-    Somos uma instituição de educação infantil comprometida com o desenvolvimento integral da criança,
-    unindo aprendizagem, socialização e valores humanos.
-  </p>
-</section>
 
-<!-- PEDAGÓGICO -->
-<section id="pedagogico" class="big-section">
-  <h2 class="title">Proposta Pedagógica</h2>
-  <p class="subtitle">
-    Nosso ensino é baseado em metodologias ativas, aprendizagem lúdica e desenvolvimento emocional.
-  </p>
+  <div class="split">
+    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Sala de aula">
 
-  <div class="grid">
-    <div class="card">
-      <h3>Alfabetização</h3>
-      <p>Desenvolvimento da leitura e escrita de forma gradual e natural.</p>
-    </div>
-
-    <div class="card">
-      <h3>Matemática Lúdica</h3>
-      <p>Aprendizado com jogos, desafios e atividades práticas.</p>
-    </div>
-
-    <div class="card">
-      <h3>Educação Emocional</h3>
-      <p>Trabalho com sentimentos, convivência e socialização.</p>
+    <div>
+      <p class="subtitle">
+        Nossa escola oferece educação infantil de qualidade com foco em desenvolvimento cognitivo,
+        emocional e social, respeitando o ritmo de cada criança.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- TURMAS -->
-<section id="turmas">
-  <h2 class="title">Turmas</h2>
+<!-- ENSINO COM IMAGENS -->
+<section id="ensino">
+  <h2 class="title">Ensino</h2>
 
   <div class="grid">
+
     <div class="card">
-      <h3>Berçário</h3>
-      <p>0 a 2 anos — estímulos sensoriais e afetivos.</p>
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+      <div class="content">
+        <h3>Alfabetização</h3>
+        <p>Aprendizado da leitura e escrita com método leve.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Maternal</h3>
-      <p>2 a 4 anos — desenvolvimento da linguagem e coordenação.</p>
+      <img src="https://images.unsplash.com/photo-1588072432865-2f6d2b4d4d4d">
+      <div class="content">
+        <h3>Brincar e Aprender</h3>
+        <p>Atividades lúdicas para desenvolvimento infantil.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Pré-escola</h3>
-      <p>4 a 6 anos — preparação para alfabetização.</p>
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+      <div class="content">
+        <h3>Matemática</h3>
+        <p>Ensino com jogos e raciocínio lógico.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
-<!-- ESTRUTURA -->
-<section id="estrutura" class="big-section">
+<!-- ESTRUTURA COM IMAGEM GRANDE -->
+<section id="estrutura">
   <h2 class="title">Nossa Estrutura</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Salas Modernas</h3>
-      <p>Ambientes amplos, seguros e climatizados.</p>
+  <div class="split">
+    <div>
+      <p class="subtitle">
+        Contamos com salas modernas, ambiente seguro, áreas recreativas e equipe especializada.
+      </p>
     </div>
 
-    <div class="card">
-      <h3>Parquinho</h3>
-      <p>Espaço recreativo seguro e supervisionado.</p>
-    </div>
-
-    <div class="card">
-      <h3>Equipe Especializada</h3>
-      <p>Profissionais capacitados em educação infantil.</p>
-    </div>
+    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt="Escola moderna">
   </div>
 </section>
 
-<!-- EVENTOS -->
-<section id="eventos">
-  <h2 class="title">Eventos e Atividades</h2>
+<!-- CTA -->
+<section class="cta" id="contato">
+  <h2>Venha conhecer nossa escola</h2>
+  <p>Agende uma visita e veja de perto nossa estrutura.</p>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Semana da Família</h3>
-      <p>Integração entre pais e alunos.</p>
-    </div>
-
-    <div class="card">
-      <h3>Festa Junina</h3>
-      <p>Cultura, diversão e aprendizado.</p>
-    </div>
-
-    <div class="card">
-      <h3>Mostra Cultural</h3>
-      <p>Apresentações e projetos dos alunos.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section id="contato" class="big-section">
-  <h2 class="title">Matrículas</h2>
-
-  <p class="subtitle">
-    Entre em contato para agendar uma visita e conhecer nossa escola.
-  </p>
-
-  <a class="btn" href="https://wa.me/5500000000000" target="_blank">
-    Falar no WhatsApp
-  </a>
+  <a class="btn" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
 </section>
 
 <footer>
