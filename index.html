@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Psicopedagogia Infantil</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escola Infantil</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -16,7 +16,7 @@
 }
 
 body{
-  background:#fff8fb;
+  background:#fffaf0;
   color:#222;
   overflow-x:hidden;
 }
@@ -27,56 +27,53 @@ header{
   top:0;
   left:0;
   width:100%;
-  background:#ffcc00;
+  background:#ffd60a;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 20px;
+  padding:10px 20px;
   flex-wrap:wrap;
   z-index:1000;
 }
 
-.logo{
-  font-weight:700;
-  font-size:1.1rem;
+.logo img{
+  height:50px;
 }
 
 nav{
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
+  gap:12px;
 }
 
 nav a{
   text-decoration:none;
-  color:#222;
   font-weight:600;
+  color:#222;
   font-size:0.95rem;
 }
 
 /* HERO */
 .hero{
-  margin-top:80px;
-  padding:70px 20px;
+  margin-top:85px;
+  padding:80px 20px;
   text-align:center;
-  background:#7bdff2;
+  background:#90e0ef;
 }
 
 .hero h1{
-  font-size:clamp(1.6rem, 4vw, 2.6rem);
-  line-height:1.2;
+  font-size:clamp(1.8rem, 4vw, 2.8rem);
 }
 
 .hero p{
   margin-top:10px;
-  font-size:clamp(1rem, 2.5vw, 1.2rem);
+  font-size:1.1rem;
 }
 
 .btn{
   display:inline-block;
   margin-top:20px;
-  background:#00c49a;
+  background:#06d6a0;
   color:white;
   padding:12px 18px;
   border-radius:10px;
@@ -90,11 +87,15 @@ section{
   text-align:center;
 }
 
-.dark{
+.white{
+  background:#fff;
+}
+
+.yellow{
   background:#ffe66d;
 }
 
-/* GRID */
+/* CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
@@ -106,104 +107,83 @@ section{
   background:white;
   border:3px solid #ff6f61;
   border-radius:15px;
-  padding:18px;
-}
-
-/* STEPS */
-.steps{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:20px;
-}
-
-.step{
-  background:#caffbf;
-  padding:12px;
-  border-radius:10px;
-  font-weight:600;
+  padding:20px;
 }
 
 /* FOOTER */
 footer{
-  background:#ffcc00;
+  background:#ffd60a;
   text-align:center;
   padding:20px;
   font-weight:600;
 }
 
-/* MOBILE FIX */
+/* RESPONSIVO */
 @media(max-width:768px){
   header{
     justify-content:center;
-    gap:10px;
     text-align:center;
-  }
-
-  nav a{
-    font-size:0.9rem;
-  }
-
-  .hero{
-    padding:60px 15px;
+    gap:10px;
   }
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <div class="logo">🧠 Apoio Infantil</div>
+  <div class="logo">
+    <img src="https://i.imgur.com/86LuJEt.png" alt="Logo Escola">
+  </div>
 
   <nav>
     <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#metodo">Método</a>
+    <a href="#ensino">Ensino</a>
+    <a href="#diferenciais">Diferenciais</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Aprender pode ser leve, divertido e possível</h1>
-  <p>Apoio psicopedagógico e reforço escolar para crianças</p>
-  <a class="btn" href="#contato">Agendar Atendimento</a>
+  <h1>Educação Infantil com Amor e Qualidade</h1>
+  <p>Um ambiente seguro, acolhedor e preparado para o desenvolvimento da criança</p>
+  <a class="btn" href="#contato">Matricule seu filho</a>
 </section>
 
-<section id="sobre">
-  <h2>Sobre o Atendimento</h2>
+<section class="white" id="sobre">
+  <h2>Sobre a Escola</h2>
   <p style="max-width:700px;margin:15px auto;">
-    Trabalho com crianças que apresentam dificuldades de aprendizagem,
-    oferecendo intervenções psicopedagógicas individuais com foco no desenvolvimento cognitivo e emocional.
+    Nossa escola oferece um ensino infantil moderno, com foco no desenvolvimento cognitivo,
+    emocional e social das crianças, respeitando cada fase da infância.
   </p>
 </section>
 
-<section class="dark" id="servicos">
-  <h2>Serviços</h2>
+<section class="yellow" id="ensino">
+  <h2>Ensino</h2>
 
   <div class="grid">
-    <div class="card">📘 Reforço Escolar</div>
-    <div class="card">🧠 Psicopedagogia</div>
-    <div class="card">🎲 Jogos Educativos</div>
-    <div class="card">🎯 Atenção e Foco</div>
+    <div class="card">📚 Educação Infantil</div>
+    <div class="card">🧠 Desenvolvimento Cognitivo</div>
+    <div class="card">🎨 Atividades Artísticas</div>
+    <div class="card">🎲 Aprendizado Lúdico</div>
   </div>
 </section>
 
-<section id="metodo">
-  <h2>Metodologia</h2>
+<section class="white" id="diferenciais">
+  <h2>Diferenciais</h2>
 
-  <div class="steps">
-    <div class="step">Avaliação inicial</div>
-    <div class="step">Plano individual</div>
-    <div class="step">Intervenções lúdicas</div>
-    <div class="step">Acompanhamento</div>
+  <div class="grid">
+    <div class="card">👩‍🏫 Professores Qualificados</div>
+    <div class="card">🛡️ Ambiente Seguro</div>
+    <div class="card">🍎 Alimentação Saudável</div>
+    <div class="card">🎯 Ensino Personalizado</div>
   </div>
 </section>
 
-<section id="contato">
-  <h2>Contato</h2>
-  <p>Agende uma avaliação ou aula particular.</p>
+<section class="yellow" id="contato">
+  <h2>Contato / Matrícula</h2>
+  <p>Entre em contato para visitar nossa escola</p>
 
   <a class="btn" href="https://wa.me/5500000000000" target="_blank">
     Falar no WhatsApp
@@ -211,7 +191,7 @@ footer{
 </section>
 
 <footer>
-  © 2026 Psicopedagogia Infantil
+  © 2026 Escola Infantil
 </footer>
 
 </body>
