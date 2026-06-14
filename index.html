@@ -5,9 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Escola Infantil</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --primary:#2b6cb0;   /* azul institucional */
+  --secondary:#f6ad55; /* laranja suave */
+  --accent:#38b2ac;    /* verde suave */
+  --bg:#f7fafc;
+  --text:#1a202c;
+  --card:#ffffff;
+}
+
 *{
   margin:0;
   padding:0;
@@ -16,8 +25,8 @@
 }
 
 body{
-  background:#fffaf0;
-  color:#222;
+  background:var(--bg);
+  color:var(--text);
   overflow-x:hidden;
 }
 
@@ -27,103 +36,156 @@ header{
   top:0;
   left:0;
   width:100%;
-  background:#ffd60a;
+  background:white;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 20px;
-  flex-wrap:wrap;
+  padding:12px 25px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
   z-index:1000;
 }
 
 .logo img{
-  height:50px;
+  height:48px;
 }
 
 nav{
   display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+  gap:18px;
 }
 
 nav a{
   text-decoration:none;
-  font-weight:600;
-  color:#222;
+  color:var(--text);
+  font-weight:500;
   font-size:0.95rem;
+}
+
+nav a:hover{
+  color:var(--primary);
 }
 
 /* HERO */
 .hero{
-  margin-top:85px;
-  padding:80px 20px;
+  margin-top:80px;
+  padding:90px 20px;
   text-align:center;
-  background:#90e0ef;
+  background:linear-gradient(0deg, #ffffff, #eef6ff);
 }
 
 .hero h1{
-  font-size:clamp(1.8rem, 4vw, 2.8rem);
+  font-size:clamp(1.8rem, 3.5vw, 2.6rem);
+  color:var(--primary);
+  font-weight:700;
 }
 
 .hero p{
-  margin-top:10px;
+  margin-top:12px;
   font-size:1.1rem;
+  color:#4a5568;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .btn{
   display:inline-block;
-  margin-top:20px;
-  background:#06d6a0;
+  margin-top:22px;
+  background:var(--primary);
   color:white;
-  padding:12px 18px;
+  padding:12px 22px;
   border-radius:10px;
   text-decoration:none;
   font-weight:600;
+  transition:0.2s;
+}
+
+.btn:hover{
+  background:#1e4e8c;
 }
 
 /* SEÇÕES */
 section{
+  padding:70px 20px;
+  text-align:center;
+}
+
+.section-title{
+  font-size:1.6rem;
+  margin-bottom:10px;
+  color:var(--primary);
+}
+
+.section-sub{
+  color:#718096;
+  max-width:650px;
+  margin:0 auto 30px auto;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+  gap:18px;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+.card{
+  background:var(--card);
+  padding:22px;
+  border-radius:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+  border:1px solid #edf2f7;
+  transition:0.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:var(--primary);
+}
+
+.card h3{
+  margin-bottom:8px;
+  color:var(--primary);
+  font-size:1.1rem;
+}
+
+/* CTA */
+.cta{
+  background:var(--primary);
+  color:white;
   padding:60px 20px;
   text-align:center;
 }
 
-.white{
-  background:#fff;
+.cta h2{
+  font-size:1.8rem;
 }
 
-.yellow{
-  background:#ffe66d;
-}
-
-/* CARDS */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:15px;
-  margin-top:25px;
-}
-
-.card{
+.cta .btn{
   background:white;
-  border:3px solid #ff6f61;
-  border-radius:15px;
-  padding:20px;
+  color:var(--primary);
+}
+
+.cta .btn:hover{
+  background:#e2e8f0;
 }
 
 /* FOOTER */
 footer{
-  background:#ffd60a;
+  padding:25px;
   text-align:center;
-  padding:20px;
-  font-weight:600;
+  font-size:0.9rem;
+  color:#718096;
+  background:white;
+  border-top:1px solid #e2e8f0;
 }
 
-/* RESPONSIVO */
+/* MOBILE */
 @media(max-width:768px){
-  header{
-    justify-content:center;
-    text-align:center;
-    gap:10px;
+  nav{
+    display:none;
   }
 }
 </style>
@@ -146,44 +208,69 @@ footer{
 </header>
 
 <section class="hero">
-  <h1>Educação Infantil com Amor e Qualidade</h1>
-  <p>Um ambiente seguro, acolhedor e preparado para o desenvolvimento da criança</p>
-  <a class="btn" href="#contato">Matricule seu filho</a>
+  <h1>Educação Infantil com excelência e carinho</h1>
+  <p>Um ambiente seguro, moderno e acolhedor para o desenvolvimento completo da criança.</p>
+  <a class="btn" href="#contato">Agendar visita</a>
 </section>
 
-<section class="white" id="sobre">
-  <h2>Sobre a Escola</h2>
-  <p style="max-width:700px;margin:15px auto;">
-    Nossa escola oferece um ensino infantil moderno, com foco no desenvolvimento cognitivo,
-    emocional e social das crianças, respeitando cada fase da infância.
+<section id="sobre">
+  <h2 class="section-title">Sobre a Escola</h2>
+  <p class="section-sub">
+    Somos uma escola infantil focada no desenvolvimento cognitivo, emocional e social das crianças,
+    com ensino moderno e acompanhamento individualizado.
   </p>
 </section>
 
-<section class="yellow" id="ensino">
-  <h2>Ensino</h2>
+<section id="ensino">
+  <h2 class="section-title">Ensino</h2>
 
   <div class="grid">
-    <div class="card">📚 Educação Infantil</div>
-    <div class="card">🧠 Desenvolvimento Cognitivo</div>
-    <div class="card">🎨 Atividades Artísticas</div>
-    <div class="card">🎲 Aprendizado Lúdico</div>
+    <div class="card">
+      <h3>Educação Infantil</h3>
+      <p>Base pedagógica sólida para os primeiros anos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Aprendizado Lúdico</h3>
+      <p>Ensino através de jogos e atividades criativas.</p>
+    </div>
+
+    <div class="card">
+      <h3>Desenvolvimento Cognitivo</h3>
+      <p>Estimulação da memória, lógica e linguagem.</p>
+    </div>
+
+    <div class="card">
+      <h3>Atividades Artísticas</h3>
+      <p>Arte, música e expressão criativa.</p>
+    </div>
   </div>
 </section>
 
-<section class="white" id="diferenciais">
-  <h2>Diferenciais</h2>
+<section id="diferenciais">
+  <h2 class="section-title">Diferenciais</h2>
 
   <div class="grid">
-    <div class="card">👩‍🏫 Professores Qualificados</div>
-    <div class="card">🛡️ Ambiente Seguro</div>
-    <div class="card">🍎 Alimentação Saudável</div>
-    <div class="card">🎯 Ensino Personalizado</div>
+    <div class="card">
+      <h3>Equipe Qualificada</h3>
+      <p>Professores experientes e especializados.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ambiente Seguro</h3>
+      <p>Estrutura pensada para proteção e conforto.</p>
+    </div>
+
+    <div class="card">
+      <h3>Acompanhamento Individual</h3>
+      <p>Cada aluno recebe atenção personalizada.</p>
+    </div>
   </div>
 </section>
 
-<section class="yellow" id="contato">
-  <h2>Contato / Matrícula</h2>
-  <p>Entre em contato para visitar nossa escola</p>
+<section class="cta" id="contato">
+  <h2>Matricule seu filho hoje</h2>
+  <p>Agende uma visita e conheça nossa estrutura.</p>
 
   <a class="btn" href="https://wa.me/5500000000000" target="_blank">
     Falar no WhatsApp
@@ -191,7 +278,7 @@ footer{
 </section>
 
 <footer>
-  © 2026 Escola Infantil
+  © 2026 Escola Infantil — Todos os direitos reservados
 </footer>
 
 </body>
