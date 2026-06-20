@@ -215,7 +215,6 @@ section{
 
 .btn1{background:#2d6cdf;}
 .btn2{background:#ff5c8a;}
-.btn3{background:#25d366;}
 
 .map-box{
   max-width:1000px;
@@ -353,17 +352,17 @@ footer p{
 
     <div class="card">
       <h3>Atendimento psicopedagógico</h3>
-      <p>Acompanhamento individual com foco no desenvolvimento da aprendizagem, comportamento e emoções.</p>
+      <p>Acompanhamento individual com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
     </div>
 
     <div class="card">
       <h3>Avaliação de aprendizagem</h3>
-      <p>Diagnóstico completo das dificuldades escolares e identificação de potencialidades cognitivas.</p>
+      <p>Diagnóstico completo das dificuldades e potencialidades no processo de aprendizagem.</p>
     </div>
 
     <div class="card">
       <h3>Intervenção pedagógica</h3>
-      <p>Plano estruturado de atividades para evolução em leitura, escrita, atenção e raciocínio lógico.</p>
+      <p>Plano estruturado de atividades personalizadas para evolução contínua da criança.</p>
     </div>
 
   </div>
@@ -381,26 +380,25 @@ footer p{
 
     <div class="step"><div class="step-number">2</div><div><h3>Avaliação</h3><p>Diagnóstico completo do desenvolvimento e aprendizagem.</p></div></div>
 
-    <div class="step"><div class="step-number">3</div><div><h3>Plano de intervenção</h3><p>Estratégias personalizadas e acompanhamento contínuo.</p></div></div>
+    <div class="step"><div class="step-number">3</div><div><h3>Plano de intervenção</h3><p>Estratégias personalizadas com acompanhamento contínuo.</p></div></div>
 
   </div>
 
 </section>
 
-<!-- MAPA + CASA DO ALUNO -->
+<!-- MAPA -->
 <section class="map-section">
 
   <h2 class="section-title">Encontre a unidade mais próxima</h2>
 
   <p class="section-sub">
-    Também realizamos atendimento na casa do aluno, quando necessário.
+    Você pode optar pelo atendimento em casa ou nas nossas unidades físicas.
   </p>
 
   <div class="map-buttons">
 
     <button class="btn1" onclick="trocarMapa(1)">Unidade Centro</button>
     <button class="btn2" onclick="trocarMapa(2)">Unidade Bela Suíça</button>
-    <button class="btn3" onclick="trocarMapa(3)">Casa do aluno</button>
 
   </div>
 
@@ -416,15 +414,15 @@ footer p{
 <!-- FINAL -->
 <section class="final-section">
 
-  <h2 class="section-title">Faça sua matrícula agora</h2>
+  <h2 class="section-title">Agende seu atendimento</h2>
 
   <div class="final-box">
-    Atendimento humanizado, individualizado e focado no desenvolvimento da criança.
+    Atendimento psicopedagógico individualizado, com foco no desenvolvimento cognitivo, emocional e escolar da criança.
   </div>
 
   <div class="final-buttons">
-    <a class="btn btn-blue" href="#">Encontrar unidade</a>
-    <a class="btn btn-green" href="https://wa.me/5500000000000">Matricular agora</a>
+    <a class="btn btn-blue" href="#mapa">Ver unidades</a>
+    <a class="btn btn-green" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
   </div>
 
 </section>
@@ -467,10 +465,6 @@ function trocarMapa(op){
 
   if(op===2){
     m.src="https://www.google.com/maps?q=R.%20Adhemar%20Pereira%20de%20Barros,%20630%20-%20Bela%20Su%C3%AD%C3%A7a,%20Londrina&output=embed";
-  }
-
-  if(op===3){
-    m.src="https://www.google.com/maps?q=Londrina%20PR&output=embed";
   }
 }
 </script>
