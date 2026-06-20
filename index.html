@@ -120,39 +120,37 @@ h2{
   margin-bottom:25px;
 }
 
-/* HISTÓRIA */
+/* =========================
+   HISTÓRIA (AGORA PREMIUM)
+========================= */
+
 .historia{
   background:#eef3ff;
 }
 
-details{
+.history-box{
   max-width:900px;
   margin:auto;
-  text-align:center;
-}
-
-summary{
-  cursor:pointer;
-  font-size:1.2rem;
-  font-weight:600;
-  padding:15px;
   background:white;
-  border-radius:12px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
-  list-style:none;
-}
-
-.historia p{
-  margin-top:25px;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.08);
   text-align:justify;
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.06);
   line-height:1.8;
+  color:#444;
 }
 
-/* SERVIÇOS */
+.history-title{
+  text-align:center;
+  font-weight:600;
+  margin-bottom:15px;
+  color:#1f3b57;
+}
+
+/* =========================
+   SERVIÇOS (MAIS COMPLETO)
+========================= */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
@@ -163,12 +161,20 @@ summary{
 
 .card{
   background:#fff;
-  padding:25px;
-  border-radius:15px;
+  padding:28px;
+  border-radius:18px;
   box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 
-/* COMO FUNCIONA (MELHORADO) */
+.card h3{
+  margin-bottom:10px;
+  color:#1f3b57;
+}
+
+/* =========================
+   COMO FUNCIONA (MAIS FORTE)
+========================= */
+
 .steps{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
@@ -184,11 +190,6 @@ summary{
   box-shadow:0 8px 18px rgba(0,0,0,0.08);
   text-align:center;
   border:1px solid rgba(0,0,0,0.05);
-  transition:.3s;
-}
-
-.step:hover{
-  transform:translateY(-5px);
 }
 
 .step h3{
@@ -197,8 +198,8 @@ summary{
 }
 
 .step p{
-  font-size:0.95rem;
   color:#555;
+  font-size:0.95rem;
 }
 
 /* FINAL */
@@ -212,7 +213,7 @@ summary{
   text-align:center;
 }
 
-/* FOOTER (COMPLETO) */
+/* FOOTER */
 footer{
   background:#1f3b57;
   color:white;
@@ -226,10 +227,6 @@ footer{
   max-width:1100px;
   margin:auto;
   text-align:left;
-}
-
-.footer-logo img{
-  width:130px;
 }
 
 footer h3{
@@ -284,31 +281,32 @@ footer p{
 
 </section>
 
-<!-- HISTÓRIA -->
+<!-- HISTÓRIA MELHORADA VISUALMENTE -->
 <section class="historia">
 
   <h2>Nossa História</h2>
 
-  <details>
-    <summary>Clique para conhecer a história</summary>
+  <div class="history-box">
 
-    <p>
-      A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização.<br><br>
+    <div class="history-title">
+      A construção da Turma do Clubinho
+    </div>
 
-      Ao longo da vivência no contexto escolar, diferentes experiências foram compondo um olhar mais atento sobre o processo de aprendizagem. Cada criança, com seu próprio ritmo, suas tentativas e suas formas de se expressar, ajudou a evidenciar a importância de uma alfabetização mais sensível, consciente e intencional.<br><br>
+    A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização.<br><br>
 
-      Nesse percurso, também foi fundamental a troca com profissionais da educação que compartilharam o cotidiano escolar, fortalecendo reflexões e ampliando possibilidades de atuação pedagógica.<br><br>
+    Ao longo da vivência no contexto escolar, diferentes experiências foram compondo um olhar mais atento sobre o processo de aprendizagem. Cada criança, com seu próprio ritmo, suas tentativas e suas formas de se expressar, ajudou a evidenciar a importância de uma alfabetização mais sensível, consciente e intencional.<br><br>
 
-      São momentos que marcaram profundamente essa trajetória e que permanecem vivos até hoje.<br><br>
+    Nesse percurso, também foi fundamental a troca com profissionais da educação que compartilharam o cotidiano escolar, fortalecendo reflexões e ampliando possibilidades de atuação pedagógica.<br><br>
 
-      Foram experiências que reforçaram a importância da escuta, da paciência e do respeito ao tempo de cada processo de aprendizagem.<br><br>
+    São momentos que marcaram profundamente essa trajetória e permanecem vivos até hoje.<br><br>
 
-      Em homenagem à Turma do Clubinho:<br>
-      Benício, Maicon, Pedro, Marcos e Maria.<br>
-      Professora Vanessa, Professora Cirleia e Professora Joceli.
-    </p>
+    Mais do que conteúdos, permaneceram relações, escuta e respeito ao tempo de cada criança.<br><br>
 
-  </details>
+    Em homenagem à Turma do Clubinho:<br>
+    Benício, Maicon, Pedro, Marcos e Maria.<br>
+    Professora Vanessa, Professora Cirleia e Professora Joceli.
+
+  </div>
 
 </section>
 
@@ -321,47 +319,59 @@ footer p{
 
     <div class="card">
       <h3>Atendimento especializado</h3>
-      <p>Foco no desenvolvimento da aprendizagem, cognição e aspectos emocionais da criança.</p>
+      <p>
+        Acompanhamento voltado ao desenvolvimento da aprendizagem,
+        habilidades cognitivas e emocionais da criança.
+      </p>
     </div>
 
     <div class="card">
       <h3>Avaliação de aprendizagem</h3>
-      <p>Identificação das dificuldades e potencialidades no processo escolar.</p>
+      <p>
+        Investigação das dificuldades e potencialidades no processo escolar.
+      </p>
     </div>
 
     <div class="card">
       <h3>Intervenção pedagógica</h3>
-      <p>Atividades direcionadas para evolução contínua da criança.</p>
+      <p>
+        Plano de atividades personalizadas com foco em evolução contínua.
+      </p>
     </div>
 
   </div>
 </section>
 
-<!-- COMO FUNCIONA -->
+<!-- COMO FUNCIONA (AGORA DIFERENTE DOS SERVIÇOS) -->
 <section>
 
-  <h2>Como funciona</h2>
+  <h2>Como funciona o atendimento</h2>
 
   <div class="steps">
 
     <div class="step">
-      <h3>Contato inicial</h3>
-      <p>Entendemos a necessidade da criança e da família.</p>
+      <h3>1. Escuta inicial</h3>
+      <p>Entendemos a queixa, história escolar e necessidades da criança.</p>
     </div>
 
     <div class="step">
-      <h3>Avaliação</h3>
-      <p>Realizamos análise completa do processo de aprendizagem.</p>
+      <h3>2. Avaliação completa</h3>
+      <p>Análise do desenvolvimento cognitivo, emocional e pedagógico.</p>
     </div>
 
     <div class="step">
-      <h3>Plano de intervenção</h3>
-      <p>Criamos estratégias personalizadas para cada caso.</p>
+      <h3>3. Plano de trabalho</h3>
+      <p>Definição de estratégias específicas para cada criança.</p>
     </div>
 
     <div class="step">
-      <h3>Acompanhamento</h3>
-      <p>Aplicação de atividades e evolução contínua.</p>
+      <h3>4. Intervenção contínua</h3>
+      <p>Sessões com atividades direcionadas e acompanhamento próximo.</p>
+    </div>
+
+    <div class="step">
+      <h3>5. Evolução e ajustes</h3>
+      <p>Revisão constante do progresso e adaptação do plano.</p>
     </div>
 
   </div>
@@ -384,10 +394,6 @@ footer p{
 
   <div class="footer-grid">
 
-    <div class="footer-logo">
-      <img src="https://i.imgur.com/W8Z47VR.png">
-    </div>
-
     <div>
       <h3>Contato</h3>
       <p>Telefone: (00) 00000-0000</p>
@@ -395,9 +401,15 @@ footer p{
     </div>
 
     <div>
-      <h3>Localização</h3>
+      <h3>Endereço</h3>
       <p>Rua Exemplo, 123</p>
       <p>Centro - Cidade/UF</p>
+    </div>
+
+    <div>
+      <h3>Atendimento</h3>
+      <p>Segunda a sábado</p>
+      <p>08h às 18h</p>
     </div>
 
   </div>
