@@ -9,7 +9,297 @@
 
 <style>
 
-/* COLE SEU CSS ORIGINAL AQUI (mantido igual) */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  overflow-x:hidden;
+  background:#fffaf0;
+}
+
+/* TOPBAR */
+.topbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#ff6b9d;
+  color:white;
+  padding:12px 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  font-weight:600;
+}
+
+.topbar button{
+  position:absolute;
+  right:15px;
+  background:transparent;
+  border:none;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 8% 0;
+  position:relative;
+  background:linear-gradient(to top, #87cefa, #bfe9ff);
+  overflow:hidden;
+}
+
+.cloud{
+  position:absolute;
+  width:140px;
+  opacity:0.85;
+  animation:moveClouds linear infinite;
+}
+
+.cloud1{top:12%; left:-180px; animation-duration:55s;}
+.cloud2{top:38%; left:-240px; animation-duration:70s;}
+.cloud3{top:65%; left:-200px; animation-duration:60s;}
+
+@keyframes moveClouds{
+  from{transform:translateX(0);}
+  to{transform:translateX(140vw);}
+}
+
+/* TEXTO */
+.hero-text{
+  width:50%;
+  z-index:2;
+  color:#1f3b57;
+}
+
+.hero-text h1{
+  font-size:2.8rem;
+  margin-bottom:15px;
+}
+
+.hero-text p{
+  font-size:1.05rem;
+  line-height:1.6;
+  max-width:500px;
+  color:#2f4f6f;
+}
+
+/* LOGO */
+.hero-logo{
+  width:40%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-logo img{
+  width:420px;
+  max-width:100%;
+  object-fit:contain;
+}
+
+/* SEÇÕES */
+section{
+  padding:120px 20px;
+}
+
+/* SERVIÇOS */
+.servicos{
+  text-align:center;
+  background:#fdfcf9;
+}
+
+.servicos h2{
+  font-size:2.2rem;
+  color:#2d6cdf;
+  margin-bottom:15px;
+}
+
+.servicos p{
+  max-width:900px;
+  margin:auto;
+  color:#666;
+  line-height:1.6;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:25px;
+  max-width:1200px;
+  margin:60px auto 0;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#1f3b57;
+}
+
+.card p{
+  color:#555;
+  line-height:1.6;
+}
+
+/* SOBRE + HISTÓRIA */
+.sobre{
+  background:#eef3ff;
+  text-align:center;
+}
+
+.sobre p{
+  max-width:900px;
+  margin:auto;
+  color:#555;
+  line-height:1.8;
+  text-align:justify;
+}
+
+/* PROCESSO */
+.processo{
+  background:#ffffff;
+  text-align:center;
+}
+
+.processo h2{
+  font-size:2.2rem;
+  color:#2d6cdf;
+  margin-bottom:15px;
+}
+
+.processo p{
+  max-width:850px;
+  margin:auto;
+  color:#555;
+  line-height:1.6;
+}
+
+.steps{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+  max-width:1100px;
+  margin-inline:auto;
+}
+
+.step{
+  background:#f7f9fc;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.step h3{
+  margin-bottom:10px;
+  color:#1f3b57;
+}
+
+.step p{
+  color:#555;
+}
+
+/* FINAL */
+.final{
+  background:#f7f9fc;
+  text-align:center;
+}
+
+.final h2{
+  color:#2d6cdf;
+  margin-bottom:10px;
+}
+
+.final p{
+  max-width:850px;
+  margin:auto;
+  color:#555;
+  line-height:1.7;
+}
+
+.final-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+  max-width:1000px;
+  margin-inline:auto;
+}
+
+.final-item{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  font-weight:600;
+  color:#1f3b57;
+}
+
+/* FOOTER */
+footer{
+  background:#1f3b57;
+  color:white;
+  padding:40px 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.footer-logo img{
+  width:140px;
+}
+
+/* BOTÃO FLUTUANTE */
+.floating-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  z-index:999;
+}
+
+/* RESPONSIVO */
+@media (max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    height:auto;
+    gap:30px;
+  }
+
+  .hero-text{
+    width:100%;
+  }
+
+  .hero-logo img{
+    width:300px;
+  }
+}
 
 </style>
 </head>
@@ -29,7 +319,6 @@
 
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
-
     <p>
       Atendimento psicopedagógico especializado para crianças com dificuldades de aprendizagem,
       com foco no desenvolvimento cognitivo, emocional e escolar de forma leve, lúdica e personalizada.
@@ -42,76 +331,62 @@
 
 </section>
 
-<!-- NOVA SEÇÃO HISTÓRIA -->
-<section class="sobre">
-
-  <h2>História da Turma do Clubinho</h2>
-
-  <p>
-    A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram
-    com a construção da prática na alfabetização.
-    <br><br>
-
-    Ao longo da vivência no contexto escolar, diferentes experiências foram compondo um olhar mais atento
-    sobre o processo de aprendizagem. Cada criança, com seu próprio ritmo, suas tentativas e suas formas
-    de se expressar, ajudou a evidenciar a importância de uma alfabetização mais sensível, consciente e intencional.
-    <br><br>
-
-    Nesse percurso, também foi fundamental a troca com profissionais da educação que compartilharam o cotidiano escolar,
-    fortalecendo reflexões e ampliando possibilidades de atuação pedagógica.
-    <br><br>
-
-    São momentos que marcaram profundamente essa trajetória e que permanecem vivos até hoje, não apenas como lembrança,
-    mas como base para a construção do que hoje se entende como a Turma do Clubinho.
-    <br><br>
-
-    Foram experiências que reforçaram a importância da escuta, da paciência e do respeito ao tempo de cada processo de aprendizagem.
-    Mais do que atividades ou conteúdos, permaneceram as relações construídas e os aprendizados que surgem no cotidiano do ensinar.
-    <br><br>
-
-    A Turma do Clubinho representa essa construção ao longo do tempo: a síntese dessas vivências que seguem sustentando uma prática mais humana e acessível na alfabetização.
-    <br><br>
-
-    <strong>Em homenagem à Turma do Clubinho:</strong><br>
-    Benício, Maicon, Pedro, Marcos e Maria.<br>
-    Professora Vanessa, Professora Cirleia e Professora Joceli.
-    <br><br>
-
-    Mais do que nomes, representam contribuições que permanecem vivas e fazem parte da base que sustenta esse trabalho.
-    <br><br>
-
-    Porque cada experiência no campo educacional deixa algo que permanece:
-    a construção contínua de práticas mais conscientes, sensíveis e significativas.
-  </p>
-
-</section>
-
 <section class="servicos">
 
   <h2>Serviços oferecidos</h2>
 
   <p>
-    Atendimento especializado para dificuldades de aprendizagem com foco em desenvolvimento individual.
+    Oferecemos atendimento completo para apoio ao desenvolvimento da aprendizagem infantil,
+    com foco em cada criança de forma individualizada e respeitando seu ritmo.
   </p>
 
   <div class="grid">
 
     <div class="card">
       <h3>Aulas particulares</h3>
-      <p>Apoio individual em leitura, escrita e matemática.</p>
+      <p>Apoio individual em leitura, escrita e matemática, reforçando a base escolar da criança.</p>
     </div>
 
     <div class="card">
       <h3>Avaliação psicopedagógica</h3>
-      <p>Identificação de dificuldades e criação de plano personalizado.</p>
+      <p>Identificação das dificuldades de aprendizagem com análise detalhada do processo cognitivo.</p>
     </div>
 
     <div class="card">
-      <h3>Intervenção</h3>
-      <p>Acompanhamento contínuo para evolução escolar e cognitiva.</p>
+      <h3>Intervenção pedagógica</h3>
+      <p>Atendimento contínuo para desenvolvimento de habilidades, autonomia e desempenho escolar.</p>
     </div>
 
   </div>
+</section>
+
+<section class="sobre">
+
+  <h2>História da Turma do Clubinho</h2>
+
+  <p>
+    A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização.<br><br>
+
+    Ao longo da vivência no contexto escolar, diferentes experiências foram compondo um olhar mais atento sobre o processo de aprendizagem. Cada criança, com seu próprio ritmo, suas tentativas e suas formas de se expressar, ajudou a evidenciar a importância de uma alfabetização mais sensível, consciente e intencional.<br><br>
+
+    Nesse percurso, também foi fundamental a troca com profissionais da educação que compartilharam o cotidiano escolar, fortalecendo reflexões e ampliando possibilidades de atuação pedagógica.<br><br>
+
+    São momentos que marcaram profundamente essa trajetória e que permanecem vivos até hoje, não apenas como lembrança, mas como base para a construção do que hoje se entende como a Turma do Clubinho.<br><br>
+
+    Foram experiências que reforçaram a importância da escuta, da paciência e do respeito ao tempo de cada processo de aprendizagem. Mais do que atividades ou conteúdos, permaneceram as relações construídas e os aprendizados que surgem no cotidiano do ensinar.<br><br>
+
+    A Turma do Clubinho representa essa construção ao longo do tempo: a síntese dessas vivências que seguem sustentando uma prática mais humana e acessível na alfabetização.<br><br>
+
+    <strong>Em homenagem à Turma do Clubinho:</strong><br>
+    Benício, Maicon, Pedro, Marcos e Maria.<br>
+    Professora Vanessa, Professora Cirleia e Professora Joceli.<br><br>
+
+    Mais do que nomes, representam contribuições que permanecem vivas e fazem parte da base que sustenta esse trabalho.<br><br>
+
+    Porque cada experiência no campo educacional deixa algo que permanece:
+    a construção contínua de práticas mais conscientes, sensíveis e significativas.
+  </p>
+
 </section>
 
 <section class="processo">
@@ -122,17 +397,17 @@
 
     <div class="step">
       <h3>Contato</h3>
-      <p>Entendimento da necessidade da criança.</p>
+      <p>Entendimento da necessidade da criança e da família.</p>
     </div>
 
     <div class="step">
       <h3>Avaliação</h3>
-      <p>Análise do nível de aprendizagem e dificuldades.</p>
+      <p>Identificação das dificuldades de aprendizagem e nível escolar.</p>
     </div>
 
     <div class="step">
       <h3>Intervenção</h3>
-      <p>Plano individual com foco em evolução contínua.</p>
+      <p>Plano personalizado com foco em evolução contínua e resultados reais.</p>
     </div>
 
   </div>
@@ -143,13 +418,14 @@
   <h2>Acompanhamento contínuo</h2>
 
   <p>
-    O processo é acompanhado de forma constante, respeitando o ritmo da criança e ajustando estratégias sempre que necessário.
+    A evolução da criança é acompanhada constantemente, com ajustes no plano sempre que necessário,
+    garantindo um desenvolvimento seguro, respeitoso e progressivo.
   </p>
 
   <div class="final-grid">
 
     <div class="final-item">Plano individualizado</div>
-    <div class="final-item">Evolução contínua</div>
+    <div class="final-item">Evolução constante</div>
     <div class="final-item">Apoio à família</div>
 
   </div>
