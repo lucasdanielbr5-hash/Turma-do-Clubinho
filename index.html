@@ -114,16 +114,18 @@ body{
   position:relative;
 }
 
-/* REMOVE A BOLA */
+/* REMOVIDO FUNDO (bola) */
 .hero-logo::before{
   display:none;
 }
 
-/* LOGO GRANDE */
+/* LOGO OTIMIZADA */
 .hero-logo img{
-  width:380px;
+  width:320px;
   max-width:100%;
   height:auto;
+  display:block;
+  image-rendering:auto;
   position:relative;
   z-index:2;
 }
@@ -262,7 +264,7 @@ footer{
   }
 
   .hero-logo img{
-    width:260px;
+    width:240px;
   }
 
   .hero-text h1{
@@ -294,6 +296,7 @@ footer{
   </div>
 
   <div class="hero-logo">
+    <!-- TROQUE AQUI POR UMA LOGO HD (PNG OU SVG) -->
     <img src="https://i.imgur.com/86LuJEt.png">
   </div>
 
