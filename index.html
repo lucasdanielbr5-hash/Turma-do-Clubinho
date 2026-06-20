@@ -58,6 +58,7 @@ body{
   overflow:hidden;
 }
 
+/* NUVENS */
 .cloud{
   position:absolute;
   width:140px;
@@ -74,6 +75,7 @@ body{
   to{transform:translateX(140vw);}
 }
 
+/* TEXTO */
 .hero-text{
   width:50%;
   z-index:2;
@@ -92,17 +94,6 @@ body{
   color:#2f4f6f;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 26px;
-  border-radius:30px;
-  background:#ff6b9d;
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-}
-
 /* LOGO */
 .hero-logo{
   width:40%;
@@ -119,7 +110,7 @@ body{
 
 /* SEÇÕES */
 section{
-  padding:110px 20px;
+  padding:120px 20px;
 }
 
 /* SERVIÇOS */
@@ -128,9 +119,22 @@ section{
   background:#fdfcf9;
 }
 
+.servicos h2{
+  font-size:2.2rem;
+  color:#2d6cdf;
+  margin-bottom:15px;
+}
+
+.servicos p{
+  max-width:900px;
+  margin:auto;
+  color:#666;
+  line-height:1.6;
+}
+
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
   gap:25px;
   max-width:1200px;
   margin:60px auto 0;
@@ -143,6 +147,16 @@ section{
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
+.card h3{
+  margin-bottom:10px;
+  color:#1f3b57;
+}
+
+.card p{
+  color:#555;
+  line-height:1.6;
+}
+
 /* SOBRE */
 .sobre{
   background:#eef3ff;
@@ -153,64 +167,87 @@ section{
   max-width:900px;
   margin:auto;
   color:#555;
-  line-height:1.7;
+  line-height:1.8;
 }
 
-/* DIFERENCIAIS */
-.diferenciais{
+/* PROCESSO */
+.processo{
+  background:#ffffff;
   text-align:center;
 }
 
-.stats{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-  gap:20px;
-  max-width:1000px;
-  margin:50px auto 0;
+.processo h2{
+  font-size:2.2rem;
+  color:#2d6cdf;
+  margin-bottom:15px;
 }
 
-.stat{
-  background:white;
+.processo p{
+  max-width:850px;
+  margin:auto;
+  color:#555;
+  line-height:1.6;
+}
+
+.steps{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+  max-width:1100px;
+  margin-inline:auto;
+}
+
+.step{
+  background:#f7f9fc;
   padding:25px;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.06);
-  font-weight:700;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.step h3{
+  margin-bottom:10px;
   color:#1f3b57;
 }
 
-/* DEPOIMENTOS */
-.depoimentos{
+.step p{
+  color:#555;
+}
+
+/* FINAL */
+.final{
   background:#f7f9fc;
   text-align:center;
 }
 
-.testimonials{
+.final h2{
+  color:#2d6cdf;
+  margin-bottom:10px;
+}
+
+.final p{
+  max-width:850px;
+  margin:auto;
+  color:#555;
+  line-height:1.7;
+}
+
+.final-grid{
+  margin-top:40px;
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
   gap:20px;
-  max-width:1100px;
-  margin:50px auto 0;
+  max-width:1000px;
+  margin-inline:auto;
 }
 
-.testimonial{
+.final-item{
   background:white;
-  padding:25px;
+  padding:20px;
   border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.06);
-  font-style:italic;
-}
-
-/* FAQ */
-.faq{
-  background:#fff;
-}
-
-.faq-item{
-  max-width:800px;
-  margin:15px auto;
-  background:#f4f6ff;
-  padding:18px;
-  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  font-weight:600;
+  color:#1f3b57;
 }
 
 /* FOOTER */
@@ -232,7 +269,7 @@ footer{
   width:140px;
 }
 
-/* BOTÃO */
+/* BOTÃO FLUTUANTE */
 .floating-btn{
   position:fixed;
   bottom:20px;
@@ -243,10 +280,12 @@ footer{
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
+  z-index:999;
 }
 
 /* RESPONSIVO */
 @media (max-width:768px){
+
   .hero{
     flex-direction:column;
     text-align:center;
@@ -281,8 +320,10 @@ footer{
 
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
-    <p>Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
-    <a class="btn" href="#contato">Falar com atendimento</a>
+    <p>
+      Atendimento psicopedagógico especializado para crianças com dificuldades de aprendizagem,
+      com foco no desenvolvimento cognitivo, emocional e escolar de forma leve, lúdica e personalizada.
+    </p>
   </div>
 
   <div class="hero-logo">
@@ -292,54 +333,91 @@ footer{
 </section>
 
 <section class="servicos">
+
   <h2>Serviços oferecidos</h2>
 
+  <p>
+    Oferecemos acompanhamento completo para auxiliar crianças no processo de aprendizagem,
+    respeitando o ritmo individual e fortalecendo habilidades essenciais.
+  </p>
+
   <div class="grid">
-    <div class="card">Aulas particulares personalizadas</div>
-    <div class="card">Avaliação psicopedagógica completa</div>
-    <div class="card">Intervenção pedagógica infantil</div>
-    <div class="card">Reforço escolar contínuo</div>
-    <div class="card">Atendimento para dificuldades de leitura</div>
-    <div class="card">Apoio em matemática básica</div>
+
+    <div class="card">
+      <h3>Aulas particulares</h3>
+      <p>Apoio individualizado em leitura, escrita e matemática com foco nas dificuldades específicas da criança.</p>
+    </div>
+
+    <div class="card">
+      <h3>Avaliação psicopedagógica</h3>
+      <p>Identificação detalhada das dificuldades de aprendizagem e criação de plano de intervenção personalizado.</p>
+    </div>
+
+    <div class="card">
+      <h3>Intervenção pedagógica</h3>
+      <p>Atendimento contínuo para desenvolver autonomia, concentração e evolução escolar consistente.</p>
+    </div>
+
   </div>
 </section>
 
 <section class="sobre">
+
   <h2>Sobre o Clubinho</h2>
+
   <p>
-    O Clubinho da Aprendizagem nasceu para ajudar crianças com dificuldades escolares,
-    oferecendo um acompanhamento humanizado, lúdico e focado no desenvolvimento completo.
-    Nosso objetivo é transformar o aprendizado em algo leve e possível.
+    O Clubinho da Aprendizagem nasceu com o propósito de transformar a forma como crianças aprendem.
+    Trabalhamos com métodos lúdicos e personalizados, respeitando o tempo de cada criança e fortalecendo sua autoestima,
+    além do desempenho escolar.
   </p>
+
 </section>
 
-<section class="diferenciais">
-  <h2>Diferenciais</h2>
+<section class="processo">
 
-  <div class="stats">
-    <div class="stat">Atendimento personalizado</div>
-    <div class="stat">Metodologia lúdica</div>
-    <div class="stat">Foco em resultados</div>
-    <div class="stat">Acompanhamento da família</div>
+  <h2>Como funciona</h2>
+
+  <p>
+    Nosso processo é simples, acolhedor e totalmente focado na evolução da criança.
+  </p>
+
+  <div class="steps">
+
+    <div class="step">
+      <h3>Contato</h3>
+      <p>Entendemos as dificuldades e necessidades da criança e da família.</p>
+    </div>
+
+    <div class="step">
+      <h3>Avaliação</h3>
+      <p>Realizamos atividades para identificar nível de aprendizagem e dificuldades.</p>
+    </div>
+
+    <div class="step">
+      <h3>Intervenção</h3>
+      <p>Criamos um plano personalizado com foco em evolução contínua e resultados reais.</p>
+    </div>
+
   </div>
 </section>
 
-<section class="depoimentos">
-  <h2>Depoimentos</h2>
+<section class="final">
 
-  <div class="testimonials">
-    <div class="testimonial">“Meu filho evoluiu muito em poucas semanas!”</div>
-    <div class="testimonial">“Agora ele gosta de estudar, mudou totalmente.”</div>
-    <div class="testimonial">“Profissionais muito atenciosos e humanos.”</div>
+  <h2>Acompanhamento contínuo</h2>
+
+  <p>
+    A evolução da criança é acompanhada constantemente, com ajustes no plano sempre que necessário,
+    garantindo progresso consistente e seguro.
+  </p>
+
+  <div class="final-grid">
+
+    <div class="final-item">Plano individualizado</div>
+    <div class="final-item">Evolução constante</div>
+    <div class="final-item">Apoio à família</div>
+
   </div>
-</section>
 
-<section class="faq">
-  <h2 style="text-align:center;">Perguntas Frequentes</h2>
-
-  <div class="faq-item">Atende qual idade? → Crianças do ensino infantil ao fundamental.</div>
-  <div class="faq-item">Tem atendimento online? → Sim, dependendo da necessidade.</div>
-  <div class="faq-item">Precisa avaliação? → Sim, para plano personalizado.</div>
 </section>
 
 <footer id="contato">
