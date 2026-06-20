@@ -107,10 +107,7 @@ section{
   line-height:1.6;
 }
 
-/* =========================
-   HISTÓRIA (COMPLETA E LIMPA)
-========================= */
-
+/* HISTÓRIA */
 .historia{
   background:#ffffff;
 }
@@ -124,22 +121,19 @@ section{
   box-shadow:0 15px 35px rgba(0,0,0,0.08);
   border:1px solid #e6ecff;
   line-height:1.8;
-  color:#3a4a5a;
   text-align:justify;
+  color:#3a4a5a;
 }
 
 .history-title{
   text-align:center;
   font-size:1.4rem;
   font-weight:600;
-  margin-bottom:25px;
+  margin-bottom:20px;
   color:#1f3b57;
 }
 
-/* =========================
-   SERVIÇOS (MAIS COMPLETO E FORTE)
-========================= */
-
+/* SERVIÇOS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -166,10 +160,7 @@ section{
   line-height:1.7;
 }
 
-/* =========================
-   COMO FUNCIONA
-========================= */
-
+/* COMO FUNCIONA */
 .steps{
   max-width:1000px;
   margin:60px auto 0;
@@ -197,6 +188,40 @@ section{
   align-items:center;
   justify-content:center;
   font-weight:600;
+}
+
+/* UNIDADES (MAPA) */
+.map-section{
+  background:#ffffff;
+  text-align:center;
+}
+
+.map-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.map-buttons button{
+  padding:12px 18px;
+  border-radius:25px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  color:white;
+}
+
+.btn1{background:#2d6cdf;}
+.btn2{background:#ff5c8a;}
+
+.map-box{
+  max-width:1000px;
+  margin:35px auto;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
 }
 
 /* FINAL */
@@ -271,9 +296,7 @@ footer p{
 
 <body>
 
-<div class="topbar">
-  Parcelamento em até 3x no cartão
-</div>
+<div class="topbar">Parcelamento em até 3x no cartão</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -293,7 +316,7 @@ footer p{
 
 </section>
 
-<!-- HISTÓRIA COMPLETA -->
+<!-- HISTÓRIA -->
 <section class="historia">
 
   <h2 class="section-title">Nossa História</h2>
@@ -308,9 +331,9 @@ footer p{
 
     Nesse percurso, também foi fundamental a troca com profissionais da educação que compartilharam o cotidiano escolar, fortalecendo reflexões e ampliando possibilidades de atuação pedagógica.<br><br>
 
-    São momentos que marcaram profundamente essa trajetória e permanecem vivos até hoje, não apenas como lembrança, mas como base para a construção do que hoje se entende como a Turma do Clubinho.<br><br>
+    São momentos que marcaram profundamente essa trajetória e permanecem vivos até hoje.<br><br>
 
-    Foram experiências que reforçaram a importância da escuta, da paciência e do respeito ao tempo de cada processo de aprendizagem.<br><br>
+    Mais do que conteúdos, permaneceram relações, escuta e respeito ao tempo de cada criança.<br><br>
 
     Em homenagem à Turma do Clubinho:<br>
     Benício, Maicon, Pedro, Marcos e Maria.<br>
@@ -320,7 +343,7 @@ footer p{
 
 </section>
 
-<!-- SERVIÇOS MELHORADOS -->
+<!-- SERVIÇOS -->
 <section>
 
   <h2 class="section-title">Serviços oferecidos</h2>
@@ -329,26 +352,17 @@ footer p{
 
     <div class="card">
       <h3>Atendimento especializado</h3>
-      <p>
-        Acompanhamento individualizado voltado ao desenvolvimento da aprendizagem,
-        respeitando o ritmo, emoções e necessidades cognitivas de cada criança.
-      </p>
+      <p>Acompanhamento individual focado no desenvolvimento cognitivo e emocional da criança.</p>
     </div>
 
     <div class="card">
       <h3>Avaliação de aprendizagem</h3>
-      <p>
-        Processo de investigação detalhada que identifica dificuldades, potencialidades
-        e fatores que interferem no desempenho escolar.
-      </p>
+      <p>Diagnóstico completo das dificuldades e potencialidades no processo escolar.</p>
     </div>
 
     <div class="card">
       <h3>Intervenção pedagógica</h3>
-      <p>
-        Plano estruturado de atividades com foco em leitura, escrita, atenção,
-        raciocínio lógico e desenvolvimento global da criança.
-      </p>
+      <p>Plano de atividades personalizadas com foco em evolução contínua.</p>
     </div>
 
   </div>
@@ -357,34 +371,35 @@ footer p{
 <!-- COMO FUNCIONA -->
 <section>
 
-  <h2 class="section-title">Como funciona o atendimento</h2>
+  <h2 class="section-title">Como funciona</h2>
 
   <div class="steps">
 
-    <div class="step">
-      <div class="step-number">1</div>
-      <div>
-        <h3>Primeiro contato</h3>
-        <p>Entendemos a necessidade da criança e da família.</p>
-      </div>
-    </div>
+    <div class="step"><div class="step-number">1</div><div><h3>Contato</h3><p>Entendimento da necessidade da criança.</p></div></div>
 
-    <div class="step">
-      <div class="step-number">2</div>
-      <div>
-        <h3>Avaliação completa</h3>
-        <p>Análise detalhada do desenvolvimento cognitivo e escolar.</p>
-      </div>
-    </div>
+    <div class="step"><div class="step-number">2</div><div><h3>Avaliação</h3><p>Análise completa do desenvolvimento.</p></div></div>
 
-    <div class="step">
-      <div class="step-number">3</div>
-      <div>
-        <h3>Plano individual</h3>
-        <p>Estratégias personalizadas para evolução contínua.</p>
-      </div>
-    </div>
+    <div class="step"><div class="step-number">3</div><div><h3>Plano</h3><p>Estratégia personalizada de intervenção.</p></div></div>
 
+  </div>
+
+</section>
+
+<!-- MAPA GOOGLE STYLE -->
+<section class="map-section">
+
+  <h2 class="section-title">Encontre a unidade mais próxima</h2>
+
+  <div class="map-buttons">
+    <button class="btn1" onclick="trocarMapa(1)">Centro - R. Sen. Souza Naves</button>
+    <button class="btn2" onclick="trocarMapa(2)">Bela Suíça - R. Adhemar Pereira</button>
+  </div>
+
+  <div class="map-box">
+    <iframe id="mapa"
+      src="https://www.google.com/maps?q=R.%20Sen.%20Souza%20Naves,%20771%20-%20Londrina&output=embed"
+      width="100%" height="420" style="border:0;">
+    </iframe>
   </div>
 
 </section>
@@ -392,15 +407,15 @@ footer p{
 <!-- FINAL -->
 <section class="final-section">
 
-  <h2 class="section-title">Comece agora</h2>
+  <h2 class="section-title">Faça sua matrícula agora</h2>
 
   <div class="final-box">
-    Encontre a unidade mais próxima ou faça sua matrícula agora mesmo.
+    Atendimento humanizado e individualizado para cada criança.
   </div>
 
   <div class="final-buttons">
-    <a class="btn btn-blue" href="#">Encontre a unidade mais próxima</a>
-    <a class="btn btn-green" href="https://wa.me/5500000000000">Faça sua matrícula</a>
+    <a class="btn btn-blue" href="#">Encontre unidade</a>
+    <a class="btn btn-green" href="https://wa.me/5500000000000">Matricular agora</a>
   </div>
 
 </section>
@@ -418,8 +433,8 @@ footer p{
 
     <div>
       <h3>Endereço</h3>
-      <p>Rua Exemplo, 123</p>
-      <p>Centro - Cidade/UF</p>
+      <p>Londrina - PR</p>
+      <p>Brasil</p>
     </div>
 
     <div>
@@ -432,9 +447,21 @@ footer p{
 
 </footer>
 
-<a class="floating-btn" href="https://wa.me/5500000000000">
-  Falar no WhatsApp
-</a>
+<a class="floating-btn" href="https://wa.me/5500000000000">WhatsApp</a>
+
+<script>
+function trocarMapa(op){
+  let m = document.getElementById("mapa");
+
+  if(op===1){
+    m.src="https://www.google.com/maps?q=R.%20Sen.%20Souza%20Naves,%20771%20-%20Centro,%20Londrina%20PR&output=embed";
+  }
+
+  if(op===2){
+    m.src="https://www.google.com/maps?q=R.%20Adhemar%20Pereira%20de%20Barros,%20630%20-%20Bela%20Su%C3%AD%C3%A7a,%20Londrina%20PR&output=embed";
+  }
+}
+</script>
 
 </body>
 </html>
