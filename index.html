@@ -47,7 +47,7 @@ body{
   overflow:hidden;
 }
 
-/* NUVENS (RESTAURADAS) */
+/* NUVENS */
 .cloud{
   position:absolute;
   width:150px;
@@ -64,7 +64,6 @@ body{
   to{transform:translateX(140vw);}
 }
 
-/* HERO TEXT */
 .hero-text{
   width:50%;
   text-align:center;
@@ -79,11 +78,10 @@ body{
   font-size:1.1rem;
   max-width:550px;
   margin:auto;
-  color:#1f3b57;
   line-height:1.6;
+  color:#1f3b57;
 }
 
-/* LOGO */
 .hero-logo img{
   width:380px;
   max-width:100%;
@@ -109,7 +107,10 @@ section{
   line-height:1.6;
 }
 
-/* HISTÓRIA */
+/* =========================
+   HISTÓRIA (COMPLETA E LIMPA)
+========================= */
+
 .historia{
   background:#ffffff;
 }
@@ -119,22 +120,26 @@ section{
   margin:50px auto 0;
   background:linear-gradient(180deg,#ffffff,#f3f7ff);
   border-radius:20px;
-  padding:40px;
+  padding:45px;
   box-shadow:0 15px 35px rgba(0,0,0,0.08);
   border:1px solid #e6ecff;
   line-height:1.8;
   color:#3a4a5a;
+  text-align:justify;
 }
 
 .history-title{
   text-align:center;
   font-size:1.4rem;
   font-weight:600;
-  margin-bottom:20px;
+  margin-bottom:25px;
   color:#1f3b57;
 }
 
-/* SERVIÇOS */
+/* =========================
+   SERVIÇOS (MAIS COMPLETO E FORTE)
+========================= */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -152,11 +157,19 @@ section{
 }
 
 .card h3{
-  margin-bottom:10px;
+  margin-bottom:12px;
   color:#1f3b57;
 }
 
-/* COMO FUNCIONA */
+.card p{
+  color:#5a6b7d;
+  line-height:1.7;
+}
+
+/* =========================
+   COMO FUNCIONA
+========================= */
+
 .steps{
   max-width:1000px;
   margin:60px auto 0;
@@ -169,7 +182,6 @@ section{
   padding:22px;
   border-radius:14px;
   display:flex;
-  align-items:flex-start;
   gap:15px;
   box-shadow:0 8px 20px rgba(0,0,0,0.06);
   border-left:5px solid #ff5c8a;
@@ -187,7 +199,7 @@ section{
   font-weight:600;
 }
 
-/* FINAL NOVO (SEM ENCERRAMENTO) */
+/* FINAL */
 .final-section{
   background:#eef4ff;
   text-align:center;
@@ -236,10 +248,6 @@ footer{
   gap:25px;
 }
 
-footer h3{
-  margin-bottom:10px;
-}
-
 footer p{
   color:#cbd6e2;
   line-height:1.6;
@@ -267,7 +275,7 @@ footer p{
   Parcelamento em até 3x no cartão
 </div>
 
-<!-- HERO COM NUVENS -->
+<!-- HERO -->
 <section class="hero">
 
   <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
@@ -285,26 +293,34 @@ footer p{
 
 </section>
 
-<!-- HISTÓRIA -->
+<!-- HISTÓRIA COMPLETA -->
 <section class="historia">
 
   <h2 class="section-title">Nossa História</h2>
 
   <div class="history-box">
 
-    <div class="history-title">A construção da aprendizagem com significado</div>
+    <div class="history-title">A construção da Turma do Clubinho</div>
 
     A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização.<br><br>
 
-    Ao longo da vivência no contexto escolar, diferentes experiências foram compondo um olhar mais atento sobre o processo de aprendizagem...<br><br>
+    Ao longo da vivência no contexto escolar, diferentes experiências foram compondo um olhar mais atento sobre o processo de aprendizagem. Cada criança, com seu próprio ritmo, suas tentativas e suas formas de se expressar, ajudou a evidenciar a importância de uma alfabetização mais sensível, consciente e intencional.<br><br>
 
-    (texto mantido completo conforme anterior)
+    Nesse percurso, também foi fundamental a troca com profissionais da educação que compartilharam o cotidiano escolar, fortalecendo reflexões e ampliando possibilidades de atuação pedagógica.<br><br>
+
+    São momentos que marcaram profundamente essa trajetória e permanecem vivos até hoje, não apenas como lembrança, mas como base para a construção do que hoje se entende como a Turma do Clubinho.<br><br>
+
+    Foram experiências que reforçaram a importância da escuta, da paciência e do respeito ao tempo de cada processo de aprendizagem.<br><br>
+
+    Em homenagem à Turma do Clubinho:<br>
+    Benício, Maicon, Pedro, Marcos e Maria.<br>
+    Professora Vanessa, Professora Cirleia e Professora Joceli.
 
   </div>
 
 </section>
 
-<!-- SERVIÇOS -->
+<!-- SERVIÇOS MELHORADOS -->
 <section>
 
   <h2 class="section-title">Serviços oferecidos</h2>
@@ -313,17 +329,26 @@ footer p{
 
     <div class="card">
       <h3>Atendimento especializado</h3>
-      <p>Acompanhamento individualizado do desenvolvimento infantil.</p>
+      <p>
+        Acompanhamento individualizado voltado ao desenvolvimento da aprendizagem,
+        respeitando o ritmo, emoções e necessidades cognitivas de cada criança.
+      </p>
     </div>
 
     <div class="card">
       <h3>Avaliação de aprendizagem</h3>
-      <p>Identificação de dificuldades e potencialidades escolares.</p>
+      <p>
+        Processo de investigação detalhada que identifica dificuldades, potencialidades
+        e fatores que interferem no desempenho escolar.
+      </p>
     </div>
 
     <div class="card">
       <h3>Intervenção pedagógica</h3>
-      <p>Estratégias direcionadas para evolução contínua.</p>
+      <p>
+        Plano estruturado de atividades com foco em leitura, escrita, atenção,
+        raciocínio lógico e desenvolvimento global da criança.
+      </p>
     </div>
 
   </div>
@@ -332,31 +357,31 @@ footer p{
 <!-- COMO FUNCIONA -->
 <section>
 
-  <h2 class="section-title">Como funciona</h2>
+  <h2 class="section-title">Como funciona o atendimento</h2>
 
   <div class="steps">
 
     <div class="step">
       <div class="step-number">1</div>
       <div>
-        <h3>Contato</h3>
-        <p>Entendimento inicial da necessidade da criança.</p>
+        <h3>Primeiro contato</h3>
+        <p>Entendemos a necessidade da criança e da família.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-number">2</div>
       <div>
-        <h3>Avaliação</h3>
-        <p>Análise completa do processo de aprendizagem.</p>
+        <h3>Avaliação completa</h3>
+        <p>Análise detalhada do desenvolvimento cognitivo e escolar.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-number">3</div>
       <div>
-        <h3>Plano de intervenção</h3>
-        <p>Estratégias personalizadas para cada caso.</p>
+        <h3>Plano individual</h3>
+        <p>Estratégias personalizadas para evolução contínua.</p>
       </div>
     </div>
 
@@ -364,7 +389,7 @@ footer p{
 
 </section>
 
-<!-- FINAL NOVO -->
+<!-- FINAL -->
 <section class="final-section">
 
   <h2 class="section-title">Comece agora</h2>
