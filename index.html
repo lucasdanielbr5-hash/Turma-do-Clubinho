@@ -78,9 +78,9 @@ body{
 /* TEXTO HERO */
 .hero-text{
   width:50%;
-  z-index:2;
-  color:#1f3b57;
   text-align:center;
+  color:#1f3b57;
+  z-index:2;
 }
 
 .hero-text h1{
@@ -89,12 +89,11 @@ body{
 }
 
 .hero-text p{
-  font-size:1.1rem;
+  font-size:1.05rem;
   line-height:1.6;
-  max-width:520px;
+  max-width:600px;
   margin:auto;
   color:#2f4f6f;
-  font-weight:500;
 }
 
 /* LOGO */
@@ -114,31 +113,21 @@ section{
   padding:100px 20px;
 }
 
-/* TITULOS */
 h2{
   text-align:center;
   font-size:2.2rem;
   color:#2d6cdf;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
 
-/* TEXTO PADRÃO */
-p{
-  max-width:900px;
-  margin:auto;
-  color:#555;
-  line-height:1.8;
-  text-align:center;
-}
-
-/* HISTÓRIA (ACCORDION) */
+/* HISTÓRIA */
 .historia{
   background:#eef3ff;
 }
 
 details{
   max-width:900px;
-  margin:40px auto 0;
+  margin:auto;
   text-align:center;
 }
 
@@ -146,21 +135,23 @@ summary{
   cursor:pointer;
   font-size:1.2rem;
   font-weight:600;
-  color:#1f3b57;
-  list-style:none;
   padding:15px;
   background:white;
   border-radius:12px;
   box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  list-style:none;
 }
 
-details p{
-  margin-top:20px;
+.historia p{
+  margin-top:25px;
   text-align:justify;
   background:white;
   padding:25px;
   border-radius:12px;
   box-shadow:0 10px 20px rgba(0,0,0,0.06);
+  max-width:900px;
+  margin-inline:auto;
+  line-height:1.8;
 }
 
 /* SERVIÇOS */
@@ -193,15 +184,6 @@ details p{
   padding:25px;
   border-radius:15px;
   text-align:center;
-}
-
-.step h3{
-  margin-bottom:10px;
-  color:#1f3b57;
-}
-
-.step p{
-  font-size:0.95rem;
 }
 
 /* FINAL */
@@ -261,8 +243,7 @@ footer img{
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
     <p>
-      Atendimento psicopedagógico com foco no desenvolvimento cognitivo,
-      emocional e escolar da criança.
+      Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.
     </p>
   </div>
 
@@ -272,13 +253,13 @@ footer img{
 
 </section>
 
-<!-- HISTÓRIA RECOLHÍVEL -->
+<!-- HISTÓRIA (COMPLETA ORIGINAL SEM CORTES) -->
 <section class="historia">
 
   <h2>Nossa História</h2>
 
   <details>
-    <summary>Clique para conhecer a história da Turma do Clubinho</summary>
+    <summary>Clique para abrir a história da Turma do Clubinho</summary>
 
     <p>
       A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização.<br><br>
@@ -287,13 +268,20 @@ footer img{
 
       Nesse percurso, também foi fundamental a troca com profissionais da educação que compartilharam o cotidiano escolar, fortalecendo reflexões e ampliando possibilidades de atuação pedagógica.<br><br>
 
-      São momentos que marcaram profundamente essa trajetória e que permanecem vivos até hoje.<br><br>
+      São momentos que marcaram profundamente essa trajetória e que permanecem vivos até hoje, não apenas como lembrança, mas como base para a construção do que hoje se entende como a Turma do Clubinho.<br><br>
 
-      Foram experiências que reforçaram a importância da escuta, da paciência e do respeito ao tempo de cada processo de aprendizagem.<br><br>
+      Foram experiências que reforçaram a importância da escuta, da paciência e do respeito ao tempo de cada processo de aprendizagem. Mais do que atividades ou conteúdos, permaneceram as relações construídas e os aprendizados que surgem no cotidiano do ensinar.<br><br>
+
+      A Turma do Clubinho representa essa construção ao longo do tempo: a síntese dessas vivências que seguem sustentando uma prática mais humana e acessível na alfabetização.<br><br>
 
       Em homenagem à Turma do Clubinho:<br>
       Benício, Maicon, Pedro, Marcos e Maria.<br>
-      Professora Vanessa, Professora Cirleia e Professora Joceli.
+      Professora Vanessa, Professora Cirleia e Professora Joceli.<br><br>
+
+      Mais do que nomes, representam contribuições que permanecem vivas e fazem parte da base que sustenta esse trabalho.<br><br>
+
+      Porque cada experiência no campo educacional deixa algo que permanece:
+      a construção contínua de práticas mais conscientes, sensíveis e significativas.
     </p>
 
   </details>
@@ -319,7 +307,7 @@ footer img{
 
     <div class="card">
       <h3>Intervenção pedagógica</h3>
-      <p>Plano contínuo de desenvolvimento cognitivo e escolar.</p>
+      <p>Acompanhamento contínuo para evolução escolar e cognitiva.</p>
     </div>
 
   </div>
@@ -333,28 +321,28 @@ footer img{
   <div class="steps">
 
     <div class="step">
-      <h3>1. Primeiro contato</h3>
-      <p>Entendemos a necessidade da criança e da família com atenção e cuidado.</p>
+      <h3>1. Contato</h3>
+      <p>Entendimento da necessidade da criança e da família.</p>
     </div>
 
     <div class="step">
       <h3>2. Avaliação</h3>
-      <p>Analisamos habilidades, dificuldades e comportamento de aprendizagem.</p>
+      <p>Análise completa das habilidades e dificuldades de aprendizagem.</p>
     </div>
 
     <div class="step">
-      <h3>3. Plano personalizado</h3>
-      <p>Criamos um plano individual baseado nas necessidades reais da criança.</p>
+      <h3>3. Plano individual</h3>
+      <p>Criação de estratégias personalizadas para cada criança.</p>
     </div>
 
     <div class="step">
       <h3>4. Intervenção</h3>
-      <p>Aplicamos atividades direcionadas com acompanhamento contínuo.</p>
+      <p>Atividades direcionadas com acompanhamento contínuo.</p>
     </div>
 
     <div class="step">
       <h3>5. Evolução</h3>
-      <p>Acompanhamos o progresso e ajustamos estratégias constantemente.</p>
+      <p>Monitoramento do progresso e ajustes constantes no plano.</p>
     </div>
 
   </div>
@@ -362,16 +350,12 @@ footer img{
 </section>
 
 <!-- FINAL -->
-<section class="historia">
+<section class="final">
 
   <h2>Encerramento</h2>
 
-  <p>
-    Cada criança aprende no seu tempo, e aqui esse tempo é respeitado com cuidado, atenção e dedicação.
-  </p>
-
   <div class="final-box">
-    Plano individual • Evolução contínua • Família envolvida
+    Cada criança aprende no seu tempo. Aqui esse tempo é respeitado com cuidado, atenção e dedicação.
   </div>
 
 </section>
