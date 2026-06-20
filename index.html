@@ -18,7 +18,8 @@
 
 body{
   overflow-x:hidden;
-  background:#fffaf0;
+  background:#f6f9ff;
+  color:#1f2d3d;
 }
 
 /* TOPBAR */
@@ -26,24 +27,12 @@ body{
   position:fixed;
   top:0;
   width:100%;
-  background:#ff6b9d;
+  background:#ff5c8a;
   color:white;
-  padding:12px 20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
+  padding:12px;
+  text-align:center;
   font-weight:600;
-}
-
-.topbar button{
-  position:absolute;
-  right:15px;
-  background:transparent;
-  border:none;
-  color:white;
-  font-size:18px;
-  cursor:pointer;
+  z-index:9999;
 }
 
 /* HERO */
@@ -52,35 +41,14 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:80px 8% 0;
+  padding:80px 8%;
+  background:linear-gradient(135deg,#6ec6ff,#cfe9ff);
   position:relative;
-  background:linear-gradient(to top, #87cefa, #bfe9ff);
-  overflow:hidden;
 }
 
-/* NUVENS */
-.cloud{
-  position:absolute;
-  width:140px;
-  opacity:0.85;
-  animation:moveClouds linear infinite;
-}
-
-.cloud1{top:12%; left:-180px; animation-duration:55s;}
-.cloud2{top:38%; left:-240px; animation-duration:70s;}
-.cloud3{top:65%; left:-200px; animation-duration:60s;}
-
-@keyframes moveClouds{
-  from{transform:translateX(0);}
-  to{transform:translateX(140vw);}
-}
-
-/* HERO TEXT */
 .hero-text{
   width:50%;
   text-align:center;
-  color:#1f3b57;
-  z-index:2;
 }
 
 .hero-text h1{
@@ -90,80 +58,88 @@ body{
 
 .hero-text p{
   font-size:1.1rem;
-  line-height:1.6;
-  max-width:600px;
+  max-width:520px;
   margin:auto;
-  color:#2f4f6f;
-}
-
-/* LOGO */
-.hero-logo{
-  width:40%;
-  display:flex;
-  justify-content:center;
+  color:#1f3b57;
+  line-height:1.6;
 }
 
 .hero-logo img{
-  width:420px;
+  width:380px;
   max-width:100%;
 }
 
 /* SEÇÕES */
 section{
-  padding:100px 20px;
+  padding:90px 20px;
 }
 
-h2{
+.section-title{
   text-align:center;
   font-size:2.2rem;
-  color:#2d6cdf;
-  margin-bottom:25px;
-}
-
-/* =========================
-   HISTÓRIA (AGORA PREMIUM)
-========================= */
-
-.historia{
-  background:#eef3ff;
-}
-
-.history-box{
-  max-width:900px;
-  margin:auto;
-  background:white;
-  padding:35px;
-  border-radius:20px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.08);
-  text-align:justify;
-  line-height:1.8;
-  color:#444;
-}
-
-.history-title{
-  text-align:center;
-  font-weight:600;
   margin-bottom:15px;
   color:#1f3b57;
 }
 
-/* =========================
-   SERVIÇOS (MAIS COMPLETO)
-========================= */
+.section-sub{
+  text-align:center;
+  max-width:800px;
+  margin:auto;
+  color:#5a6b7d;
+  line-height:1.6;
+}
+
+/* ======================
+   HISTÓRIA (PANEL PREMIUM)
+====================== */
+
+.historia{
+  background:#ffffff;
+}
+
+.history-box{
+  max-width:900px;
+  margin:50px auto 0;
+  background:linear-gradient(180deg,#ffffff,#f3f7ff);
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  border:1px solid #e6ecff;
+  line-height:1.8;
+  color:#3a4a5a;
+}
+
+.history-title{
+  text-align:center;
+  font-size:1.4rem;
+  font-weight:600;
+  margin-bottom:20px;
+  color:#1f3b57;
+}
+
+/* ======================
+   SERVIÇOS (CARDS MODERNOS)
+====================== */
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
   max-width:1100px;
   margin:50px auto 0;
 }
 
 .card{
-  background:#fff;
+  background:white;
   padding:28px;
   border-radius:18px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  border-top:4px solid #5aa9ff;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
 }
 
 .card h3{
@@ -171,62 +147,68 @@ h2{
   color:#1f3b57;
 }
 
-/* =========================
-   COMO FUNCIONA (MAIS FORTE)
-========================= */
+/* ======================
+   COMO FUNCIONA (LINHA VISUAL)
+====================== */
 
 .steps{
+  max-width:1000px;
+  margin:60px auto 0;
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
   gap:18px;
-  max-width:1100px;
-  margin:50px auto 0;
 }
 
 .step{
   background:white;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.08);
-  text-align:center;
-  border:1px solid rgba(0,0,0,0.05);
+  padding:22px;
+  border-radius:14px;
+  display:flex;
+  align-items:flex-start;
+  gap:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  border-left:5px solid #ff5c8a;
 }
 
-.step h3{
-  margin-bottom:10px;
-  color:#1f3b57;
-}
-
-.step p{
-  color:#555;
-  font-size:0.95rem;
+.step-number{
+  min-width:35px;
+  height:35px;
+  border-radius:50%;
+  background:#ff5c8a;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
 }
 
 /* FINAL */
-.final-box{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  max-width:800px;
-  margin:40px auto 0;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+.final{
   text-align:center;
+  background:#eef4ff;
+}
+
+.final-box{
+  max-width:750px;
+  margin:40px auto 0;
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
 }
 
 /* FOOTER */
 footer{
-  background:#1f3b57;
+  background:#1f2d3d;
   color:white;
   padding:50px 20px;
 }
 
 .footer-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   max-width:1100px;
   margin:auto;
-  text-align:left;
+  gap:25px;
 }
 
 footer h3{
@@ -234,7 +216,7 @@ footer h3{
 }
 
 footer p{
-  color:#d6e4ff;
+  color:#cbd6e2;
   line-height:1.6;
 }
 
@@ -258,20 +240,16 @@ footer p{
 
 <div class="topbar">
   Parcelamento em até 3x no cartão
-  <button onclick="this.parentElement.style.display='none'">X</button>
 </div>
 
 <!-- HERO -->
 <section class="hero">
 
-  <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
-  <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
-  <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
-
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
     <p>
-      Atendimento especializado com foco no desenvolvimento cognitivo, emocional e escolar da criança.
+      Atendimento especializado com foco no desenvolvimento cognitivo,
+      emocional e escolar da criança.
     </p>
   </div>
 
@@ -281,16 +259,15 @@ footer p{
 
 </section>
 
-<!-- HISTÓRIA MELHORADA VISUALMENTE -->
+<!-- HISTÓRIA -->
 <section class="historia">
 
-  <h2>Nossa História</h2>
+  <h2 class="section-title">Nossa História</h2>
+  <p class="section-sub">A trajetória que deu origem ao Clubinho da Aprendizagem</p>
 
   <div class="history-box">
 
-    <div class="history-title">
-      A construção da Turma do Clubinho
-    </div>
+    <div class="history-title">A construção da prática na alfabetização</div>
 
     A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização.<br><br>
 
@@ -313,65 +290,67 @@ footer p{
 <!-- SERVIÇOS -->
 <section>
 
-  <h2>Serviços oferecidos</h2>
+  <h2 class="section-title">Serviços oferecidos</h2>
+  <p class="section-sub">Atendimentos voltados ao desenvolvimento integral da criança</p>
 
   <div class="grid">
 
     <div class="card">
       <h3>Atendimento especializado</h3>
-      <p>
-        Acompanhamento voltado ao desenvolvimento da aprendizagem,
-        habilidades cognitivas e emocionais da criança.
-      </p>
+      <p>Desenvolvimento cognitivo, emocional e escolar de forma individualizada.</p>
     </div>
 
     <div class="card">
       <h3>Avaliação de aprendizagem</h3>
-      <p>
-        Investigação das dificuldades e potencialidades no processo escolar.
-      </p>
+      <p>Identificação das dificuldades e potencialidades no processo escolar.</p>
     </div>
 
     <div class="card">
       <h3>Intervenção pedagógica</h3>
-      <p>
-        Plano de atividades personalizadas com foco em evolução contínua.
-      </p>
+      <p>Plano estruturado com atividades direcionadas e acompanhamento contínuo.</p>
     </div>
 
   </div>
 </section>
 
-<!-- COMO FUNCIONA (AGORA DIFERENTE DOS SERVIÇOS) -->
+<!-- COMO FUNCIONA -->
 <section>
 
-  <h2>Como funciona o atendimento</h2>
+  <h2 class="section-title">Como funciona o atendimento</h2>
+  <p class="section-sub">Processo estruturado para evolução real da criança</p>
 
   <div class="steps">
 
     <div class="step">
-      <h3>1. Escuta inicial</h3>
-      <p>Entendemos a queixa, história escolar e necessidades da criança.</p>
+      <div class="step-number">1</div>
+      <div>
+        <h3>Primeiro contato</h3>
+        <p>Entendimento da queixa e necessidades da família.</p>
+      </div>
     </div>
 
     <div class="step">
-      <h3>2. Avaliação completa</h3>
-      <p>Análise do desenvolvimento cognitivo, emocional e pedagógico.</p>
+      <div class="step-number">2</div>
+      <div>
+        <h3>Avaliação completa</h3>
+        <p>Análise cognitiva, emocional e pedagógica.</p>
+      </div>
     </div>
 
     <div class="step">
-      <h3>3. Plano de trabalho</h3>
-      <p>Definição de estratégias específicas para cada criança.</p>
+      <div class="step-number">3</div>
+      <div>
+        <h3>Plano individual</h3>
+        <p>Estratégias personalizadas para cada criança.</p>
+      </div>
     </div>
 
     <div class="step">
-      <h3>4. Intervenção contínua</h3>
-      <p>Sessões com atividades direcionadas e acompanhamento próximo.</p>
-    </div>
-
-    <div class="step">
-      <h3>5. Evolução e ajustes</h3>
-      <p>Revisão constante do progresso e adaptação do plano.</p>
+      <div class="step-number">4</div>
+      <div>
+        <h3>Intervenção contínua</h3>
+        <p>Sessões com atividades direcionadas e acompanhamento.</p>
+      </div>
     </div>
 
   </div>
@@ -381,7 +360,7 @@ footer p{
 <!-- FINAL -->
 <section class="final">
 
-  <h2>Encerramento</h2>
+  <h2 class="section-title">Encerramento</h2>
 
   <div class="final-box">
     Cada criança aprende no seu tempo. Aqui esse processo é respeitado com cuidado, atenção e dedicação.
@@ -389,7 +368,7 @@ footer p{
 
 </section>
 
-<!-- FOOTER COMPLETO -->
+<!-- FOOTER -->
 <footer>
 
   <div class="footer-grid">
