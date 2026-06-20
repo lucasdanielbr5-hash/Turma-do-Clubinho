@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -83,7 +84,7 @@ body{
 }
 
 .hero-text h1{
-  font-size:2.6rem;
+  font-size:2.8rem;
   margin-bottom:15px;
 }
 
@@ -103,6 +104,11 @@ body{
   color:white;
   text-decoration:none;
   font-weight:600;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 /* LOGO */
@@ -114,18 +120,12 @@ body{
   position:relative;
 }
 
-/* REMOVIDO FUNDO (bola) */
-.hero-logo::before{
-  display:none;
-}
-
-/* LOGO OTIMIZADA */
 .hero-logo img{
-  width:320px;
+  width:420px;
   max-width:100%;
   height:auto;
   display:block;
-  image-rendering:auto;
+  object-fit:contain;
   position:relative;
   z-index:2;
 }
@@ -140,6 +140,7 @@ body{
 .servicos h2{
   font-size:2.2rem;
   color:#2d6cdf;
+  margin-bottom:15px;
 }
 
 .servicos p{
@@ -162,6 +163,16 @@ body{
   border-radius:20px;
   padding:30px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#1f3b57;
 }
 
 /* PROCESSO */
@@ -169,6 +180,11 @@ body{
   padding:120px 20px;
   background:#eef3ff;
   text-align:center;
+}
+
+.processo h2{
+  font-size:2.2rem;
+  color:#2d6cdf;
 }
 
 .steps{
@@ -187,11 +203,20 @@ body{
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
+.step h3{
+  margin-bottom:10px;
+  color:#1f3b57;
+}
+
 /* FINAL */
 .final{
   padding:120px 20px;
   background:#f7f9fc;
   text-align:center;
+}
+
+.final h2{
+  color:#2d6cdf;
 }
 
 .final-grid{
@@ -208,6 +233,7 @@ body{
   padding:20px;
   border-radius:15px;
   box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  font-weight:600;
 }
 
 /* FOOTER */
@@ -223,10 +249,11 @@ footer{
   gap:20px;
   max-width:1100px;
   margin:auto;
+  align-items:center;
 }
 
 .footer-logo img{
-  width:120px;
+  width:140px;
 }
 
 /* BOTÃO FLUTUANTE */
@@ -234,13 +261,14 @@ footer{
   position:fixed;
   bottom:20px;
   right:20px;
-  background:#1877f2;
+  background:#25d366;
   color:white;
   padding:14px 18px;
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
   z-index:999;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* RESPONSIVO */
@@ -264,7 +292,7 @@ footer{
   }
 
   .hero-logo img{
-    width:240px;
+    width:300px;
   }
 
   .hero-text h1{
@@ -290,44 +318,66 @@ footer{
 
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
-    <p>Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
 
-    <a class="btn" href="#contato">Falar com atendimento</a>
+    <p>
+      Atendimento psicopedagógico com foco no desenvolvimento
+      cognitivo, emocional e escolar da criança.
+    </p>
+
+    <a class="btn" href="#contato">
+      Falar com atendimento
+    </a>
   </div>
 
   <div class="hero-logo">
-    <!-- TROQUE AQUI POR UMA LOGO HD (PNG OU SVG) -->
-    <img src="https://i.imgur.com/86LuJEt.png">
+    <img src="https://i.imgur.com/W8Z47VR.png" alt="Clubinho da Aprendizagem">
   </div>
 
 </section>
 
 <section class="servicos">
+
   <h2>Serviços oferecidos</h2>
-  <p>Atendimento especializado para dificuldades de aprendizagem.</p>
+
+  <p>
+    Atendimento especializado para dificuldades de aprendizagem.
+  </p>
 
   <div class="grid">
+
     <div class="card">
       <h3>Aulas particulares</h3>
-      <p>Apoio individual em leitura, escrita e matemática.</p>
+
+      <p>
+        Apoio individual em leitura, escrita e matemática.
+      </p>
     </div>
 
     <div class="card">
       <h3>Avaliação psicopedagógica</h3>
-      <p>Diagnóstico das dificuldades de aprendizagem.</p>
+
+      <p>
+        Diagnóstico das dificuldades de aprendizagem.
+      </p>
     </div>
 
     <div class="card">
       <h3>Intervenção</h3>
-      <p>Desenvolvimento cognitivo e escolar.</p>
+
+      <p>
+        Desenvolvimento cognitivo e escolar.
+      </p>
     </div>
+
   </div>
 </section>
 
 <section class="processo">
+
   <h2>Como funciona</h2>
 
   <div class="steps">
+
     <div class="step">
       <h3>Contato</h3>
       <p>Entendimento da demanda.</p>
@@ -342,23 +392,38 @@ footer{
       <h3>Intervenção</h3>
       <p>Acompanhamento personalizado.</p>
     </div>
+
   </div>
 </section>
 
 <section class="final">
+
   <h2>Acompanhamento contínuo</h2>
 
   <div class="final-grid">
-    <div class="final-item">Plano individual</div>
-    <div class="final-item">Evolução contínua</div>
-    <div class="final-item">Família envolvida</div>
+
+    <div class="final-item">
+      Plano individual
+    </div>
+
+    <div class="final-item">
+      Evolução contínua
+    </div>
+
+    <div class="final-item">
+      Família envolvida
+    </div>
+
   </div>
+
 </section>
 
 <footer id="contato">
+
   <div class="footer-grid">
+
     <div class="footer-logo">
-      <img src="https://i.imgur.com/86LuJEt.png">
+      <img src="https://i.imgur.com/W8Z47VR.png" alt="Clubinho da Aprendizagem">
     </div>
 
     <div>
@@ -372,7 +437,9 @@ footer{
       <p>Rua Exemplo, 123</p>
       <p>Cidade - Estado</p>
     </div>
+
   </div>
+
 </footer>
 
 <a class="floating-btn" href="https://wa.me/5500000000000">
@@ -381,3 +448,4 @@ footer{
 
 </body>
 </html>
+```
