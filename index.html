@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -59,7 +58,6 @@ body{
   overflow:hidden;
 }
 
-/* NUVENS */
 .cloud{
   position:absolute;
   width:140px;
@@ -76,7 +74,6 @@ body{
   to{transform:translateX(140vw);}
 }
 
-/* TEXTO */
 .hero-text{
   width:50%;
   z-index:2;
@@ -104,11 +101,6 @@ body{
   color:white;
   text-decoration:none;
   font-weight:600;
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
 }
 
 /* LOGO */
@@ -117,42 +109,28 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  position:relative;
 }
 
 .hero-logo img{
   width:420px;
   max-width:100%;
-  height:auto;
-  display:block;
   object-fit:contain;
-  position:relative;
-  z-index:2;
+}
+
+/* SEÇÕES */
+section{
+  padding:110px 20px;
 }
 
 /* SERVIÇOS */
 .servicos{
-  padding:120px 20px;
   text-align:center;
   background:#fdfcf9;
 }
 
-.servicos h2{
-  font-size:2.2rem;
-  color:#2d6cdf;
-  margin-bottom:15px;
-}
-
-.servicos p{
-  max-width:900px;
-  margin:auto;
-  color:#666;
-  line-height:1.6;
-}
-
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:25px;
   max-width:1200px;
   margin:60px auto 0;
@@ -163,77 +141,76 @@ body{
   border-radius:20px;
   padding:30px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:.3s;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-}
-
-.card h3{
-  margin-bottom:10px;
-  color:#1f3b57;
-}
-
-/* PROCESSO */
-.processo{
-  padding:120px 20px;
+/* SOBRE */
+.sobre{
   background:#eef3ff;
   text-align:center;
 }
 
-.processo h2{
-  font-size:2.2rem;
-  color:#2d6cdf;
+.sobre p{
+  max-width:900px;
+  margin:auto;
+  color:#555;
+  line-height:1.7;
 }
 
-.steps{
-  margin-top:50px;
+/* DIFERENCIAIS */
+.diferenciais{
+  text-align:center;
+}
+
+.stats{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
   gap:20px;
-  max-width:1100px;
-  margin-inline:auto;
+  max-width:1000px;
+  margin:50px auto 0;
 }
 
-.step{
+.stat{
   background:white;
   padding:25px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.step h3{
-  margin-bottom:10px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  font-weight:700;
   color:#1f3b57;
 }
 
-/* FINAL */
-.final{
-  padding:120px 20px;
+/* DEPOIMENTOS */
+.depoimentos{
   background:#f7f9fc;
   text-align:center;
 }
 
-.final h2{
-  color:#2d6cdf;
-}
-
-.final-grid{
-  margin-top:40px;
+.testimonials{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:20px;
-  max-width:1000px;
-  margin-inline:auto;
+  max-width:1100px;
+  margin:50px auto 0;
 }
 
-.final-item{
+.testimonial{
   background:white;
-  padding:20px;
+  padding:25px;
   border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.06);
-  font-weight:600;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  font-style:italic;
+}
+
+/* FAQ */
+.faq{
+  background:#fff;
+}
+
+.faq-item{
+  max-width:800px;
+  margin:15px auto;
+  background:#f4f6ff;
+  padding:18px;
+  border-radius:12px;
 }
 
 /* FOOTER */
@@ -249,14 +226,13 @@ footer{
   gap:20px;
   max-width:1100px;
   margin:auto;
-  align-items:center;
 }
 
 .footer-logo img{
   width:140px;
 }
 
-/* BOTÃO FLUTUANTE */
+/* BOTÃO */
 .floating-btn{
   position:fixed;
   bottom:20px;
@@ -267,36 +243,23 @@ footer{
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
-  z-index:999;
-  box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px){
-
+@media (max-width:768px){
   .hero{
     flex-direction:column;
     text-align:center;
-    justify-content:center;
-    gap:30px;
-    padding:120px 20px 50px;
     height:auto;
+    gap:30px;
   }
 
   .hero-text{
     width:100%;
   }
 
-  .hero-logo{
-    width:100%;
-  }
-
   .hero-logo img{
     width:300px;
-  }
-
-  .hero-text h1{
-    font-size:2rem;
   }
 }
 
@@ -305,9 +268,9 @@ footer{
 
 <body>
 
-<div class="topbar" id="topbar">
+<div class="topbar">
   Parcelamento em até 3x no cartão
-  <button onclick="document.getElementById('topbar').style.display='none'">X</button>
+  <button onclick="this.parentElement.style.display='none'">X</button>
 </div>
 
 <section class="hero">
@@ -318,104 +281,65 @@ footer{
 
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
-
-    <p>
-      Atendimento psicopedagógico com foco no desenvolvimento
-      cognitivo, emocional e escolar da criança.
-    </p>
-
-    <a class="btn" href="#contato">
-      Falar com atendimento
-    </a>
+    <p>Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
+    <a class="btn" href="#contato">Falar com atendimento</a>
   </div>
 
   <div class="hero-logo">
-    <img src="https://i.imgur.com/W8Z47VR.png" alt="Clubinho da Aprendizagem">
+    <img src="https://i.imgur.com/W8Z47VR.png">
   </div>
 
 </section>
 
 <section class="servicos">
-
   <h2>Serviços oferecidos</h2>
 
-  <p>
-    Atendimento especializado para dificuldades de aprendizagem.
-  </p>
-
   <div class="grid">
-
-    <div class="card">
-      <h3>Aulas particulares</h3>
-
-      <p>
-        Apoio individual em leitura, escrita e matemática.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Avaliação psicopedagógica</h3>
-
-      <p>
-        Diagnóstico das dificuldades de aprendizagem.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Intervenção</h3>
-
-      <p>
-        Desenvolvimento cognitivo e escolar.
-      </p>
-    </div>
-
+    <div class="card">Aulas particulares personalizadas</div>
+    <div class="card">Avaliação psicopedagógica completa</div>
+    <div class="card">Intervenção pedagógica infantil</div>
+    <div class="card">Reforço escolar contínuo</div>
+    <div class="card">Atendimento para dificuldades de leitura</div>
+    <div class="card">Apoio em matemática básica</div>
   </div>
 </section>
 
-<section class="processo">
+<section class="sobre">
+  <h2>Sobre o Clubinho</h2>
+  <p>
+    O Clubinho da Aprendizagem nasceu para ajudar crianças com dificuldades escolares,
+    oferecendo um acompanhamento humanizado, lúdico e focado no desenvolvimento completo.
+    Nosso objetivo é transformar o aprendizado em algo leve e possível.
+  </p>
+</section>
 
-  <h2>Como funciona</h2>
+<section class="diferenciais">
+  <h2>Diferenciais</h2>
 
-  <div class="steps">
-
-    <div class="step">
-      <h3>Contato</h3>
-      <p>Entendimento da demanda.</p>
-    </div>
-
-    <div class="step">
-      <h3>Avaliação</h3>
-      <p>Análise das habilidades.</p>
-    </div>
-
-    <div class="step">
-      <h3>Intervenção</h3>
-      <p>Acompanhamento personalizado.</p>
-    </div>
-
+  <div class="stats">
+    <div class="stat">Atendimento personalizado</div>
+    <div class="stat">Metodologia lúdica</div>
+    <div class="stat">Foco em resultados</div>
+    <div class="stat">Acompanhamento da família</div>
   </div>
 </section>
 
-<section class="final">
+<section class="depoimentos">
+  <h2>Depoimentos</h2>
 
-  <h2>Acompanhamento contínuo</h2>
-
-  <div class="final-grid">
-
-    <div class="final-item">
-      Plano individual
-    </div>
-
-    <div class="final-item">
-      Evolução contínua
-    </div>
-
-    <div class="final-item">
-      Família envolvida
-    </div>
-
+  <div class="testimonials">
+    <div class="testimonial">“Meu filho evoluiu muito em poucas semanas!”</div>
+    <div class="testimonial">“Agora ele gosta de estudar, mudou totalmente.”</div>
+    <div class="testimonial">“Profissionais muito atenciosos e humanos.”</div>
   </div>
+</section>
 
+<section class="faq">
+  <h2 style="text-align:center;">Perguntas Frequentes</h2>
+
+  <div class="faq-item">Atende qual idade? → Crianças do ensino infantil ao fundamental.</div>
+  <div class="faq-item">Tem atendimento online? → Sim, dependendo da necessidade.</div>
+  <div class="faq-item">Precisa avaliação? → Sim, para plano personalizado.</div>
 </section>
 
 <footer id="contato">
@@ -423,7 +347,7 @@ footer{
   <div class="footer-grid">
 
     <div class="footer-logo">
-      <img src="https://i.imgur.com/W8Z47VR.png" alt="Clubinho da Aprendizagem">
+      <img src="https://i.imgur.com/W8Z47VR.png">
     </div>
 
     <div>
@@ -448,4 +372,3 @@ footer{
 
 </body>
 </html>
-```
