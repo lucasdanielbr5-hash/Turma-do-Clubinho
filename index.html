@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -20,7 +21,7 @@ body{
   background:#fffaf0;
 }
 
-/* POPUP */
+/* TOPBAR */
 .topbar{
   position:fixed;
   top:0;
@@ -113,21 +114,18 @@ body{
   position:relative;
 }
 
+/* REMOVE A BOLA */
 .hero-logo::before{
-  content:"";
-  position:absolute;
-  width:280px;
-  height:280px;
-  background:radial-gradient(circle at top, #ffffff 40%, #dff1ff 80%, #cfe8ff 100%);
-  border-radius:50%;
-  box-shadow:0 20px 40px rgba(0,0,0,0.12);
-  z-index:1;
+  display:none;
 }
 
+/* LOGO GRANDE */
 .hero-logo img{
-  width:170px;
-  z-index:2;
+  width:380px;
+  max-width:100%;
+  height:auto;
   position:relative;
+  z-index:2;
 }
 
 /* SERVIÇOS */
@@ -162,29 +160,13 @@ body{
   border-radius:20px;
   padding:30px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  text-align:left;
 }
 
-.card h3{
-  color:#2d6cdf;
-  margin-bottom:10px;
-}
-
-.card p{
-  color:#5f6c7b;
-  line-height:1.6;
-}
-
-/* COMO FUNCIONA (SUBSTITUIU AVALIAÇÕES) */
+/* PROCESSO */
 .processo{
   padding:120px 20px;
   background:#eef3ff;
   text-align:center;
-}
-
-.processo h2{
-  font-size:2rem;
-  color:#2c3e50;
 }
 
 .steps{
@@ -201,11 +183,6 @@ body{
   padding:25px;
   border-radius:18px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.step h3{
-  color:#2d6cdf;
-  margin-bottom:10px;
 }
 
 /* FINAL */
@@ -250,13 +227,6 @@ footer{
   width:120px;
 }
 
-.footer-social a{
-  color:white;
-  display:block;
-  margin-top:5px;
-  text-decoration:none;
-}
-
 /* BOTÃO FLUTUANTE */
 .floating-btn{
   position:fixed;
@@ -270,18 +240,46 @@ footer{
   text-decoration:none;
   z-index:999;
 }
+
+/* RESPONSIVO */
+@media (max-width: 768px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+    gap:30px;
+    padding:120px 20px 50px;
+    height:auto;
+  }
+
+  .hero-text{
+    width:100%;
+  }
+
+  .hero-logo{
+    width:100%;
+  }
+
+  .hero-logo img{
+    width:260px;
+  }
+
+  .hero-text h1{
+    font-size:2rem;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- POPUP -->
 <div class="topbar" id="topbar">
   Parcelamento em até 3x no cartão
   <button onclick="document.getElementById('topbar').style.display='none'">X</button>
 </div>
 
-<!-- HERO -->
 <section class="hero">
 
   <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
@@ -301,82 +299,61 @@ footer{
 
 </section>
 
-<!-- SERVIÇOS -->
 <section class="servicos">
-
   <h2>Serviços oferecidos</h2>
-
-  <p>
-    Atendimento especializado para dificuldades de aprendizagem, com intervenções estruturadas
-    e acompanhamento individualizado.
-  </p>
+  <p>Atendimento especializado para dificuldades de aprendizagem.</p>
 
   <div class="grid">
-
     <div class="card">
       <h3>Aulas particulares</h3>
-      <p>Apoio individual em leitura, escrita e matemática com estratégias adaptadas ao ritmo da criança.</p>
+      <p>Apoio individual em leitura, escrita e matemática.</p>
     </div>
 
     <div class="card">
       <h3>Avaliação psicopedagógica</h3>
-      <p>Investigação das dificuldades de aprendizagem e construção de plano de intervenção personalizado.</p>
+      <p>Diagnóstico das dificuldades de aprendizagem.</p>
     </div>
 
     <div class="card">
-      <h3>Intervenção psicopedagógica</h3>
-      <p>Desenvolvimento de atenção, memória, raciocínio e desempenho escolar com atividades estruturadas.</p>
+      <h3>Intervenção</h3>
+      <p>Desenvolvimento cognitivo e escolar.</p>
     </div>
-
   </div>
 </section>
 
-<!-- PROCESSO (SUBSTITUI AVALIAÇÕES) -->
 <section class="processo">
-
-  <h2>Como funciona o atendimento</h2>
+  <h2>Como funciona</h2>
 
   <div class="steps">
-
     <div class="step">
-      <h3>1. Primeiro contato</h3>
-      <p>Entendemos a demanda e as principais dificuldades da criança.</p>
+      <h3>Contato</h3>
+      <p>Entendimento da demanda.</p>
     </div>
 
     <div class="step">
-      <h3>2. Avaliação</h3>
-      <p>Realizamos análise completa das habilidades cognitivas e escolares.</p>
+      <h3>Avaliação</h3>
+      <p>Análise das habilidades.</p>
     </div>
 
     <div class="step">
-      <h3>3. Intervenção</h3>
-      <p>Iniciamos o acompanhamento individualizado com plano personalizado.</p>
+      <h3>Intervenção</h3>
+      <p>Acompanhamento personalizado.</p>
     </div>
-
   </div>
-
 </section>
 
-<!-- FINAL -->
 <section class="final">
-
-  <h2>Acompanhamento contínuo do desenvolvimento</h2>
+  <h2>Acompanhamento contínuo</h2>
 
   <div class="final-grid">
-
-    <div class="final-item">Plano individual de aprendizagem</div>
-    <div class="final-item">Processo contínuo de evolução</div>
-    <div class="final-item">Acompanhamento com a família</div>
-
+    <div class="final-item">Plano individual</div>
+    <div class="final-item">Evolução contínua</div>
+    <div class="final-item">Família envolvida</div>
   </div>
-
 </section>
 
-<!-- FOOTER -->
 <footer id="contato">
-
   <div class="footer-grid">
-
     <div class="footer-logo">
       <img src="https://i.imgur.com/86LuJEt.png">
     </div>
@@ -392,20 +369,11 @@ footer{
       <p>Rua Exemplo, 123</p>
       <p>Cidade - Estado</p>
     </div>
-
-    <div class="footer-social">
-      <h3>Redes sociais</h3>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">WhatsApp</a>
-    </div>
-
   </div>
-
 </footer>
 
 <a class="floating-btn" href="https://wa.me/5500000000000">
-  Falar com atendente
+  Falar no WhatsApp
 </a>
 
 </body>
