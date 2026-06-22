@@ -19,10 +19,6 @@
   font-family:'Poppins', sans-serif;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
   overflow-x:hidden;
   background:#f6f9ff;
@@ -43,48 +39,24 @@ body{
   z-index:9999;
 }
 
-/* ================= MENU ================= */
-
-.menu{
-  position:fixed;
-  top:48px;
-  width:100%;
-  background:white;
-  padding:16px 8%;
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  z-index:9998;
-  box-shadow:0 2px 15px rgba(0,0,0,0.05);
-}
-
-.menu a{
-  text-decoration:none;
-  color:#1f3b57;
-  font-weight:600;
-}
-
-.menu a:hover{
-  color:#ff5c8a;
-}
-
 /* ================= HERO ================= */
 
 .hero{
-  min-height:100vh;
+  height:100vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:160px 8% 90px;
+  padding:80px 8%;
   background:linear-gradient(135deg,#6ec6ff,#cfe9ff);
   position:relative;
   overflow:hidden;
 }
 
-/* NUVENS */
+/* NUVENS (MANTIDAS) */
+
 .cloud{
   position:absolute;
-  width:160px;
+  width:150px;
   opacity:0.8;
   animation:moveClouds linear infinite;
 }
@@ -104,56 +76,51 @@ body{
 }
 
 .hero-text h1{
-  font-size:3rem;
+  font-size:2.8rem;
   margin-bottom:15px;
-  color:#16314d;
 }
 
 .hero-text p{
   font-size:1.1rem;
-  line-height:1.7;
+  max-width:550px;
+  margin:auto;
+  line-height:1.6;
   color:#1f3b57;
 }
 
 .hero-logo img{
   width:380px;
+  max-width:100%;
 }
 
 /* ================= SEÇÕES ================= */
 
 section{
-  padding:100px 20px;
+  padding:90px 20px;
 }
 
 .section-title{
   text-align:center;
-  font-size:2.3rem;
+  font-size:2.2rem;
   margin-bottom:15px;
   color:#1f3b57;
-}
-
-.section-sub{
-  text-align:center;
-  max-width:850px;
-  margin:auto;
-  color:#5a6b7d;
-  line-height:1.7;
 }
 
 /* ================= HISTÓRIA ================= */
 
 .historia{
-  background:white;
+  background:#ffffff;
 }
 
 .history-box{
-  max-width:950px;
+  max-width:900px;
   margin:50px auto 0;
   background:linear-gradient(180deg,#ffffff,#f3f7ff);
+  border-radius:20px;
   padding:45px;
-  border-radius:22px;
-  line-height:1.9;
-  color:#3a4a5a;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  line-height:1.8;
+  text-align:justify;
 }
 
 /* ================= SERVIÇOS ================= */
@@ -186,137 +153,63 @@ section{
 .step{
   background:white;
   padding:22px;
-  border-radius:16px;
+  border-radius:14px;
   display:flex;
   gap:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
   border-left:5px solid #ff5c8a;
 }
 
-/* ================= FINAL MELHORADO ================= */
+/* ================= FINAL (SÓ MELHORADO VISUALMENTE) ================= */
 
 .final-section{
-  background:linear-gradient(180deg,#eaf3ff,#f8fbff);
+  background:linear-gradient(180deg,#eef4ff,#f8fbff);
   text-align:center;
 }
 
-.contact-header{
-  max-width:850px;
-  margin:auto;
+.final-box{
+  max-width:750px;
+  margin:35px auto;
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  line-height:1.7;
+  color:#3a4a5a;
 }
 
-.contact-badge{
-  display:inline-block;
-  background:#dcecff;
-  color:#2d6cdf;
-  padding:10px 18px;
-  border-radius:30px;
-  font-size:0.9rem;
-  font-weight:600;
-  margin-bottom:10px;
+.final-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
 }
+
+.btn{
+  padding:14px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  color:white;
+}
+
+.btn-green{background:#25d366;}
+.btn-blue{background:#2d6cdf;}
+
+/* ================= MELHORIA SOLICITADA ================= */
 
 .matricula-title{
   font-size:2.6rem;
-  color:#16314d;
   font-weight:700;
+  color:#16314d;
   margin-bottom:10px;
 }
 
-.contact-container{
-  max-width:1150px;
-  margin:60px auto 0;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
-}
-
-.contact-card{
-  background:white;
-  padding:35px 28px;
-  border-radius:22px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.06);
-  border:1px solid #edf2ff;
-}
-
-.contact-icon{
-  width:70px;
-  height:70px;
+.matricula-sub{
+  max-width:850px;
   margin:auto;
-  margin-bottom:18px;
-  border-radius:50%;
-  background:#eef4ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:2rem;
-}
-
-/* REGIÕES */
-.regions{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
-  margin-top:15px;
-}
-
-.region-item{
-  background:linear-gradient(135deg,#e9f2ff,#f4f8ff);
-  color:#2d6cdf;
-  padding:9px 14px;
-  border-radius:30px;
-  font-size:0.9rem;
-  font-weight:600;
-  border:1px solid #d7e6ff;
-}
-
-/* BOTÕES */
-.contact-button{
-  display:block;
-  margin-top:12px;
-  padding:15px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  color:white;
-  background:#25d366;
-}
-
-.secondary-button{
-  background:#2d6cdf;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-  background:#1f2d3d;
-  color:white;
-  padding:50px 20px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  max-width:1100px;
-  margin:auto;
-  gap:25px;
-}
-
-footer p{
-  color:#cbd6e2;
-}
-
-/* FLOAT BUTTON */
-.floating-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:white;
-  padding:14px 20px;
-  border-radius:50px;
-  font-weight:600;
-  text-decoration:none;
+  color:#5a6b7d;
+  line-height:1.6;
 }
 
 </style>
@@ -324,20 +217,10 @@ footer p{
 
 <body>
 
-<!-- TOP -->
 <div class="topbar">Matrículas abertas!</div>
 
-<!-- MENU -->
-<nav class="menu">
-  <a href="#inicio">Início</a>
-  <a href="#historia">História</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#funciona">Como funciona</a>
-  <a href="#contato">Matrícula</a>
-</nav>
-
 <!-- HERO -->
-<section class="hero" id="inicio">
+<section class="hero">
 
   <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
   <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
@@ -345,7 +228,7 @@ footer p{
 
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
-    <p>Atendimento psicopedagógico com foco no desenvolvimento da aprendizagem infantil.</p>
+    <p>Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
   </div>
 
   <div class="hero-logo">
@@ -355,98 +238,67 @@ footer p{
 </section>
 
 <!-- HISTÓRIA -->
-<section class="historia" id="historia">
+<section class="historia">
+
   <h2 class="section-title">Nossa História</h2>
+
   <div class="history-box">
     A Turma do Clubinho nasce como forma de reconhecimento...
   </div>
+
 </section>
 
 <!-- SERVIÇOS -->
-<section id="servicos">
+<section>
+
   <h2 class="section-title">Serviços</h2>
+
   <div class="grid">
+
     <div class="card">Atendimento psicopedagógico</div>
     <div class="card">Avaliação</div>
-    <div class="card">Intervenção</div>
+    <div class="card">Intervenção pedagógica</div>
+
   </div>
+
 </section>
 
-<!-- COMO FUNCIONA -->
-<section id="funciona">
+<!-- STEPS -->
+<section>
+
   <h2 class="section-title">Como funciona</h2>
+
   <div class="steps">
+
     <div class="step">Contato</div>
     <div class="step">Avaliação</div>
-    <div class="step">Plano</div>
-  </div>
-</section>
-
-<!-- FINAL / MATRÍCULA -->
-<section class="final-section" id="contato">
-
-  <div class="contact-header">
-
-    <span class="contact-badge">
-      Vagas abertas
-    </span>
-
-    <h2 class="matricula-title">
-      Faça sua matrícula
-    </h2>
-
-    <p class="section-sub">
-      Atendimento psicopedagógico individualizado em ambiente profissional, com foco no desenvolvimento da aprendizagem.
-    </p>
-
-  </div>
-
-  <div class="contact-container">
-
-    <div class="contact-card">
-      <div class="contact-icon">📚</div>
-      <h3>Atendimento especializado</h3>
-      <p>Acompanhamento da aprendizagem infantil.</p>
-    </div>
-
-    <div class="contact-card">
-      <div class="contact-icon">📍</div>
-      <h3>Atendimento presencial</h3>
-      <p>Espaço profissional parceiro mediante agendamento.</p>
-
-      <div class="regions">
-        <div class="region-item">Região Central</div>
-        <div class="region-item">Região Norte</div>
-        <div class="region-item">Zona Sul</div>
-      </div>
-
-      <small>A localização é enviada após agendamento.</small>
-    </div>
-
-    <div class="contact-card">
-      <div class="contact-icon">💬</div>
-
-      <h3>Contato</h3>
-
-      <a class="contact-button" href="#">Fazer matrícula</a>
-      <a class="contact-button secondary-button" href="#">Tirar dúvidas</a>
-
-    </div>
+    <div class="step">Plano de intervenção</div>
 
   </div>
 
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div><h3>Contato</h3><p>WhatsApp</p></div>
-    <div><h3>Local</h3><p>Londrina - PR</p></div>
-    <div><h3>Horário</h3><p>Seg - Sáb</p></div>
-  </div>
-</footer>
+<!-- FINAL MELHORADO -->
+<section class="final-section">
 
-<a class="floating-btn" href="#">Matrícula</a>
+  <h2 class="section-title matricula-title">
+    Faça sua matrícula
+  </h2>
+
+  <p class="matricula-sub">
+    Atendimento psicopedagógico individualizado, com foco no desenvolvimento da aprendizagem da criança.
+  </p>
+
+  <div class="final-box">
+    Atendimento realizado em ambiente profissional, com acompanhamento especializado e foco no desenvolvimento completo da criança.
+  </div>
+
+  <div class="final-buttons">
+    <a class="btn btn-blue" href="#">Ver unidades</a>
+    <a class="btn btn-green" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+  </div>
+
+</section>
 
 </body>
 </html>
