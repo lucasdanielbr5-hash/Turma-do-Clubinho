@@ -22,7 +22,6 @@
       color: #1f2d3d;
     }
 
-    /* TOPBAR */
     .topbar {
       position: fixed;
       top: 0;
@@ -35,7 +34,6 @@
       z-index: 9999;
     }
 
-    /* HERO */
     .hero {
       height: 100vh;
       display: flex;
@@ -86,7 +84,6 @@
       max-width: 100%;
     }
 
-    /* SEÇÕES */
     section {
       padding: 90px 20px;
     }
@@ -106,33 +103,6 @@
       line-height: 1.6;
     }
 
-    /* HISTÓRIA */
-    .historia {
-      background: #ffffff;
-    }
-
-    .history-box {
-      max-width: 900px;
-      margin: 50px auto 0;
-      background: linear-gradient(180deg, #ffffff, #f3f7ff);
-      border-radius: 20px;
-      padding: 45px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-      border: 1px solid #e6ecff;
-      line-height: 1.8;
-      text-align: justify;
-      color: #3a4a5a;
-    }
-
-    .history-title {
-      text-align: center;
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #1f3b57;
-    }
-
-    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -159,43 +129,6 @@
       line-height: 1.7;
     }
 
-    /* STEPS */
-    .steps {
-      max-width: 1000px;
-      margin: 60px auto 0;
-      display: grid;
-      gap: 18px;
-    }
-
-    .step {
-      background: white;
-      padding: 22px;
-      border-radius: 14px;
-      display: flex;
-      gap: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      border-left: 5px solid #ff5c8a;
-    }
-
-    .step-number {
-      min-width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      background: #ff5c8a;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-    }
-
-    /* REGIÕES */
-    .regioes {
-      background: #ffffff;
-      text-align: center;
-    }
-
-    /* FINAL */
     .final-section {
       background: #eef4ff;
       text-align: center;
@@ -229,7 +162,6 @@
     .btn-green { background: #25d366; }
     .btn-blue { background: #2d6cdf; }
 
-    /* FOOTER */
     footer {
       background: #1f2d3d;
       color: white;
@@ -249,7 +181,6 @@
       line-height: 1.6;
     }
 
-    /* BOTÃO FLUTUANTE */
     .floating-btn {
       position: fixed;
       bottom: 20px;
@@ -285,17 +216,14 @@
   </section>
 
   <!-- HISTÓRIA -->
-  <section class="historia">
+  <section>
     <h2 class="section-title">Nossa História</h2>
 
-    <div class="history-box">
-      <div class="history-title">A construção da Turma do Clubinho</div>
-
+    <div class="final-box">
       A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização...
       <br><br>
-      Em homenagem à Turma do Clubinho:<br>
-      Benício, Maicon, Pedro, Marcos e Maria.<br>
-      Professora Vanessa, Professora Cirleia e Professora Joceli.
+      Em homenagem: Benício, Maicon, Pedro, Marcos e Maria.<br>
+      Professoras Vanessa, Cirleia e Joceli.
     </div>
   </section>
 
@@ -306,75 +234,44 @@
     <div class="grid">
       <div class="card">
         <h3>Atendimento psicopedagógico</h3>
-        <p>Acompanhamento individual com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
+        <p>Acompanhamento individual com foco no desenvolvimento da criança.</p>
       </div>
 
       <div class="card">
         <h3>Avaliação de aprendizagem</h3>
-        <p>Diagnóstico completo das dificuldades e potencialidades no processo de aprendizagem.</p>
+        <p>Diagnóstico completo das dificuldades e potencialidades.</p>
       </div>
 
       <div class="card">
         <h3>Intervenção pedagógica</h3>
-        <p>Plano estruturado de atividades personalizadas para evolução contínua da criança.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMO FUNCIONA -->
-  <section>
-    <h2 class="section-title">Como funciona</h2>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <div>
-          <h3>Contato</h3>
-          <p>Entendimento da necessidade da criança e da família.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-number">2</div>
-        <div>
-          <h3>Avaliação</h3>
-          <p>Diagnóstico completo do desenvolvimento e aprendizagem.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-number">3</div>
-        <div>
-          <h3>Plano de intervenção</h3>
-          <p>Estratégias personalizadas com acompanhamento contínuo.</p>
-        </div>
+        <p>Plano de atividades personalizadas e acompanhamento contínuo.</p>
       </div>
     </div>
   </section>
 
   <!-- REGIÕES -->
-  <section class="regioes">
+  <section>
     <h2 class="section-title">Regiões de atendimento</h2>
 
     <p class="section-sub">
-      Atendemos de forma flexível em diferentes regiões da cidade, com atendimento em domicílio ou em pontos de apoio.
+      Atendemos de forma flexível em diferentes regiões da cidade, com atendimento domiciliar ou em espaços parceiros cuidadosamente selecionados.
     </p>
 
     <div class="grid">
 
       <div class="card">
         <h3>Zona Central</h3>
-        <p>Atendimento com fácil acesso e maior disponibilidade de horários.</p>
+        <p>Atendimento realizado em espaço reservado e de fácil acesso na região central.</p>
       </div>
 
       <div class="card">
         <h3>Zona Norte</h3>
-        <p>Atendimento domiciliar e suporte em espaços parceiros da região.</p>
+        <p>Atendimento domiciliar e suporte direto às famílias da região.</p>
       </div>
 
       <div class="card">
         <h3>Zona Sul</h3>
-        <p>Atendimento personalizado conforme a necessidade da família.</p>
+        <p>Atendimento em espaço reservado e ambiente tranquilo para acompanhamento pedagógico.</p>
       </div>
 
     </div>
@@ -385,33 +282,21 @@
     <h2 class="section-title">Agende seu atendimento</h2>
 
     <div class="final-box">
-      Atendimento psicopedagógico individualizado, com foco no desenvolvimento cognitivo, emocional e escolar da criança.
+      Atendimento psicopedagógico individualizado com foco no desenvolvimento da criança.
     </div>
 
     <div class="final-buttons">
-      <a class="btn btn-blue" href="#mapa">Saiba mais</a>
-      <a class="btn btn-green" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+      <a class="btn btn-blue" href="#">Saiba mais</a>
+      <a class="btn btn-green" href="https://wa.me/5500000000000">WhatsApp</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div>
         <h3>Contato</h3>
         <p>(00) 00000-0000</p>
         <p>contato@clubinho.com</p>
-      </div>
-
-      <div>
-        <h3>Londrina - PR</h3>
-        <p>Atendimento flexível por região</p>
-      </div>
-
-      <div>
-        <h3>Horário</h3>
-        <p>Segunda a sábado</p>
-        <p>08h às 18h</p>
       </div>
     </div>
   </footer>
