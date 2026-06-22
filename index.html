@@ -1,14 +1,21 @@
 ```html
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Clubinho da Aprendizagem</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ================================================= */
+/* RESET */
+/* ================================================= */
 
 *{
   margin:0;
@@ -27,7 +34,10 @@ body{
   color:#1f2d3d;
 }
 
+/* ================================================= */
 /* TOPBAR */
+/* ================================================= */
+
 .topbar{
   position:fixed;
   top:0;
@@ -40,13 +50,16 @@ body{
   z-index:9999;
 }
 
+/* ================================================= */
 /* MENU */
+/* ================================================= */
+
 .menu{
   position:fixed;
   top:48px;
   width:100%;
   background:white;
-  padding:15px 8%;
+  padding:16px 8%;
   display:flex;
   justify-content:center;
   gap:30px;
@@ -65,33 +78,58 @@ body{
   color:#ff5c8a;
 }
 
+/* ================================================= */
 /* HERO */
+/* ================================================= */
+
 .hero{
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:150px 8% 80px;
+  padding:160px 8% 90px;
   background:linear-gradient(135deg,#6ec6ff,#cfe9ff);
   position:relative;
   overflow:hidden;
 }
 
 /* NUVENS */
+
 .cloud{
   position:absolute;
-  width:150px;
+  width:170px;
   opacity:0.8;
   animation:moveClouds linear infinite;
 }
 
-.cloud1{top:12%; left:-180px; animation-duration:55s;}
-.cloud2{top:38%; left:-240px; animation-duration:70s;}
-.cloud3{top:65%; left:-200px; animation-duration:60s;}
+.cloud1{
+  top:12%;
+  left:-180px;
+  animation-duration:55s;
+}
+
+.cloud2{
+  top:38%;
+  left:-240px;
+  animation-duration:70s;
+}
+
+.cloud3{
+  top:65%;
+  left:-200px;
+  animation-duration:60s;
+}
 
 @keyframes moveClouds{
-  from{transform:translateX(0);}
-  to{transform:translateX(140vw);}
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(140vw);
+  }
+
 }
 
 .hero-text{
@@ -100,21 +138,21 @@ body{
 }
 
 .hero-text h1{
-  font-size:3rem;
+  font-size:3.2rem;
   margin-bottom:18px;
   color:#16314d;
 }
 
 .hero-text p{
-  font-size:1.1rem;
-  max-width:550px;
+  font-size:1.15rem;
+  max-width:560px;
   margin:auto;
-  line-height:1.7;
+  line-height:1.8;
   color:#1f3b57;
 }
 
 .hero-buttons{
-  margin-top:30px;
+  margin-top:35px;
   display:flex;
   justify-content:center;
   gap:15px;
@@ -122,14 +160,17 @@ body{
 }
 
 .hero-logo img{
-  width:380px;
+  width:390px;
   max-width:100%;
 }
 
+/* ================================================= */
 /* BOTÕES */
+/* ================================================= */
+
 .btn{
-  padding:14px 24px;
-  border-radius:30px;
+  padding:15px 24px;
+  border-radius:35px;
   text-decoration:none;
   font-weight:600;
   color:white;
@@ -138,7 +179,7 @@ body{
 }
 
 .btn:hover{
-  transform:translateY(-2px);
+  transform:translateY(-3px);
 }
 
 .btn-green{
@@ -149,15 +190,18 @@ body{
   background:#2d6cdf;
 }
 
+/* ================================================= */
 /* SEÇÕES */
+/* ================================================= */
+
 section{
-  padding:90px 20px;
+  padding:100px 20px;
 }
 
 .section-title{
   text-align:center;
-  font-size:2.2rem;
-  margin-bottom:15px;
+  font-size:2.5rem;
+  margin-bottom:18px;
   color:#1f3b57;
 }
 
@@ -166,23 +210,26 @@ section{
   max-width:850px;
   margin:auto;
   color:#5a6b7d;
-  line-height:1.7;
+  line-height:1.8;
 }
 
+/* ================================================= */
 /* HISTÓRIA */
+/* ================================================= */
+
 .historia{
-  background:#ffffff;
+  background:white;
 }
 
 .history-box{
   max-width:950px;
-  margin:50px auto 0;
+  margin:55px auto 0;
   background:linear-gradient(180deg,#ffffff,#f3f7ff);
-  border-radius:20px;
-  padding:45px;
+  border-radius:25px;
+  padding:50px;
   box-shadow:0 15px 35px rgba(0,0,0,0.08);
   border:1px solid #e6ecff;
-  line-height:1.9;
+  line-height:2;
   text-align:justify;
   color:#3a4a5a;
 }
@@ -191,58 +238,69 @@ section{
   text-align:center;
   font-size:1.5rem;
   font-weight:600;
-  margin-bottom:20px;
+  margin-bottom:25px;
   color:#1f3b57;
 }
 
+/* ================================================= */
 /* SERVIÇOS */
+/* ================================================= */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
+  gap:25px;
   max-width:1100px;
-  margin:50px auto 0;
+  margin:60px auto 0;
 }
 
 .card{
   background:white;
-  padding:28px;
-  border-radius:18px;
+  padding:30px;
+  border-radius:22px;
   box-shadow:0 10px 25px rgba(0,0,0,0.06);
-  border-top:4px solid #5aa9ff;
+  border-top:5px solid #5aa9ff;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
 }
 
 .card h3{
-  margin-bottom:12px;
+  margin-bottom:15px;
   color:#1f3b57;
 }
 
 .card p{
   color:#5a6b7d;
-  line-height:1.7;
+  line-height:1.8;
 }
 
+/* ================================================= */
 /* COMO FUNCIONA */
+/* ================================================= */
+
 .steps{
   max-width:1000px;
   margin:60px auto 0;
   display:grid;
-  gap:18px;
+  gap:20px;
 }
 
 .step{
   background:white;
-  padding:22px;
-  border-radius:14px;
+  padding:25px;
+  border-radius:18px;
   display:flex;
-  gap:15px;
+  gap:18px;
   box-shadow:0 8px 20px rgba(0,0,0,0.06);
   border-left:5px solid #ff5c8a;
 }
 
 .step-number{
-  min-width:35px;
-  height:35px;
+  min-width:40px;
+  height:40px;
   border-radius:50%;
   background:#ff5c8a;
   color:white;
@@ -252,36 +310,146 @@ section{
   font-weight:600;
 }
 
-/* FINAL */
+/* ================================================= */
+/* CONTATO */
+/* ================================================= */
+
 .final-section{
-  background:#eef4ff;
+  background:linear-gradient(180deg,#eef5ff,#f8fbff);
   text-align:center;
 }
 
-.final-box{
-  max-width:780px;
-  margin:40px auto 20px;
+.contact-header{
+  max-width:800px;
+  margin:auto;
+}
+
+.contact-badge{
+  display:inline-block;
+  background:#dcecff;
+  color:#2d6cdf;
+  padding:10px 18px;
+  border-radius:30px;
+  font-size:0.9rem;
+  font-weight:600;
+  margin-bottom:22px;
+}
+
+.contact-container{
+  max-width:1150px;
+  margin:60px auto 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:28px;
+}
+
+.contact-card{
   background:white;
-  padding:35px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.06);
-  line-height:1.9;
-  color:#3d4d5d;
+  padding:38px 32px;
+  border-radius:24px;
+  box-shadow:0 12px 35px rgba(0,0,0,0.06);
+  transition:0.35s;
+  border:1px solid #edf2ff;
 }
 
-.final-buttons{
+.contact-card:hover{
+  transform:translateY(-6px);
+}
+
+.contact-icon{
+  width:78px;
+  height:78px;
+  margin:auto;
+  margin-bottom:22px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#eef4ff,#dcecff);
   display:flex;
+  align-items:center;
   justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-  margin-top:25px;
+  font-size:2rem;
 }
 
+.contact-card h3{
+  color:#1f3b57;
+  margin-bottom:15px;
+}
+
+.contact-card p{
+  color:#5a6b7d;
+  line-height:1.9;
+  margin-bottom:20px;
+}
+
+.contact-list{
+  list-style:none;
+  text-align:left;
+  margin-top:15px;
+}
+
+.contact-list li{
+  margin-bottom:12px;
+  color:#486078;
+  position:relative;
+  padding-left:28px;
+}
+
+.contact-list li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#25d366;
+  font-weight:bold;
+}
+
+.location-box{
+  background:#f4f8ff;
+  border-radius:18px;
+  padding:20px;
+  margin-top:15px;
+}
+
+.location-box span{
+  display:block;
+  color:#2d6cdf;
+  font-weight:700;
+  font-size:1.05rem;
+  margin-bottom:8px;
+}
+
+.location-box small{
+  color:#6c7f92;
+  line-height:1.6;
+}
+
+.contact-button{
+  display:block;
+  width:100%;
+  margin-top:12px;
+  background:#25d366;
+  color:white;
+  text-decoration:none;
+  padding:15px 22px;
+  border-radius:35px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.contact-button:hover{
+  transform:scale(1.02);
+}
+
+.secondary-button{
+  background:#2d6cdf;
+}
+
+/* ================================================= */
 /* FOOTER */
+/* ================================================= */
+
 footer{
   background:#1f2d3d;
   color:white;
-  padding:50px 20px;
+  padding:55px 20px;
 }
 
 .footer-grid{
@@ -298,10 +466,13 @@ footer h3{
 
 footer p{
   color:#cbd6e2;
-  line-height:1.7;
+  line-height:1.8;
 }
 
+/* ================================================= */
 /* BOTÃO FLUTUANTE */
+/* ================================================= */
+
 .floating-btn{
   position:fixed;
   bottom:20px;
@@ -316,13 +487,16 @@ footer p{
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* ================================================= */
 /* RESPONSIVO */
+/* ================================================= */
+
 @media(max-width:900px){
 
   .hero{
     flex-direction:column;
     text-align:center;
-    gap:40px;
+    gap:45px;
   }
 
   .hero-text{
@@ -336,27 +510,31 @@ footer p{
   }
 
   .hero-text h1{
-    font-size:2.2rem;
+    font-size:2.3rem;
   }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
   Matrículas abertas!
 </div>
 
 <!-- MENU -->
 <nav class="menu">
+
   <a href="#inicio">Início</a>
   <a href="#historia">História</a>
   <a href="#servicos">Serviços</a>
   <a href="#funciona">Como funciona</a>
   <a href="#contato">Contato</a>
+
 </nav>
 
 <!-- HERO -->
@@ -368,27 +546,39 @@ footer p{
 
   <div class="hero-text">
 
-    <h1>Clubinho da Aprendizagem</h1>
+    <h1>
+      Clubinho da Aprendizagem
+    </h1>
 
     <p>
-      Atendimento psicopedagógico com foco no desenvolvimento cognitivo,
-      emocional e escolar da criança.
+      Atendimento psicopedagógico com foco no desenvolvimento
+      cognitivo, emocional e escolar da criança.
     </p>
 
     <div class="hero-buttons">
-      <a class="btn btn-green" href="https://wa.me/5500000000000">
-        Fazer matrícula
+
+      <a class="btn btn-green"
+         href="https://wa.me/5500000000000">
+
+         Fazer matrícula
+
       </a>
 
-      <a class="btn btn-blue" href="#servicos">
-        Conhecer serviços
+      <a class="btn btn-blue"
+         href="#servicos">
+
+         Conhecer serviços
+
       </a>
+
     </div>
 
   </div>
 
   <div class="hero-logo">
+
     <img src="https://i.imgur.com/W8Z47VR.png">
+
   </div>
 
 </section>
@@ -396,7 +586,9 @@ footer p{
 <!-- HISTÓRIA -->
 <section class="historia" id="historia">
 
-  <h2 class="section-title">Nossa História</h2>
+  <h2 class="section-title">
+    Nossa História
+  </h2>
 
   <div class="history-box">
 
@@ -425,35 +617,54 @@ footer p{
 <!-- SERVIÇOS -->
 <section id="servicos">
 
-  <h2 class="section-title">Serviços oferecidos</h2>
+  <h2 class="section-title">
+    Serviços oferecidos
+  </h2>
 
   <p class="section-sub">
-    Atendimento individualizado com foco no desenvolvimento da aprendizagem,
-    alfabetização e fortalecimento das habilidades cognitivas da criança.
+    Atendimento individualizado com foco no desenvolvimento
+    da aprendizagem, alfabetização e fortalecimento das habilidades cognitivas.
   </p>
 
   <div class="grid">
 
     <div class="card">
-      <h3>Atendimento psicopedagógico</h3>
+
+      <h3>
+        Atendimento psicopedagógico
+      </h3>
+
       <p>
-        Acompanhamento individual com foco no desenvolvimento cognitivo,
-        emocional e escolar da criança.
+        Acompanhamento individual com foco no desenvolvimento
+        cognitivo, emocional e escolar da criança.
       </p>
+
     </div>
 
     <div class="card">
-      <h3>Avaliação de aprendizagem</h3>
+
+      <h3>
+        Avaliação de aprendizagem
+      </h3>
+
       <p>
-        Diagnóstico das dificuldades e potencialidades no processo de aprendizagem.
+        Diagnóstico das dificuldades e potencialidades
+        no processo de aprendizagem.
       </p>
+
     </div>
 
     <div class="card">
-      <h3>Intervenção pedagógica</h3>
+
+      <h3>
+        Intervenção pedagógica
+      </h3>
+
       <p>
-        Plano estruturado de atividades personalizadas para evolução contínua.
+        Plano estruturado de atividades personalizadas
+        para evolução contínua da criança.
       </p>
+
     </div>
 
   </div>
@@ -463,41 +674,70 @@ footer p{
 <!-- COMO FUNCIONA -->
 <section id="funciona">
 
-  <h2 class="section-title">Como funciona</h2>
+  <h2 class="section-title">
+    Como funciona
+  </h2>
 
   <div class="steps">
 
     <div class="step">
-      <div class="step-number">1</div>
+
+      <div class="step-number">
+        1
+      </div>
 
       <div>
-        <h3>Contato inicial</h3>
+
+        <h3>
+          Contato inicial
+        </h3>
+
         <p>
           Conversa para compreender as necessidades da criança e da família.
         </p>
+
       </div>
+
     </div>
 
     <div class="step">
-      <div class="step-number">2</div>
+
+      <div class="step-number">
+        2
+      </div>
 
       <div>
-        <h3>Avaliação</h3>
+
+        <h3>
+          Avaliação
+        </h3>
+
         <p>
           Observação e avaliação das habilidades cognitivas e escolares.
         </p>
+
       </div>
+
     </div>
 
     <div class="step">
-      <div class="step-number">3</div>
+
+      <div class="step-number">
+        3
+      </div>
 
       <div>
-        <h3>Plano de acompanhamento</h3>
+
+        <h3>
+          Plano de acompanhamento
+        </h3>
+
         <p>
-          Estratégias individualizadas com acompanhamento contínuo da evolução.
+          Estratégias individualizadas com acompanhamento contínuo.
         </p>
+
       </div>
+
     </div>
 
   </div>
@@ -507,39 +747,112 @@ footer p{
 <!-- CONTATO -->
 <section class="final-section" id="contato">
 
-  <h2 class="section-title">Agende seu atendimento</h2>
+  <div class="contact-header">
 
-  <p class="section-sub">
-    Atendimentos presenciais em espaço profissional parceiro,
-    mediante agendamento prévio.
-  </p>
+    <span class="contact-badge">
+      Atendimento mediante agendamento
+    </span>
 
-  <div class="final-box">
+    <h2 class="section-title">
+      Agende seu atendimento
+    </h2>
 
-    Atendimento psicopedagógico individualizado com foco no
-    desenvolvimento cognitivo, emocional e escolar da criança.<br><br>
-
-    ✔ Atendimento acolhedor e personalizado<br>
-    ✔ Atendimento presencial e online<br>
-    ✔ Avaliação e intervenção pedagógica<br>
-    ✔ Acompanhamento individualizado<br><br>
-
-    📍 Londrina - PR<br>
-    📅 Atendimento mediante agendamento
+    <p class="section-sub">
+      Atendimento psicopedagógico individualizado em ambiente acolhedor,
+      profissional e cuidadosamente preparado para cada criança.
+    </p>
 
   </div>
 
-  <div class="final-buttons">
+  <div class="contact-container">
 
-    <a class="btn btn-green"
-       href="https://wa.me/5500000000000">
-       Fazer matrícula
-    </a>
+    <!-- CARD -->
+    <div class="contact-card">
 
-    <a class="btn btn-blue"
-       href="https://wa.me/5500000000000">
-       Tirar dúvidas
-    </a>
+      <div class="contact-icon">
+        📚
+      </div>
+
+      <h3>
+        Atendimento especializado
+      </h3>
+
+      <p>
+        Acompanhamento psicopedagógico com foco no desenvolvimento
+        cognitivo, emocional e escolar da criança.
+      </p>
+
+      <ul class="contact-list">
+
+        <li>Atendimento individualizado</li>
+        <li>Intervenção pedagógica</li>
+        <li>Fortalecimento da aprendizagem</li>
+
+      </ul>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="contact-card">
+
+      <div class="contact-icon">
+        📍
+      </div>
+
+      <h3>
+        Atendimento presencial
+      </h3>
+
+      <p>
+        Os encontros acontecem em espaço profissional parceiro,
+        mediante agendamento prévio.
+      </p>
+
+      <div class="location-box">
+
+        <span>
+          Londrina - PR
+        </span>
+
+        <small>
+          Local enviado após confirmação do horário.
+        </small>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="contact-card">
+
+      <div class="contact-icon">
+        💬
+      </div>
+
+      <h3>
+        Entre em contato
+      </h3>
+
+      <p>
+        Tire dúvidas, consulte disponibilidade de horários
+        e faça o agendamento da criança.
+      </p>
+
+      <a class="contact-button"
+         href="https://wa.me/5500000000000">
+
+         Fazer matrícula
+
+      </a>
+
+      <a class="contact-button secondary-button"
+         href="https://wa.me/5500000000000">
+
+         Tirar dúvidas
+
+      </a>
+
+    </div>
 
   </div>
 
@@ -551,30 +864,63 @@ footer p{
   <div class="footer-grid">
 
     <div>
-      <h3>Contato</h3>
-      <p>WhatsApp: (00) 00000-0000</p>
-      <p>E-mail: contato@clubinho.com</p>
+
+      <h3>
+        Contato
+      </h3>
+
+      <p>
+        WhatsApp: (00) 00000-0000
+      </p>
+
+      <p>
+        contato@clubinho.com
+      </p>
+
     </div>
 
     <div>
-      <h3>Localização</h3>
-      <p>Londrina - PR</p>
-      <p>Atendimento presencial mediante agendamento</p>
+
+      <h3>
+        Localização
+      </h3>
+
+      <p>
+        Londrina - PR
+      </p>
+
+      <p>
+        Atendimento presencial mediante agendamento
+      </p>
+
     </div>
 
     <div>
-      <h3>Horários</h3>
-      <p>Segunda a sábado</p>
-      <p>08h às 18h</p>
+
+      <h3>
+        Horários
+      </h3>
+
+      <p>
+        Segunda a sábado
+      </p>
+
+      <p>
+        08h às 18h
+      </p>
+
     </div>
 
   </div>
 
 </footer>
 
+<!-- BOTÃO FLUTUANTE -->
 <a class="floating-btn"
    href="https://wa.me/5500000000000">
+
    Fazer matrícula
+
 </a>
 
 </body>
