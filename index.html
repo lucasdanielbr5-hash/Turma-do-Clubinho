@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,6 +15,10 @@
   padding:0;
   box-sizing:border-box;
   font-family:'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
@@ -35,13 +40,38 @@ body{
   z-index:9999;
 }
 
+/* MENU */
+.menu{
+  position:fixed;
+  top:48px;
+  width:100%;
+  background:white;
+  padding:15px 8%;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  z-index:9998;
+  box-shadow:0 2px 15px rgba(0,0,0,0.05);
+}
+
+.menu a{
+  text-decoration:none;
+  color:#1f3b57;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.menu a:hover{
+  color:#ff5c8a;
+}
+
 /* HERO */
 .hero{
-  height:100vh;
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:80px 8%;
+  padding:150px 8% 80px;
   background:linear-gradient(135deg,#6ec6ff,#cfe9ff);
   position:relative;
   overflow:hidden;
@@ -70,21 +100,53 @@ body{
 }
 
 .hero-text h1{
-  font-size:2.8rem;
-  margin-bottom:15px;
+  font-size:3rem;
+  margin-bottom:18px;
+  color:#16314d;
 }
 
 .hero-text p{
   font-size:1.1rem;
   max-width:550px;
   margin:auto;
-  line-height:1.6;
+  line-height:1.7;
   color:#1f3b57;
+}
+
+.hero-buttons{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
 .hero-logo img{
   width:380px;
   max-width:100%;
+}
+
+/* BOTÕES */
+.btn{
+  padding:14px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  color:white;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-green{
+  background:#25d366;
+}
+
+.btn-blue{
+  background:#2d6cdf;
 }
 
 /* SEÇÕES */
@@ -101,10 +163,10 @@ section{
 
 .section-sub{
   text-align:center;
-  max-width:800px;
+  max-width:850px;
   margin:auto;
   color:#5a6b7d;
-  line-height:1.6;
+  line-height:1.7;
 }
 
 /* HISTÓRIA */
@@ -113,21 +175,21 @@ section{
 }
 
 .history-box{
-  max-width:900px;
+  max-width:950px;
   margin:50px auto 0;
   background:linear-gradient(180deg,#ffffff,#f3f7ff);
   border-radius:20px;
   padding:45px;
   box-shadow:0 15px 35px rgba(0,0,0,0.08);
   border:1px solid #e6ecff;
-  line-height:1.8;
+  line-height:1.9;
   text-align:justify;
   color:#3a4a5a;
 }
 
 .history-title{
   text-align:center;
-  font-size:1.4rem;
+  font-size:1.5rem;
   font-weight:600;
   margin-bottom:20px;
   color:#1f3b57;
@@ -190,40 +252,6 @@ section{
   font-weight:600;
 }
 
-/* MAPA */
-.map-section{
-  background:#ffffff;
-  text-align:center;
-}
-
-.map-buttons{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:25px;
-}
-
-.map-buttons button{
-  padding:12px 18px;
-  border-radius:25px;
-  border:none;
-  font-weight:600;
-  cursor:pointer;
-  color:white;
-}
-
-.btn1{background:#2d6cdf;}
-.btn2{background:#ff5c8a;}
-
-.map-box{
-  max-width:1000px;
-  margin:35px auto;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 15px 30px rgba(0,0,0,0.15);
-}
-
 /* FINAL */
 .final-section{
   background:#eef4ff;
@@ -231,12 +259,14 @@ section{
 }
 
 .final-box{
-  max-width:750px;
+  max-width:780px;
   margin:40px auto 20px;
   background:white;
-  padding:30px;
+  padding:35px;
   border-radius:18px;
   box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  line-height:1.9;
+  color:#3d4d5d;
 }
 
 .final-buttons{
@@ -244,19 +274,8 @@ section{
   justify-content:center;
   gap:15px;
   flex-wrap:wrap;
-  margin-top:20px;
+  margin-top:25px;
 }
-
-.btn{
-  padding:14px 22px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  color:white;
-}
-
-.btn-green{background:#25d366;}
-.btn-blue{background:#2d6cdf;}
 
 /* FOOTER */
 footer{
@@ -273,9 +292,13 @@ footer{
   gap:25px;
 }
 
+footer h3{
+  margin-bottom:12px;
+}
+
 footer p{
   color:#cbd6e2;
-  line-height:1.6;
+  line-height:1.7;
 }
 
 /* BOTÃO FLUTUANTE */
@@ -285,10 +308,37 @@ footer p{
   right:20px;
   background:#25d366;
   color:white;
-  padding:14px 18px;
+  padding:14px 20px;
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
+  z-index:9999;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+  }
+
+  .hero-text{
+    width:100%;
+  }
+
+  .menu{
+    gap:15px;
+    padding:15px;
+    flex-wrap:wrap;
+  }
+
+  .hero-text h1{
+    font-size:2.2rem;
+  }
+
 }
 
 </style>
@@ -296,18 +346,45 @@ footer p{
 
 <body>
 
-<div class="topbar">Matriculas abertas!</div>
+<div class="topbar">
+  Matrículas abertas!
+</div>
+
+<!-- MENU -->
+<nav class="menu">
+  <a href="#inicio">Início</a>
+  <a href="#historia">História</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#funciona">Como funciona</a>
+  <a href="#contato">Contato</a>
+</nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="inicio">
 
   <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
   <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
   <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
 
   <div class="hero-text">
+
     <h1>Clubinho da Aprendizagem</h1>
-    <p>Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
+
+    <p>
+      Atendimento psicopedagógico com foco no desenvolvimento cognitivo,
+      emocional e escolar da criança.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-green" href="https://wa.me/5500000000000">
+        Fazer matrícula
+      </a>
+
+      <a class="btn btn-blue" href="#servicos">
+        Conhecer serviços
+      </a>
+    </div>
+
   </div>
 
   <div class="hero-logo">
@@ -317,13 +394,15 @@ footer p{
 </section>
 
 <!-- HISTÓRIA -->
-<section class="historia">
+<section class="historia" id="historia">
 
   <h2 class="section-title">Nossa História</h2>
 
   <div class="history-box">
 
-    <div class="history-title">A construção da Turma do Clubinho</div>
+    <div class="history-title">
+      A construção da Turma do Clubinho
+    </div>
 
     A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização.<br><br>
 
@@ -344,25 +423,37 @@ footer p{
 </section>
 
 <!-- SERVIÇOS -->
-<section>
+<section id="servicos">
 
   <h2 class="section-title">Serviços oferecidos</h2>
+
+  <p class="section-sub">
+    Atendimento individualizado com foco no desenvolvimento da aprendizagem,
+    alfabetização e fortalecimento das habilidades cognitivas da criança.
+  </p>
 
   <div class="grid">
 
     <div class="card">
       <h3>Atendimento psicopedagógico</h3>
-      <p>Acompanhamento individual com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
+      <p>
+        Acompanhamento individual com foco no desenvolvimento cognitivo,
+        emocional e escolar da criança.
+      </p>
     </div>
 
     <div class="card">
       <h3>Avaliação de aprendizagem</h3>
-      <p>Diagnóstico completo das dificuldades e potencialidades no processo de aprendizagem.</p>
+      <p>
+        Diagnóstico das dificuldades e potencialidades no processo de aprendizagem.
+      </p>
     </div>
 
     <div class="card">
       <h3>Intervenção pedagógica</h3>
-      <p>Plano estruturado de atividades personalizadas para evolução contínua da criança.</p>
+      <p>
+        Plano estruturado de atividades personalizadas para evolução contínua.
+      </p>
     </div>
 
   </div>
@@ -370,59 +461,86 @@ footer p{
 </section>
 
 <!-- COMO FUNCIONA -->
-<section>
+<section id="funciona">
 
   <h2 class="section-title">Como funciona</h2>
 
   <div class="steps">
 
-    <div class="step"><div class="step-number">1</div><div><h3>Contato</h3><p>Entendimento da necessidade da criança e da família.</p></div></div>
+    <div class="step">
+      <div class="step-number">1</div>
 
-    <div class="step"><div class="step-number">2</div><div><h3>Avaliação</h3><p>Diagnóstico completo do desenvolvimento e aprendizagem.</p></div></div>
+      <div>
+        <h3>Contato inicial</h3>
+        <p>
+          Conversa para compreender as necessidades da criança e da família.
+        </p>
+      </div>
+    </div>
 
-    <div class="step"><div class="step-number">3</div><div><h3>Plano de intervenção</h3><p>Estratégias personalizadas com acompanhamento contínuo.</p></div></div>
+    <div class="step">
+      <div class="step-number">2</div>
+
+      <div>
+        <h3>Avaliação</h3>
+        <p>
+          Observação e avaliação das habilidades cognitivas e escolares.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+
+      <div>
+        <h3>Plano de acompanhamento</h3>
+        <p>
+          Estratégias individualizadas com acompanhamento contínuo da evolução.
+        </p>
+      </div>
+    </div>
 
   </div>
 
 </section>
 
-<!-- MAPA -->
-<section class="map-section">
-
-  <h2 class="section-title">Encontre a unidade mais próxima</h2>
-
-  <p class="section-sub">
-    Você pode optar pelo atendimento em casa ou nas nossas unidades físicas.
-  </p>
-
-  <div class="map-buttons">
-
-    <button class="btn1" onclick="trocarMapa(1)">Unidade Centro</button>
-    <button class="btn2" onclick="trocarMapa(2)">Unidade Bela Suíça</button>
-
-  </div>
-
-  <div class="map-box">
-    <iframe id="mapa"
-      src="https://www.google.com/maps?q=R.%20Sen.%20Souza%20Naves,%20771%20-%20Centro,%20Londrina&output=embed"
-      width="100%" height="420" style="border:0;">
-    </iframe>
-  </div>
-
-</section>
-
-<!-- FINAL -->
-<section class="final-section">
+<!-- CONTATO -->
+<section class="final-section" id="contato">
 
   <h2 class="section-title">Agende seu atendimento</h2>
 
+  <p class="section-sub">
+    Atendimentos presenciais em espaço profissional parceiro,
+    mediante agendamento prévio.
+  </p>
+
   <div class="final-box">
-    Atendimento psicopedagógico individualizado, com foco no desenvolvimento cognitivo, emocional e escolar da criança.
+
+    Atendimento psicopedagógico individualizado com foco no
+    desenvolvimento cognitivo, emocional e escolar da criança.<br><br>
+
+    ✔ Atendimento acolhedor e personalizado<br>
+    ✔ Atendimento presencial e online<br>
+    ✔ Avaliação e intervenção pedagógica<br>
+    ✔ Acompanhamento individualizado<br><br>
+
+    📍 Londrina - PR<br>
+    📅 Atendimento mediante agendamento
+
   </div>
 
   <div class="final-buttons">
-    <a class="btn btn-blue" href="#mapa">Ver unidades</a>
-    <a class="btn btn-green" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+
+    <a class="btn btn-green"
+       href="https://wa.me/5500000000000">
+       Fazer matrícula
+    </a>
+
+    <a class="btn btn-blue"
+       href="https://wa.me/5500000000000">
+       Tirar dúvidas
+    </a>
+
   </div>
 
 </section>
@@ -434,17 +552,18 @@ footer p{
 
     <div>
       <h3>Contato</h3>
-      <p>Telefone: (00) 00000-0000</p>
+      <p>WhatsApp: (00) 00000-0000</p>
       <p>E-mail: contato@clubinho.com</p>
     </div>
 
     <div>
-      <h3>Endereço</h3>
+      <h3>Localização</h3>
       <p>Londrina - PR</p>
+      <p>Atendimento presencial mediante agendamento</p>
     </div>
 
     <div>
-      <h3>Atendimento</h3>
+      <h3>Horários</h3>
       <p>Segunda a sábado</p>
       <p>08h às 18h</p>
     </div>
@@ -453,21 +572,11 @@ footer p{
 
 </footer>
 
-<a class="floating-btn" href="https://wa.me/5500000000000">Conversar com um atendente</a>
-
-<script>
-function trocarMapa(op){
-  let m = document.getElementById("mapa");
-
-  if(op===1){
-    m.src="https://www.google.com/maps?q=R.%20Sen.%20Souza%20Naves,%20771%20-%20Centro,%20Londrina&output=embed";
-  }
-
-  if(op===2){
-    m.src="https://www.google.com/maps?q=R.%20Adhemar%20Pereira%20de%20Barros,%20630%20-%20Bela%20Su%C3%AD%C3%A7a,%20Londrina&output=embed";
-  }
-}
-</script>
+<a class="floating-btn"
+   href="https://wa.me/5500000000000">
+   Fazer matrícula
+</a>
 
 </body>
 </html>
+```
