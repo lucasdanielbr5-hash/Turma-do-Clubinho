@@ -1,1 +1,423 @@
-<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Clubinho da Aprendizagem</title> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <style> *{ margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; } body{ overflow-x:hidden; background:#f6f9ff; color:#1f2d3d; } /* TOPBAR */ .topbar{ position:fixed; top:0; width:100%; background:#ff5c8a; color:white; padding:12px; text-align:center; font-weight:600; z-index:9999; } /* HERO */ .hero{ height:100vh; display:flex; align-items:center; justify-content:space-between; padding:80px 8%; background:linear-gradient(135deg,#6ec6ff,#cfe9ff); position:relative; overflow:hidden; } /* NUVENS */ .cloud{ position:absolute; width:150px; opacity:0.8; animation:moveClouds linear infinite; } .cloud1{top:12%; left:-180px; animation-duration:55s;} .cloud2{top:38%; left:-240px; animation-duration:70s;} .cloud3{top:65%; left:-200px; animation-duration:60s;} @keyframes moveClouds{ from{transform:translateX(0);} to{transform:translateX(140vw);} } .hero-text{ width:50%; text-align:center; } .hero-text h1{ font-size:2.8rem; margin-bottom:15px; } .hero-text p{ font-size:1.1rem; max-width:550px; margin:auto; line-height:1.6; color:#1f3b57; } .hero-logo img{ width:380px; max-width:100%; } /* SEÇÕES */ section{ padding:90px 20px; } .section-title{ text-align:center; font-size:2.2rem; margin-bottom:15px; color:#1f3b57; } .section-sub{ text-align:center; max-width:800px; margin:auto; color:#5a6b7d; line-height:1.6; } /* HISTÓRIA */ .historia{ background:#ffffff; } .history-box{ max-width:900px; margin:50px auto 0; background:linear-gradient(180deg,#ffffff,#f3f7ff); border-radius:20px; padding:45px; box-shadow:0 15px 35px rgba(0,0,0,0.08); border:1px solid #e6ecff; line-height:1.8; text-align:justify; color:#3a4a5a; } .history-title{ text-align:center; font-size:1.4rem; font-weight:600; margin-bottom:20px; color:#1f3b57; } /* SERVIÇOS */ .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; max-width:1100px; margin:50px auto 0; } .card{ background:white; padding:28px; border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,0.06); border-top:4px solid #5aa9ff; } .card h3{ margin-bottom:12px; color:#1f3b57; } .card p{ color:#5a6b7d; line-height:1.7; } /* COMO FUNCIONA */ .steps{ max-width:1000px; margin:60px auto 0; display:grid; gap:18px; } .step{ background:white; padding:22px; border-radius:14px; display:flex; gap:15px; box-shadow:0 8px 20px rgba(0,0,0,0.06); border-left:5px solid #ff5c8a; } .step-number{ min-width:35px; height:35px; border-radius:50%; background:#ff5c8a; color:white; display:flex; align-items:center; justify-content:center; font-weight:600; } /* MAPA */ .map-section{ background:#ffffff; text-align:center; } .map-buttons{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:25px; } .map-buttons button{ padding:12px 18px; border-radius:25px; border:none; font-weight:600; cursor:pointer; color:white; } .btn1{background:#2d6cdf;} .btn2{background:#ff5c8a;} .map-box{ max-width:1000px; margin:35px auto; border-radius:18px; overflow:hidden; box-shadow:0 15px 30px rgba(0,0,0,0.15); } /* FINAL */ .final-section{ background:#eef4ff; text-align:center; } .final-box{ max-width:750px; margin:40px auto 20px; background:white; padding:30px; border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,0.06); } .final-buttons{ display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px; } .btn{ padding:14px 22px; border-radius:30px; text-decoration:none; font-weight:600; color:white; } .btn-green{background:#25d366;} .btn-blue{background:#2d6cdf;} /* FOOTER */ footer{ background:#1f2d3d; color:white; padding:50px 20px; } .footer-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); max-width:1100px; margin:auto; gap:25px; } footer p{ color:#cbd6e2; line-height:1.6; } /* BOTÃO FLUTUANTE */ .floating-btn{ position:fixed; bottom:20px; right:20px; background:#25d366; color:white; padding:14px 18px; border-radius:50px; font-weight:600; text-decoration:none; } </style> </head> <body> <div class="topbar">Matriculas abertas!</div> <!-- HERO --> <section class="hero"> <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png"> <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png"> <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png"> <div class="hero-text"> <h1>Clubinho da Aprendizagem</h1> <p>Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p> </div> <div class="hero-logo"> <img src="https://i.imgur.com/W8Z47VR.png"> </div> </section> <!-- HISTÓRIA --> <section class="historia"> <h2 class="section-title">Nossa História</h2> <div class="history-box"> <div class="history-title">A construção da Turma do Clubinho</div> A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização.<br><br> Ao longo da vivência no contexto escolar, diferentes experiências foram compondo um olhar mais atento sobre o processo de aprendizagem. Cada criança, com seu próprio ritmo, suas tentativas e suas formas de se expressar, ajudou a evidenciar a importância de uma alfabetização mais sensível, consciente e intencional.<br><br> Nesse percurso, também foi fundamental a troca com profissionais da educação que compartilharam o cotidiano escolar, fortalecendo reflexões e ampliando possibilidades de atuação pedagógica.<br><br> São momentos que marcaram profundamente essa trajetória e permanecem vivos até hoje.<br><br> Mais do que conteúdos, permaneceram relações, escuta e respeito ao tempo de cada criança.<br><br> Em homenagem à Turma do Clubinho:<br> Benício, Maicon, Pedro, Marcos e Maria.<br> Professora Vanessa, Professora Cirleia e Professora Joceli. </div> </section> <!-- SERVIÇOS --> <section> <h2 class="section-title">Serviços oferecidos</h2> <div class="grid"> <div class="card"> <h3>Atendimento psicopedagógico</h3> <p>Acompanhamento individual com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p> </div> <div class="card"> <h3>Avaliação de aprendizagem</h3> <p>Diagnóstico completo das dificuldades e potencialidades no processo de aprendizagem.</p> </div> <div class="card"> <h3>Intervenção pedagógica</h3> <p>Plano estruturado de atividades personalizadas para evolução contínua da criança.</p> </div> </div> </section> <!-- COMO FUNCIONA --> <section> <h2 class="section-title">Como funciona</h2> <div class="steps"> <div class="step"><div class="step-number">1</div><div><h3>Contato</h3><p>Entendimento da necessidade da criança e da família.</p></div></div> <div class="step"><div class="step-number">2</div><div><h3>Avaliação</h3><p>Diagnóstico completo do desenvolvimento e aprendizagem.</p></div></div> <div class="step"><div class="step-number">3</div><div><h3>Plano de intervenção</h3><p>Estratégias personalizadas com acompanhamento contínuo.</p></div></div> </div> </section> <!-- MAPA --> <section class="map-section"> <h2 class="section-title">Encontre a unidade mais próxima</h2> <p class="section-sub"> Você pode optar pelo atendimento em casa ou nas nossas unidades físicas. </p> <div class="map-buttons"> <button class="btn1" onclick="trocarMapa(1)">Unidade Centro</button> <button class="btn2" onclick="trocarMapa(2)">Unidade Bela Suíça</button> </div> <div class="map-box"> <iframe id="mapa" src="https://www.google.com/maps?q=R.%20Sen.%20Souza%20Naves,%20771%20-%20Centro,%20Londrina&output=embed" width="100%" height="420" style="border:0;"> </iframe> </div> </section> <!-- FINAL --> <section class="final-section"> <h2 class="section-title">Agende seu atendimento</h2> <div class="final-box"> Atendimento psicopedagógico individualizado, com foco no desenvolvimento cognitivo, emocional e escolar da criança. </div> <div class="final-buttons"> <a class="btn btn-blue" href="#mapa">Ver unidades</a> <a class="btn btn-green" href="https://wa.me/5500000000000">Falar no WhatsApp</a> </div> </section> <!-- FOOTER --> <footer> <div class="footer-grid"> <div> <h3>Contato</h3> <p>Telefone: (00) 00000-0000</p> <p>E-mail: contato@clubinho.com</p> </div> <div> <h3>Endereço</h3> <p>Londrina - PR</p> </div> <div> <h3>Atendimento</h3> <p>Segunda a sábado</p> <p>08h às 18h</p> </div> </div> </footer> <a class="floating-btn" href="https://wa.me/5500000000000">Conversar com um atendente</a> <script> function trocarMapa(op){ let m = document.getElementById("mapa"); if(op===1){ m.src="https://www.google.com/maps?q=R.%20Sen.%20Souza%20Naves,%20771%20-%20Centro,%20Londrina&output=embed"; } if(op===2){ m.src="https://www.google.com/maps?q=R.%20Adhemar%20Pereira%20de%20Barros,%20630%20-%20Bela%20Su%C3%AD%C3%A7a,%20Londrina&output=embed"; } } </script> </body> </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clubinho da Aprendizagem</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+      background: #f6f9ff;
+      color: #1f2d3d;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ff5c8a;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-weight: 600;
+      z-index: 9999;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 8%;
+      background: linear-gradient(135deg, #6ec6ff, #cfe9ff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      width: 150px;
+      opacity: 0.8;
+      animation: moveClouds linear infinite;
+    }
+
+    .cloud1 { top: 12%; left: -180px; animation-duration: 55s; }
+    .cloud2 { top: 38%; left: -240px; animation-duration: 70s; }
+    .cloud3 { top: 65%; left: -200px; animation-duration: 60s; }
+
+    @keyframes moveClouds {
+      from { transform: translateX(0); }
+      to { transform: translateX(140vw); }
+    }
+
+    .hero-text {
+      width: 50%;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      max-width: 550px;
+      margin: auto;
+      line-height: 1.6;
+      color: #1f3b57;
+    }
+
+    .hero-logo img {
+      width: 380px;
+      max-width: 100%;
+    }
+
+    /* SEÇÕES */
+    section {
+      padding: 90px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #1f3b57;
+    }
+
+    .section-sub {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      color: #5a6b7d;
+      line-height: 1.6;
+    }
+
+    /* HISTÓRIA */
+    .historia {
+      background: #ffffff;
+    }
+
+    .history-box {
+      max-width: 900px;
+      margin: 50px auto 0;
+      background: linear-gradient(180deg, #ffffff, #f3f7ff);
+      border-radius: 20px;
+      padding: 45px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      border: 1px solid #e6ecff;
+      line-height: 1.8;
+      text-align: justify;
+      color: #3a4a5a;
+    }
+
+    .history-title {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #1f3b57;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: 50px auto 0;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      border-top: 4px solid #5aa9ff;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #1f3b57;
+    }
+
+    .card p {
+      color: #5a6b7d;
+      line-height: 1.7;
+    }
+
+    /* STEPS */
+    .steps {
+      max-width: 1000px;
+      margin: 60px auto 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .step {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      display: flex;
+      gap: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border-left: 5px solid #ff5c8a;
+    }
+
+    .step-number {
+      min-width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: #ff5c8a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+
+    /* REGIÕES */
+    .regioes {
+      background: #ffffff;
+      text-align: center;
+    }
+
+    /* FINAL */
+    .final-section {
+      background: #eef4ff;
+      text-align: center;
+    }
+
+    .final-box {
+      max-width: 750px;
+      margin: 40px auto 20px;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .final-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+    }
+
+    .btn-green { background: #25d366; }
+    .btn-blue { background: #2d6cdf; }
+
+    /* FOOTER */
+    footer {
+      background: #1f2d3d;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      max-width: 1100px;
+      margin: auto;
+      gap: 25px;
+    }
+
+    footer p {
+      color: #cbd6e2;
+      line-height: 1.6;
+    }
+
+    /* BOTÃO FLUTUANTE */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">Matrículas abertas!</div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
+    <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
+    <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
+
+    <div class="hero-text">
+      <h1>Clubinho da Aprendizagem</h1>
+      <p>Atendimento psicopedagógico com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
+    </div>
+
+    <div class="hero-logo">
+      <img src="https://i.imgur.com/W8Z47VR.png">
+    </div>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section class="historia">
+    <h2 class="section-title">Nossa História</h2>
+
+    <div class="history-box">
+      <div class="history-title">A construção da Turma do Clubinho</div>
+
+      A Turma do Clubinho nasce como forma de reconhecimento às crianças e profissionais que contribuíram com a construção da prática na alfabetização...
+      <br><br>
+      Em homenagem à Turma do Clubinho:<br>
+      Benício, Maicon, Pedro, Marcos e Maria.<br>
+      Professora Vanessa, Professora Cirleia e Professora Joceli.
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section>
+    <h2 class="section-title">Serviços oferecidos</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Atendimento psicopedagógico</h3>
+        <p>Acompanhamento individual com foco no desenvolvimento cognitivo, emocional e escolar da criança.</p>
+      </div>
+
+      <div class="card">
+        <h3>Avaliação de aprendizagem</h3>
+        <p>Diagnóstico completo das dificuldades e potencialidades no processo de aprendizagem.</p>
+      </div>
+
+      <div class="card">
+        <h3>Intervenção pedagógica</h3>
+        <p>Plano estruturado de atividades personalizadas para evolução contínua da criança.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section>
+    <h2 class="section-title">Como funciona</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>
+          <h3>Contato</h3>
+          <p>Entendimento da necessidade da criança e da família.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>
+          <h3>Avaliação</h3>
+          <p>Diagnóstico completo do desenvolvimento e aprendizagem.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>
+          <h3>Plano de intervenção</h3>
+          <p>Estratégias personalizadas com acompanhamento contínuo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGIÕES -->
+  <section class="regioes">
+    <h2 class="section-title">Regiões de atendimento</h2>
+
+    <p class="section-sub">
+      Atendemos de forma flexível em diferentes regiões da cidade, com atendimento em domicílio ou em pontos de apoio.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Zona Central</h3>
+        <p>Atendimento com fácil acesso e maior disponibilidade de horários.</p>
+      </div>
+
+      <div class="card">
+        <h3>Zona Norte</h3>
+        <p>Atendimento domiciliar e suporte em espaços parceiros da região.</p>
+      </div>
+
+      <div class="card">
+        <h3>Zona Sul</h3>
+        <p>Atendimento personalizado conforme a necessidade da família.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="final-section">
+    <h2 class="section-title">Agende seu atendimento</h2>
+
+    <div class="final-box">
+      Atendimento psicopedagógico individualizado, com foco no desenvolvimento cognitivo, emocional e escolar da criança.
+    </div>
+
+    <div class="final-buttons">
+      <a class="btn btn-blue" href="#mapa">Saiba mais</a>
+      <a class="btn btn-green" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Contato</h3>
+        <p>(00) 00000-0000</p>
+        <p>contato@clubinho.com</p>
+      </div>
+
+      <div>
+        <h3>Londrina - PR</h3>
+        <p>Atendimento flexível por região</p>
+      </div>
+
+      <div>
+        <h3>Horário</h3>
+        <p>Segunda a sábado</p>
+        <p>08h às 18h</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-btn" href="https://wa.me/5500000000000">WhatsApp</a>
+
+</body>
+
+</html>
