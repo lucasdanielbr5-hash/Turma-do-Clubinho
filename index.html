@@ -3,19 +3,15 @@
 <html lang="pt-br">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Clubinho da Aprendizagem</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ========================= */
-/* RESET */
-/* ========================= */
+/* ================= RESET ================= */
 
 *{
   margin:0;
@@ -34,9 +30,7 @@ body{
   color:#1f2d3d;
 }
 
-/* ========================= */
-/* TOPBAR */
-/* ========================= */
+/* ================= TOPBAR ================= */
 
 .topbar{
   position:fixed;
@@ -50,9 +44,7 @@ body{
   z-index:9999;
 }
 
-/* ========================= */
-/* MENU */
-/* ========================= */
+/* ================= MENU ================= */
 
 .menu{
   position:fixed;
@@ -77,9 +69,7 @@ body{
   color:#ff5c8a;
 }
 
-/* ========================= */
-/* HERO */
-/* ========================= */
+/* ================= HERO ================= */
 
 .hero{
   min-height:100vh;
@@ -92,22 +82,6 @@ body{
   overflow:hidden;
 }
 
-.cloud{
-  position:absolute;
-  width:160px;
-  opacity:0.8;
-  animation:moveClouds linear infinite;
-}
-
-.cloud1{top:12%; left:-180px; animation-duration:55s;}
-.cloud2{top:38%; left:-240px; animation-duration:70s;}
-.cloud3{top:65%; left:-200px; animation-duration:60s;}
-
-@keyframes moveClouds{
-  from{transform:translateX(0);}
-  to{transform:translateX(140vw);}
-}
-
 .hero-text{
   width:50%;
   text-align:center;
@@ -115,26 +89,21 @@ body{
 
 .hero-text h1{
   font-size:3rem;
-  color:#16314d;
   margin-bottom:15px;
+  color:#16314d;
 }
 
 .hero-text p{
   font-size:1.1rem;
-  color:#1f3b57;
   line-height:1.7;
-  max-width:560px;
-  margin:auto;
+  color:#1f3b57;
 }
 
 .hero-logo img{
   width:380px;
-  max-width:100%;
 }
 
-/* ========================= */
-/* BOTÕES */
-/* ========================= */
+/* ================= BOTÕES ================= */
 
 .btn{
   padding:14px 22px;
@@ -142,15 +111,12 @@ body{
   text-decoration:none;
   font-weight:600;
   color:white;
-  display:inline-block;
 }
 
 .btn-green{background:#25d366;}
 .btn-blue{background:#2d6cdf;}
 
-/* ========================= */
-/* SEÇÕES */
-/* ========================= */
+/* ================= SEÇÕES ================= */
 
 section{
   padding:100px 20px;
@@ -171,9 +137,7 @@ section{
   line-height:1.7;
 }
 
-/* ========================= */
-/* HISTÓRIA */
-/* ========================= */
+/* ================= HISTÓRIA ================= */
 
 .historia{
   background:white;
@@ -185,22 +149,11 @@ section{
   background:linear-gradient(180deg,#ffffff,#f3f7ff);
   padding:45px;
   border-radius:22px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
   line-height:1.9;
-  text-align:justify;
   color:#3a4a5a;
 }
 
-.history-title{
-  text-align:center;
-  font-size:1.4rem;
-  margin-bottom:20px;
-  font-weight:600;
-}
-
-/* ========================= */
-/* SERVIÇOS */
-/* ========================= */
+/* ================= SERVIÇOS ================= */
 
 .grid{
   display:grid;
@@ -218,9 +171,7 @@ section{
   border-top:4px solid #5aa9ff;
 }
 
-/* ========================= */
-/* COMO FUNCIONA */
-/* ========================= */
+/* ================= STEPS ================= */
 
 .steps{
   max-width:1000px;
@@ -238,9 +189,7 @@ section{
   border-left:5px solid #ff5c8a;
 }
 
-/* ========================= */
-/* CONTATO COMPLETO */
-/* ========================= */
+/* ================= CONTATO MELHORADO ================= */
 
 .final-section{
   background:linear-gradient(180deg,#eef5ff,#f8fbff);
@@ -300,7 +249,6 @@ section{
 .contact-card p{
   color:#5a6b7d;
   line-height:1.8;
-  margin-bottom:18px;
 }
 
 /* REGIÕES */
@@ -309,7 +257,7 @@ section{
   flex-wrap:wrap;
   justify-content:center;
   gap:10px;
-  margin:15px 0;
+  margin-top:15px;
 }
 
 .region-item{
@@ -326,6 +274,7 @@ section{
   background:#f4f8ff;
   border-radius:16px;
   padding:18px;
+  margin-top:15px;
 }
 
 .location-box span{
@@ -335,7 +284,6 @@ section{
   margin-bottom:10px;
 }
 
-/* BOTÕES */
 .contact-button{
   display:block;
   margin-top:12px;
@@ -351,9 +299,7 @@ section{
   background:#2d6cdf;
 }
 
-/* ========================= */
-/* FOOTER */
-/* ========================= */
+/* ================= FOOTER ================= */
 
 footer{
   background:#1f2d3d;
@@ -371,10 +317,9 @@ footer{
 
 footer p{
   color:#cbd6e2;
-  line-height:1.7;
 }
 
-/* BOTÃO FLUTUANTE */
+/* FLOAT */
 .floating-btn{
   position:fixed;
   bottom:20px;
@@ -388,7 +333,6 @@ footer p{
 }
 
 </style>
-
 </head>
 
 <body>
@@ -403,23 +347,24 @@ footer p{
   <a href="#contato">Contato</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="inicio">
-
-  <img class="cloud cloud1" src="https://i.imgur.com/Z3yZoZw.png">
-  <img class="cloud cloud2" src="https://i.imgur.com/Z3yZoZw.png">
-  <img class="cloud cloud3" src="https://i.imgur.com/Z3yZoZw.png">
-
   <div class="hero-text">
     <h1>Clubinho da Aprendizagem</h1>
     <p>Atendimento psicopedagógico com foco no desenvolvimento da aprendizagem infantil.</p>
+
+    <div style="margin-top:25px; display:flex; gap:10px; justify-content:center;">
+      <a class="btn btn-green" href="#">Matrícula</a>
+      <a class="btn btn-blue" href="#contato">Agendar</a>
+    </div>
   </div>
 
   <div class="hero-logo">
     <img src="https://i.imgur.com/W8Z47VR.png">
   </div>
-
 </section>
 
+<!-- HISTÓRIA -->
 <section class="historia" id="historia">
   <h2 class="section-title">Nossa História</h2>
   <div class="history-box">
@@ -427,24 +372,27 @@ footer p{
   </div>
 </section>
 
+<!-- SERVIÇOS -->
 <section id="servicos">
   <h2 class="section-title">Serviços</h2>
   <div class="grid">
     <div class="card">Atendimento psicopedagógico</div>
-    <div class="card">Avaliação de aprendizagem</div>
-    <div class="card">Intervenção pedagógica</div>
+    <div class="card">Avaliação</div>
+    <div class="card">Intervenção</div>
   </div>
 </section>
 
+<!-- FUNCIONA -->
 <section id="funciona">
   <h2 class="section-title">Como funciona</h2>
   <div class="steps">
     <div class="step">Contato</div>
     <div class="step">Avaliação</div>
-    <div class="step">Plano de intervenção</div>
+    <div class="step">Plano</div>
   </div>
 </section>
 
+<!-- CONTATO FINAL -->
 <section class="final-section" id="contato">
 
   <div class="contact-header">
@@ -457,26 +405,20 @@ footer p{
 
   <div class="contact-container">
 
+    <!-- CARD 1 -->
     <div class="contact-card">
-
       <div class="contact-icon">📚</div>
-
       <h3>Atendimento especializado</h3>
-
-      <p>Foco no desenvolvimento cognitivo e escolar.</p>
-
+      <p>Acompanhamento da aprendizagem infantil.</p>
     </div>
 
+    <!-- CARD 2 -->
     <div class="contact-card">
-
       <div class="contact-icon">📍</div>
-
       <h3>Atendimento presencial</h3>
-
       <p>Espaço profissional parceiro mediante agendamento.</p>
 
       <div class="location-box">
-
         <span>Regiões atendidas</span>
 
         <div class="regions">
@@ -486,20 +428,17 @@ footer p{
         </div>
 
         <small>A localização é enviada após agendamento.</small>
-
       </div>
-
     </div>
 
+    <!-- CARD 3 -->
     <div class="contact-card">
-
       <div class="contact-icon">💬</div>
 
       <h3>Contato</h3>
 
-      <a class="contact-button" href="https://wa.me/5500000000000">Fazer matrícula</a>
-      <a class="contact-button secondary-button" href="https://wa.me/5500000000000">Tirar dúvidas</a>
-
+      <a class="contact-button" href="#">Fazer matrícula</a>
+      <a class="contact-button secondary-button" href="#">Tirar dúvidas</a>
     </div>
 
   </div>
@@ -507,31 +446,15 @@ footer p{
 </section>
 
 <footer>
-
   <div class="footer-grid">
-
-    <div>
-      <h3>Contato</h3>
-      <p>WhatsApp</p>
-    </div>
-
-    <div>
-      <h3>Local</h3>
-      <p>Londrina - PR</p>
-    </div>
-
-    <div>
-      <h3>Horário</h3>
-      <p>Segunda a sábado</p>
-    </div>
-
+    <div><h3>Contato</h3><p>WhatsApp</p></div>
+    <div><h3>Local</h3><p>Londrina - PR</p></div>
+    <div><h3>Horário</h3><p>Seg - Sáb</p></div>
   </div>
-
 </footer>
 
-<a class="floating-btn" href="https://wa.me/5500000000000">Matrícula</a>
+<a class="floating-btn" href="#">Matrícula</a>
 
 </body>
-
 </html>
 ```
